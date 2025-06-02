@@ -1,0 +1,374 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}EcoCycle Impact Dashboard{% endblock %}
+
+{% block extra_head %}
+{# Include Chart.js library #}
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style>
+    /* Basic styling for the dashboard to make it look good with your dark theme */
+    .dashboard-container {
+        max-width: 1000px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #343a40; /* Darker background for the container */
+        border-radius: 8px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Slightly stronger overall shadow */
+        color: #e9ecef; /* Light text */
+    }
+    .dashboard-container h1 {
+        color: #f8f9fa; /* Lighter heading */
+        text-align: center;
+        margin-bottom: 30px;
+        padding-bottom: 15px;
+        border-bottom: 2px solid #495057; /* Darker border */
+    }
+    .chart-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px; /* Keep consistent gap */
+        margin-top: 30px;
+    }
+    .chart-card {
+        background-color: #495057; /* Slightly lighter dark for card background */
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+        text-align: center;
+        color: #e9ecef; /* Light text */
+        height: 400px; /* Keep this fixed height */
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition for hover effects */
+    }
+    .chart-card:hover {
+        transform: translateY(-5px); /* Lift card slightly on hover */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Darker, larger shadow on hover */
+    }
+    .chart-card h2 {
+        color: #f8f9fa; /* Lighter heading in card */
+        margin-top: 0;
+        font-size: 1.5em;
+        margin-bottom: 10px; /* Add some space below the h2 */
+    }
+    .metric-card {
+        background-color: #20c997; /* Vibrant teal from your theme for metrics */
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+        text-align: center;
+        color: #1a1a1a; /* Dark text on vibrant background */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition for hover effects */
+    }
+    .metric-card:hover {
+        transform: translateY(-5px); /* Lift card slightly on hover */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Darker, larger shadow on hover */
+    }
+    .metric-card h3 {
+        margin-top: 0;
+        color: #1a1a1a;
+        font-size: 1.8em;
+    }
+    .metric-card p {
+        font-size: 3em; /* Larger font for impact number */
+        font-weight: bold;
+        color: #1a1a1a;
+        margin: 10px 0 0;
+    }
+    canvas {
+        background-color: #ffffff; /* Charts need a light background to render well */
+        border-radius: 5px;
+        width: 100% !important; /* Force width to 100% */
+        height: 100% !important; /* Force height to 100% */
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="dashboard-container">
+    <h1>EcoCycle Impact Dashboard</h1>
+
+    <div class="chart-grid">
+        <div class="metric-card">
+            <h3>Total Waste Diverted</h3>
+            <p>{{ dashboard_data.waste_diverted_kg }} kg</p>
+        </div>
+    </div>
+
+    <div class="chart-grid">
+        <div class="chart-card">
+            <h2>Requests per Month</h2>
+            <canvas id="requestsChart"></canvas>
+        </div>
+        <div class="chart-card">
+            <h2>Offers per Month</h2>
+            <canvas id="offersChart"></canvas>
+        </div>
+        <div class="chart-card">
+            <h2>Top Product Types</h2>
+            <canvas id="productTypesChart"></canvas>
+        </div>
+    </div>
+</div>
+
+{# Safely pass dashboard_data from Django to JavaScript #}
+{{ dashboard_data|json_script:"dashboard-data" }}
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Set global Chart.js defaults for text color and font size
+        Chart.defaults.color = '#343a40'; // Default text color for all chart text (DARK)
+        Chart.defaults.font.size = 12; // A reasonable default font size
+        Chart.defaults.font.family = 'sans-serif'; // Ensure a clean, readable font family
+
+        const data = JSON.parse(document.getElementById('dashboard-data').textContent);
+
+        // --- CUSTOM COLOR PALETTE ---
+        const primaryColor = 'rgba(32, 201, 151, 0.8)'; // Your vibrant teal from metric card
+        const primaryBorderColor = 'rgba(32, 201, 151, 1)';
+
+        const secondaryColor = 'rgba(0, 123, 255, 0.8)'; // Professional Blue
+        const secondaryBorderColor = 'rgba(0, 123, 255, 1)';
+
+        const pieColors = [
+            'rgba(32, 201, 151, 0.8)', // Teal
+            'rgba(0, 123, 255, 0.8)',  // Blue
+            'rgba(111, 66, 193, 0.8)', // Purple
+            'rgba(253, 126, 20, 0.8)', // Orange
+            'rgba(232, 62, 140, 0.8)', // Pink
+            'rgba(108, 117, 125, 0.8)' // Gray
+        ];
+        // --- END CUSTOM COLOR PALETTE ---
+
+        // Chart 1: Requests per Month (Bar Chart)
+        const requestsCtx = document.getElementById('requestsChart').getContext('2d');
+        new Chart(requestsCtx, {
+            type: 'bar',
+            data: {
+                labels: data.requests_per_month.map(item => item.month),
+                datasets: [{
+                    label: 'Requests',
+                    data: data.requests_per_month.map(item => item.count),
+                    backgroundColor: primaryColor, // Using custom primary color
+                    borderColor: primaryBorderColor,
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                layout: {
+                    padding: { // Add padding around the chart content
+                        left: 10,
+                        right: 10,
+                        top: 10,
+                        bottom: 10
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        grid: {
+                            color: 'rgba(0, 0, 0, 0.08)' // Softer grid lines
+                        },
+                        ticks: {
+                            color: '#343a40'
+                        },
+                        title: {
+                            display: false,
+                            text: 'Count',
+                            color: '#343a40',
+                            font: { size: 14 }
+                        }
+                    },
+                    x: {
+                        grid: {
+                            color: 'rgba(0, 0, 0, 0.08)' // Softer grid lines
+                        },
+                        ticks: {
+                            color: '#343a40'
+                        },
+                        title: {
+                            display: false,
+                            text: 'Month',
+                            color: '#343a40',
+                            font: { size: 14 }
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        labels: {
+                            color: '#343a40'
+                        }
+                    },
+                    title: {
+                        display: false,
+                        text: 'Requests per Month',
+                        color: '#343a40',
+                        font: { size: 16 }
+                    },
+                    tooltip: {
+                        backgroundColor: 'rgba(0, 0, 0, 0.7)',
+                        titleColor: '#e9ecef',
+                        bodyColor: '#e9ecef',
+                        footerColor: '#e9ecef',
+                        borderColor: '#e9ecef',
+                        borderWidth: 1,
+                        cornerRadius: 4,
+                        displayColors: true
+                    }
+                }
+            }
+        });
+
+        // Chart 2: Offers per Month (Line Chart)
+        const offersCtx = document.getElementById('offersChart').getContext('2d');
+        new Chart(offersCtx, {
+            type: 'line',
+            data: {
+                labels: data.offers_per_month.map(item => item.month),
+                datasets: [{
+                    label: 'Offers',
+                    data: data.offers_per_month.map(item => item.count),
+                    backgroundColor: secondaryColor, // Using custom secondary color
+                    borderColor: secondaryBorderColor,
+                    borderWidth: 2, // Slightly thicker line for emphasis
+                    tension: 0.4, // Make line slightly smoother
+                    fill: true, // Fill area under the line for a modern look
+                    pointBackgroundColor: secondaryBorderColor,
+                    pointBorderColor: '#ffffff', // White border for points
+                    pointHoverBackgroundColor: '#ffffff',
+                    pointHoverBorderColor: secondaryBorderColor
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                layout: {
+                    padding: {
+                        left: 10,
+                        right: 10,
+                        top: 10,
+                        bottom: 10
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        grid: {
+                            color: 'rgba(0, 0, 0, 0.08)'
+                        },
+                        ticks: {
+                            color: '#343a40'
+                        },
+                        title: {
+                            display: false,
+                            text: 'Count',
+                            color: '#343a40',
+                            font: { size: 14 }
+                        }
+                    },
+                    x: {
+                        grid: {
+                            color: 'rgba(0, 0, 0, 0.08)'
+                        },
+                        ticks: {
+                            color: '#343a40'
+                        },
+                        title: {
+                            display: false,
+                            text: 'Month',
+                            color: '#343a40',
+                            font: { size: 14 }
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        labels: {
+                            color: '#343a40'
+                        }
+                    },
+                    title: {
+                        display: false,
+                        text: 'Offers per Month',
+                        color: '#343a40',
+                        font: { size: 16 }
+                    },
+                    tooltip: {
+                        backgroundColor: 'rgba(0, 0, 0, 0.7)',
+                        titleColor: '#e9ecef',
+                        bodyColor: '#e9ecef',
+                        footerColor: '#e9ecef',
+                        borderColor: '#e9ecef',
+                        borderWidth: 1,
+                        cornerRadius: 4,
+                        displayColors: true
+                    }
+                }
+            }
+        });
+
+        // Chart 3: Top Product Types (Pie Chart)
+        const productTypesCtx = document.getElementById('productTypesChart').getContext('2d');
+        new Chart(productTypesCtx, {
+            type: 'pie',
+            data: {
+                labels: data.top_product_types.map(item => item.label),
+                datasets: [{
+                    label: 'Number of Requests',
+                    data: data.top_product_types.map(item => item.value),
+                    backgroundColor: pieColors, // Using the new custom pie colors
+                    borderColor: '#343a40', // Border between slices (darker)
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                layout: {
+                    padding: {
+                        left: 10,
+                        right: 10,
+                        top: 10,
+                        bottom: 10
+                    }
+                },
+                plugins: {
+                    legend: {
+                        labels: {
+                            color: '#343a40'
+                        }
+                    },
+                    title: {
+                        display: false,
+                        text: 'Top Product Types',
+                        color: '#343a40',
+                        font: { size: 16 }
+                    },
+                    tooltip: {
+                        backgroundColor: 'rgba(0, 0, 0, 0.7)',
+                        titleColor: '#e9ecef',
+                        bodyColor: '#e9ecef',
+                        footerColor: '#e9ecef',
+                        borderColor: '#e9ecef',
+                        borderWidth: 1,
+                        cornerRadius: 4,
+                        displayColors: true
+                    }
+                }
+            }
+        });
+    });
+</script>
+{% endblock %}

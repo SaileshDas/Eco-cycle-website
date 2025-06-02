@@ -5,7 +5,16 @@ from .models import UpcyclingRequest, ArtisanProfile, Offer, Conversation, Messa
 from django.contrib.auth.decorators import login_required, user_passes_test
 from django.contrib import messages
 from django.db import transaction
-from django.db.models import Q
+from django.db.models import Q, Count
+from django.db.models.functions import TruncMonth
+from django.http import JsonResponse
+
+# --- NEW IMPORTS FOR DASHBOARD ---
+import random
+import datetime # CORRECTED: Import the entire datetime module
+from django.http import JsonResponse
+from django.db.models import Count
+# --- END NEW IMPORTS ---
 
 # A simple home page view (optional, but good to have)
 def home_page(request):
@@ -131,8 +140,8 @@ def artisan_available_requests(request):
 
 @login_required
 @user_passes_test(is_active_artisan, login_url='/accounts/login/') # Only active artisans can make offers
-@login_required
-@user_passes_test(is_active_artisan, login_url='/accounts/login/') # Only active artisans can make offers
+# NOTE: Removed the duplicate @login_required and @user_passes_test decorators below,
+# as they are redundant when already applied above.
 def make_offer(request, request_id):
     upcycling_request = get_object_or_404(UpcyclingRequest, id=request_id)
 
@@ -141,12 +150,12 @@ def make_offer(request, request_id):
         messages.error(request, "You cannot make an offer on your own upcycling request.")
         return redirect('request_detail', request_id=upcycling_request.id)
 
-    print(f"DEBUG (make_offer): Request method: {request.method}") # ADD THIS LINE
+    print(f"DEBUG (make_offer): Request method: {request.method}")
     if request.method == 'POST':
-        print(f"DEBUG (make_offer): Processing POST request for offer on request ID: {request_id}") # ADD THIS LINE
+        print(f"DEBUG (make_offer): Processing POST request for offer on request ID: {request_id}")
         form = OfferForm(request.POST)
         if form.is_valid():
-            print("DEBUG (make_offer): Form is VALID.") # ADD THIS LINE
+            print("DEBUG (make_offer): Form is VALID.")
             offer = form.save(commit=False)
             offer.request = upcycling_request
             offer.artisan = request.user.artisan_profile # Link to the artisan profile
@@ -155,8 +164,8 @@ def make_offer(request, request_id):
             messages.success(request, "Your offer has been submitted successfully!")
             return redirect('request_detail', request_id=upcycling_request.id)
         else:
-            print("DEBUG (make_offer): Form is INVALID.") # ADD THIS LINE
-            print(f"DEBUG (make_offer): Form errors: {form.errors}") # ADD THIS LINE
+            print("DEBUG (make_offer): Form is INVALID.")
+            print(f"DEBUG (make_offer): Form errors: {form.errors}")
             # If form is invalid, re-render the detail page with the form and errors
             offer_form = form # Pass the form with errors
             context = {
@@ -287,7 +296,7 @@ def conversation_detail(request, conversation_id):
     messages_in_conversation = conversation.messages.all().order_by('timestamp') # Fetch and order messages
     print(f"DEBUG: Fetched {messages_in_conversation.count()} messages for conversation ID: {conversation.id}")
     for msg in messages_in_conversation:
-        print(f"   DEBUG MESSAGE: Sender: {msg.sender.username}, Content: '{msg.content[:50]}...'")
+        print(f"    DEBUG MESSAGE: Sender: {msg.sender.username}, Content: '{msg.content[:50]}...'")
 
     if request.method == 'POST':
         form = MessageForm(request.POST)
@@ -312,3 +321,128 @@ def conversation_detail(request, conversation_id):
         'other_participant': conversation.participant1 if request.user == conversation.participant2 else conversation.participant2
     }
     return render(request, 'requests/conversation_detail.html', context)
+
+# --- NEW DASHBOARD VIEWS START HERE ---
+
+def generate_dummy_data():
+    """Generates dummy data for the dashboard charts."""
+    today = datetime.datetime.now() # CORRECTED: Changed to datetime.datetime.now()
+    data = {
+        'requests_per_month': [],
+        'offers_per_month': [],
+        'top_product_types': [],
+        'waste_diverted_kg': [], # Dummy for overall impact
+    }
+
+    # Data for past 6 months
+    for i in range(6, 0, -1):
+        month = (today - datetime.timedelta(days=30 * i)).strftime('%b %Y') # CORRECTED: Changed to datetime.timedelta
+        data['requests_per_month'].append({
+            'month': month,
+            'count': random.randint(10, 50)
+        })
+        data['offers_per_month'].append({
+            'month': month,
+            'count': random.randint(5, 40)
+        })
+
+    # Top product types
+    product_types = ['Furniture', 'Textiles', 'Electronics', 'Decor', 'Other']
+    type_counts = {}
+    total_requests = sum(item['count'] for item in data['requests_per_month']) # rough estimate
+    for p_type in product_types:
+        type_counts[p_type] = random.randint(int(total_requests * 0.1), int(total_requests * 0.3))
+
+    sorted_types = sorted(type_counts.items(), key=lambda item: item[1], reverse=True)
+    data['top_product_types'] = [{'label': item[0], 'value': item[1]} for item in sorted_types[:5]]
+
+    # Dummy waste diverted data (example: kilograms)
+    data['waste_diverted_kg'] = random.randint(500, 2000)
+
+    return data
+
+@login_required
+def dashboard_view(request):
+    # --- Dummy Data Generation for Dashboard Charts ---
+
+    # Get today's date correctly
+    today = datetime.date.today() # This is correct with 'import datetime'
+
+    # Dummy data for Requests per Month (Bar Chart)
+    # Generate data for the last 6 months
+    requests_per_month_data = []
+    for i in range(6):
+        # Go back in months
+        # Use timedelta to subtract days correctly
+        month_date = today - datetime.timedelta(days=30 * i) # This is correct with 'import datetime'
+        month_label = month_date.strftime('%Y-%m') # Format as YYYY-MM
+        dummy_count = random.randint(10, 50) # Random number of requests
+        requests_per_month_data.insert(0, {'month': month_label, 'count': dummy_count}) # Insert at beginning to keep chronological order
+
+    # Dummy data for Offers per Month (Line Chart)
+    offers_per_month_data = []
+    for i in range(6):
+        month_date = today - datetime.timedelta(days=30 * i) # This is correct with 'import datetime'
+        month_label = month_date.strftime('%Y-%m')
+        dummy_count = random.randint(5, 30) # Random number of offers
+        offers_per_month_data.insert(0, {'month': month_label, 'count': dummy_count})
+
+    # Dummy data for Top Product Types (Pie Chart)
+    # Using a predefined list of common product types
+    product_types = ['Textile', 'Wood', 'Plastic', 'Metal', 'Glass', 'Electronics']
+    top_product_types_data = []
+    # Assign random values to a few top types
+    for p_type in random.sample(product_types, k=min(len(product_types), 5)): # Get up to 5 random types
+        dummy_value = random.randint(15, 60) # Random number of requests for this type
+        top_product_types_data.append({'label': p_type, 'value': dummy_value})
+
+    # Dummy data for Total Waste Diverted (just a single metric)
+    total_waste_diverted_kg = random.randint(500, 2000) # Random dummy value
+
+    dashboard_data = {
+        'requests_per_month': requests_per_month_data,
+        'offers_per_month': offers_per_month_data,
+        'top_product_types': top_product_types_data,
+        'waste_diverted_kg': total_waste_diverted_kg,
+    }
+
+    # Pass the data to the template
+    return render(request, 'requests/dashboard.html', {'dashboard_data': dashboard_data})
+
+
+# Optional: JSON endpoint for dashboard data (if you want to fetch dynamically later)
+@login_required
+def get_dashboard_data_json(request):
+    # This function can return the same dummy data or real data
+    # For now, let's return the same dummy data as dashboard_view
+    today = datetime.date.today() # This is correct with 'import datetime'
+
+    requests_per_month_data = []
+    for i in range(6):
+        month_date = today - datetime.timedelta(days=30 * i) # This is correct with 'import datetime'
+        month_label = month_date.strftime('%Y-%m')
+        dummy_count = random.randint(10, 50)
+        requests_per_month_data.insert(0, {'month': month_label, 'count': dummy_count})
+
+    offers_per_month_data = []
+    for i in range(6):
+        month_date = today - datetime.timedelta(days=30 * i) # This is correct with 'import datetime'
+        month_label = month_date.strftime('%Y-%m')
+        dummy_count = random.randint(5, 30)
+        offers_per_month_data.insert(0, {'month': month_label, 'count': dummy_count})
+
+    product_types = ['Textile', 'Wood', 'Plastic', 'Metal', 'Glass', 'Electronics']
+    top_product_types_data = []
+    for p_type in random.sample(product_types, k=min(len(product_types), 5)):
+        dummy_value = random.randint(15, 60)
+        top_product_types_data.append({'label': p_type, 'value': dummy_value})
+
+    total_waste_diverted_kg = random.randint(500, 2000)
+
+    dashboard_data = {
+        'requests_per_month': requests_per_month_data,
+        'offers_per_month': offers_per_month_data,
+        'top_product_types': top_product_types_data,
+        'waste_diverted_kg': total_waste_diverted_kg,
+    }
+    return JsonResponse(dashboard_data)

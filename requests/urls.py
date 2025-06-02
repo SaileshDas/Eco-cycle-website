@@ -23,4 +23,9 @@ urlpatterns = [
     # NEW: Messaging URLs
     path('messages/', views.conversation_list, name='conversation_list'),
     path('messages/<int:conversation_id>/', views.conversation_detail, name='conversation_detail'),
+
+    # --- NEW DASHBOARD URLS ---
+    path('dashboard/', views.dashboard_view, name='dashboard'),
+    path('api/dashboard-data/', views.get_dashboard_data_json, name='dashboard_data_api'), # Optional API endpoint
+    # --- END NEW DASHBOARD URLS ---
 ]
