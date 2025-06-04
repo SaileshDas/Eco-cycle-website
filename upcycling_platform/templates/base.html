@@ -238,25 +238,26 @@
             </form>
         {% else %}
             <a href="{% url 'login' %}">Login</a>
-            <a href="{% url 'register' %}">Register</a>
+            <a href="{% url 'upcycling_requests:register' %}">Register</a> {# Changed: Added namespace #}
         {% endif %}
     </div>
 </header>
     <nav>
-        <a href="{% url 'home' %}">Home</a>
-        <a href="{% url 'create_request' %}">Submit Request</a>
+        <a href="{% url 'upcycling_requests:home' %}">Home</a> {# Changed: Added namespace #}
+        <a href="{% url 'upcycling_requests:create_request' %}">Submit Request</a> {# Changed: Added namespace #}
+        <a href="{% url 'upcycling_requests:dashboard' %}">Dashboard</a>
         {% if user.is_authenticated %}
-            <a href="{% url 'my_requests' %}">My Requests</a>
+            {# Assuming you want links like 'My Requests' and 'My Offers' here #}
+            <a href="{% url 'upcycling_requests:my_requests' %}">My Requests</a>
+            <a href="{% url 'upcycling_requests:conversation_list' %}">Messages</a>
             {% if user.artisan_profile.is_active_artisan %}
-                <a href="{% url 'artisan_available_requests' %}">Available Requests</a>
+                <a href="{% url 'upcycling_requests:artisan_available_requests' %}">Available requests</a>
+            {# Add Messages link for all authenticated users #}   
             {% endif %}
-            <a href="{% url 'conversation_list' %}">Messages</a>
-            <a href="{% url 'dashboard' %}">Impact Dashboard</a> {# ADDED THIS LINE #}
-        {% endif %}
+        {% endif %} 
     </nav>
 
     <div class="content">
-        {# Display Django messages here #}
         {% if messages %}
             <ul class="messages">
                 {% for message in messages %}
@@ -264,9 +265,17 @@
                 {% endfor %}
             </ul>
         {% endif %}
-
         {% block content %}
+            {# Content from child templates will go here #}
         {% endblock %}
     </div>
+
+    <footer>
+        <p>&copy; 2025 EcoCycle. All rights reserved.</p>
+    </footer>
+
+    {# Optional: Block for page-specific JavaScript files #}
+    {% block extra_js %}{% endblock %}
+
 </body>
 </html>

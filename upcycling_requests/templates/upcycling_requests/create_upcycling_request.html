@@ -1,0 +1,350 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Submit Your Eco-Upcycling Request{% endblock %}
+
+{% block extra_head %}
+<style>
+    /* General Form Styling - Adapted for your dark theme */
+    .form-container {
+        max-width: 700px; /* Increased max-width for better layout */
+        margin: 30px auto;
+        padding: 30px;
+        background-color: #343a40; /* Your dashboard's dark background */
+        border-radius: 8px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+        color: #e9ecef; /* Light text */
+    }
+    .form-container h1 {
+        color: #f8f9fa;
+        text-align: center;
+        margin-bottom: 25px;
+        padding-bottom: 15px;
+        border-bottom: 2px solid #495057; /* Darker border */
+    }
+    .form-field {
+        margin-bottom: 20px; /* Increased bottom margin for fields */
+    }
+    .form-field label {
+        display: block;
+        margin-bottom: 8px; /* More space below labels */
+        font-weight: bold;
+        color: #e9ecef; /* Light label text */
+    }
+    .form-field input[type="text"],
+    .form-field textarea,
+    .form-field input[type="number"],
+    .form-field input[type="file"], /* Added file input styling */
+    .form-field select {
+        width: calc(100% - 20px); /* Adjust width for padding */
+        padding: 10px; /* More padding */
+        border: 1px solid #6c757d; /* Softer border */
+        border-radius: 4px;
+        background-color: #495057; /* Darker input background */
+        color: #e9ecef; /* Light input text */
+        box-sizing: border-box; /* Include padding in width */
+    }
+    .form-field input[type="file"] {
+        padding: 8px 10px; /* Slightly less padding for file input visually */
+    }
+    .form-field textarea {
+        resize: vertical;
+        min-height: 80px; /* Set min-height for textareas */
+    }
+
+    /* Common Button Styles */
+    .btn {
+        padding: 10px 20px; /* More padding for buttons */
+        border: none;
+        border-radius: 5px; /* Slightly more rounded corners */
+        cursor: pointer;
+        font-weight: bold;
+        transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+        display: inline-block; /* Allows side-by-side or stacked with margin */
+        text-align: center;
+    }
+    .btn-primary {
+        background-color: #20c997; /* Teal submit button */
+        color: #1a1a1a; /* Dark text on teal */
+        margin-top: 25px; /* Space above submit button */
+        width: 100%; /* Make submit button full width */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    .btn-primary:hover {
+        background-color: #1aa37a; /* Darker teal on hover */
+        transform: translateY(-2px); /* Slight lift on hover */
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    }
+    .btn-secondary {
+        background-color: #6c757d; /* Grey button for AI scan */
+        color: #f8f9fa; /* Light text */
+        margin-top: 15px; /* Space below image upload field */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+    .btn-secondary:hover {
+        background-color: #5a6268;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+    .btn:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+        transform: none; /* No lift when disabled */
+        box-shadow: none; /* No shadow when disabled */
+    }
+
+    .errorlist {
+        color: #dc3545;
+        list-style-type: none;
+        padding: 0;
+        margin-top: 5px;
+        font-size: 0.9em;
+    }
+
+    /* Styles for AI integration specific section */
+    .ai-scan-section {
+        margin-top: 30px;
+        padding-top: 20px;
+        border-top: 1px dashed #6c757d;
+        margin-bottom: 25px; /* Space below AI section */
+    }
+    .ai-scan-section h3 {
+        color: #f8f9fa;
+        margin-bottom: 15px;
+    }
+    .ai-scan-section p.text-muted {
+        color: #adb5bd; /* Lighter grey for muted text */
+        font-size: 0.95em;
+        margin-bottom: 15px;
+    }
+    .ai-scan-feedback {
+        margin-top: 15px;
+        padding: 10px;
+        border-radius: 5px;
+        color: #e9ecef;
+        display: none; /* Hidden by default */
+        text-align: center;
+        font-weight: bold;
+    }
+    .ai-scan-feedback.loading {
+        background-color: #007bff; /* Blue for loading */
+    }
+    .ai-scan-feedback.success {
+        background-color: #28a745; /* Green for success */
+    }
+    .ai-scan-feedback.error {
+        background-color: #dc3545; /* Red for error */
+    }
+    /* Simple loading spinner */
+    .spinner {
+        border: 4px solid rgba(255, 255, 255, 0.3);
+        border-radius: 50%;
+        border-top: 4px solid #fff;
+        width: 24px;
+        height: 24px;
+        -webkit-animation: spin 1s linear infinite; /* Safari */
+        animation: spin 1s linear infinite;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 10px;
+    }
+    /* Safari */
+    @-webkit-keyframes spin {
+      0% { -webkit-transform: rotate(0deg); }
+      100% { -webkit-transform: rotate(360deg); }
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+    <div class="form-container">
+        <h1>Submit Your Eco-Upcycling Request</h1>
+
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+
+            {# AI Integration Section - Place item_image here and add scan button #}
+            <div class="ai-scan-section">
+                <h3>AI-Powered Scan (Optional)</h3>
+                <p class="text-muted">Upload an image of the item. AI can suggest product type and material details. You can always edit them!</p>
+                
+                <div class="form-field">
+                    {{ form.item_image.label_tag }}
+                    {# Django will render this input with id="id_item_image" by default #}
+                    {{ form.item_image }}
+                    {% if form.item_image.errors %}
+                        <ul class="errorlist">
+                            {% for error in form.item_image.errors %}
+                                <li>{{ error }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                </div>
+
+                <button type="button" class="btn btn-secondary" id="scanImageBtn">
+                    Scan Image with AI
+                </button>
+                <div id="aiFeedback" class="ai-scan-feedback"></div>
+            </div>
+            {# END AI Integration Section #}
+
+            {# Your existing form fields based on UpcyclingRequest model #}
+
+            <div class="form-field">
+                {{ form.product_type.label_tag }}
+                {# This will render as <input type="..." id="id_product_type" ...> by default #}
+                {{ form.product_type }}
+                {% if form.product_type.errors %}
+                    <ul class="errorlist">
+                        {% for error in form.product_type.errors %}
+                            <li>{{ error }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+
+            <div class="form-field">
+                {{ form.material_details.label_tag }}
+                {# This will render as <textarea id="id_material_details" ...> by default #}
+                {{ form.material_details }}
+                {% if form.material_details.errors %}
+                    <ul class="errorlist">
+                        {% for error in form.material_details.errors %}
+                            <li>{{ error }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+
+            <div class="form-field">
+                {{ form.style_preference.label_tag }}
+                {{ form.style_preference }}
+                {% if form.style_preference.errors %}
+                    <ul class="errorlist">
+                        {% for error in form.style_preference.errors %}
+                            <li>{{ error }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+
+            <div class="form-field">
+                {{ form.pickup_location.label_tag }}
+                {{ form.pickup_location }}
+                {% if form.pickup_location.errors %}
+                    <ul class="errorlist">
+                        {% for error in form.pickup_location.errors %}
+                            <li>{{ error }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+
+            <div class="form-field">
+                {{ form.budget.label_tag }}
+                {{ form.budget }}
+                {% if form.budget.errors %}
+                    <ul class="errorlist">
+                        {% for error in form.budget.errors %}
+                            <li>{{ error }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit Request</button>
+        </form>
+
+        <p style="text-align: center; margin-top: 20px;"><a href="{% url 'upcycling_requests:home' %}" style="color: #20c997; text-decoration: none;">Back to Home</a></p> {# FIX IS HERE! #}
+    </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Target elements by their default Django IDs
+        const itemImageInput = document.getElementById('id_item_image');
+        const scanImageBtn = document.getElementById('scanImageBtn');
+        const aiFeedback = document.getElementById('aiFeedback');
+        const productTypeField = document.getElementById('id_product_type');
+        const materialDetailsField = document.getElementById('id_material_details');
+
+        scanImageBtn.addEventListener('click', async function() {
+            if (!itemImageInput.files || itemImageInput.files.length === 0) {
+                displayFeedback('Please select an image first.', 'error');
+                return;
+            }
+
+            const formData = new FormData();
+            formData.append('image', itemImageInput.files[0]);
+
+            displayFeedback('<span class="spinner"></span> Scanning image with AI...', 'loading');
+            scanImageBtn.disabled = true; // Disable button during scan
+
+            try {
+                // IMPORTANT: This is the Django API endpoint we will create next!
+                // Make sure your Django project's urls.py eventually maps this URL.
+                const response = await fetch('/upcycling_requests/api/scan_image/', { // CORRECTED URL HERE
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        // Include CSRF token for security with POST requests in Django
+                        'X-CSRFToken': getCookie('csrftoken')
+                    }
+                });
+
+                const data = await response.json();
+
+                if (response.ok) {
+                    if (data.product_type || data.material_details) {
+                        if (data.product_type) {
+                            productTypeField.value = data.product_type;
+                        }
+                        if (data.material_details) {
+                            materialDetailsField.value = data.material_details;
+                        }
+                        displayFeedback('AI scan successful! Details autofilled.', 'success');
+                    } else {
+                        displayFeedback('AI scan completed, but no specific details were identified. Please enter manually.', 'error');
+                    }
+                } else {
+                    // Handle non-200 responses (e.g., 400 Bad Request, 500 Internal Server Error)
+                    displayFeedback(`AI scan failed: ${data.error || 'Unknown error'}`, 'error');
+                }
+
+            } catch (error) {
+                console.error('Error during AI scan:', error);
+                displayFeedback('An error occurred during AI scan. Please check your network and try again.', 'error');
+            } finally {
+                scanImageBtn.disabled = false; // Re-enable button
+            }
+        });
+
+        // Helper function to display feedback messages
+        function displayFeedback(message, type) {
+            aiFeedback.innerHTML = message;
+            aiFeedback.className = 'ai-scan-feedback ' + type; // Reset classes and apply new one
+            aiFeedback.style.display = 'block'; // Show the feedback div
+        }
+
+        // Helper function to get CSRF token (standard Django practice)
+        function getCookie(name) {
+            let cookieValue = null;
+            if (document.cookie && document.cookie !== '') {
+                const cookies = document.cookie.split(';');
+                for (let i = 0; i < cookies.length; i++) {
+                    const cookie = cookies[i].trim();
+                    // Does this cookie string begin with the name we want?
+                    if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                        break;
+                    }
+                }
+            }
+            return cookieValue;
+        }
+    });
+</script>
+{% endblock %}

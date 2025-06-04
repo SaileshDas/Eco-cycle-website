@@ -2,6 +2,8 @@
 from django.urls import path
 from . import views # Import the views from our app
 
+app_name = 'upcycling_requests'
+
 urlpatterns = [
     path('', views.home_page, name='home'),
     # path('relative_path/', views.your_view_function, name='name_for_url'),
@@ -23,9 +25,10 @@ urlpatterns = [
     # NEW: Messaging URLs
     path('messages/', views.conversation_list, name='conversation_list'),
     path('messages/<int:conversation_id>/', views.conversation_detail, name='conversation_detail'),
-
     # --- NEW DASHBOARD URLS ---
     path('dashboard/', views.dashboard_view, name='dashboard'),
     path('api/dashboard-data/', views.get_dashboard_data_json, name='dashboard_data_api'), # Optional API endpoint
     # --- END NEW DASHBOARD URLS ---
+    # NEW: API endpoint for AI image scanning
+    path('api/scan_image/', views.api_scan_image, name='ai_image_scan'),
 ]

@@ -297,8 +297,8 @@
         <h1>Transform Your Unused into Unique Art</h1>
         <p>EcoCycle connects you with talented artisans ready to give new life to your old materials. Sustainable creations are just a click away!</p>
         <div class="hero-buttons">
-            <a href="{% url 'create_request' %}" class="btn btn-primary">Submit a Request</a>
-            <a href="{% url 'artisan_available_requests' %}" class="btn btn-secondary">Explore Available Requests</a>
+            <a href="{% url 'upcycling_requests:create_request' %}" class="btn btn-primary">Submit a Request</a>
+            <a href="{% url 'upcycling_requests:artisan_available_requests' %}" class="btn btn-secondary">Explore Available Requests</a>
         </div>
     </div>
 
@@ -354,7 +354,7 @@
                         <h3>{{ request.product_type|default:"Untitled Request" }}</h3>
                         <p><strong>Materials:</strong> {{ request.material_details|truncatechars:70 }}</p>
                         <p><strong>Location:</strong> {{ request.pickup_location|default:"Not specified" }}</p>
-                        <a href="{% url 'request_detail' request_id=request.id %}" class="view-details-link">View Details</a>
+                        <a href="{% url 'upcycling_requests:request_detail' request_id=request.id %}" class="view-details-link">View Details</a>
                     </div>
                 {% endfor %}
             {% else %}
@@ -365,59 +365,59 @@
         </div>
     </div>
 
+    {# --- MOVED SCRIPT BLOCK INSIDE block content --- #}
+    <script>
+        let slideIndex = 0; // Start at 0 for array index
+        const slidesContainer = document.querySelector(".slides-container");
+        const slides = document.querySelectorAll(".slide"); // Get all individual slides
+
+        function showSlides(index) {
+            if (index >= slides.length) { // Loop back to start
+                slideIndex = 0;
+            } else if (index < 0) { // Loop to end
+                slideIndex = slides.length - 1;
+            } else {
+                slideIndex = index;
+            }
+
+            // Calculate the amount to translate the container
+            const offset = -slideIndex * 100; // Move by 100% of container width per slide
+            slidesContainer.style.transform = `translateX(${offset}%)`;
+        }
+
+        function plusSlides(n) {
+            showSlides(slideIndex + n);
+        }
+
+        // Initial display
+        showSlides(slideIndex);
+
+        // Automatic slideshow
+        let autoSlideInterval = setInterval(() => plusSlides(1), 5000); // Change image every 5 seconds
+
+        // Pause auto-slide on hover for better user experience
+        const slider = document.querySelector(".before-after-slider");
+        slider.addEventListener("mouseenter", () => {
+            clearInterval(autoSlideInterval);
+        });
+        slider.addEventListener("mouseleave", () => {
+            autoSlideInterval = setInterval(() => plusSlides(1), 5000);
+        });
+
+
+        // Attach click events to nav buttons with preventDefault()
+        document.querySelector(".prev").addEventListener("click", (event) => {
+            event.preventDefault(); // <--- THIS IS THE KEY FIX
+            clearInterval(autoSlideInterval); // Stop auto-slide on manual click
+            plusSlides(-1);
+            autoSlideInterval = setInterval(() => plusSlides(1), 5000); // Restart auto-slide
+        });
+
+        document.querySelector(".next").addEventListener("click", (event) => {
+            event.preventDefault(); // <--- THIS IS THE KEY FIX
+            clearInterval(autoSlideInterval); // Stop auto-slide on manual click
+            plusSlides(1);
+            autoSlideInterval = setInterval(() => plusSlides(1), 5000); // Restart auto-slide
+        });
+    </script>
 {% endblock %}
-
-<script>
-let slideIndex = 0; // Start at 0 for array index
-const slidesContainer = document.querySelector(".slides-container");
-const slides = document.querySelectorAll(".slide"); // Get all individual slides
-
-function showSlides(index) {
-  if (index >= slides.length) { // Loop back to start
-    slideIndex = 0;
-  } else if (index < 0) { // Loop to end
-    slideIndex = slides.length - 1;
-  } else {
-    slideIndex = index;
-  }
-
-  // Calculate the amount to translate the container
-  const offset = -slideIndex * 100; // Move by 100% of container width per slide
-  slidesContainer.style.transform = `translateX(${offset}%)`;
-}
-
-function plusSlides(n) {
-  showSlides(slideIndex + n);
-}
-
-// Initial display
-showSlides(slideIndex);
-
-// Automatic slideshow
-let autoSlideInterval = setInterval(() => plusSlides(1), 5000); // Change image every 5 seconds
-
-// Pause auto-slide on hover for better user experience
-const slider = document.querySelector(".before-after-slider");
-slider.addEventListener("mouseenter", () => {
-  clearInterval(autoSlideInterval);
-});
-slider.addEventListener("mouseleave", () => {
-  autoSlideInterval = setInterval(() => plusSlides(1), 5000);
-});
-
-
-// Attach click events to nav buttons with preventDefault()
-document.querySelector(".prev").addEventListener("click", (event) => {
-    event.preventDefault(); // <--- THIS IS THE KEY FIX
-    clearInterval(autoSlideInterval); // Stop auto-slide on manual click
-    plusSlides(-1);
-    autoSlideInterval = setInterval(() => plusSlides(1), 5000); // Restart auto-slide
-});
-
-document.querySelector(".next").addEventListener("click", (event) => {
-    event.preventDefault(); // <--- THIS IS THE KEY FIX
-    clearInterval(autoSlideInterval); // Stop auto-slide on manual click
-    plusSlides(1);
-    autoSlideInterval = setInterval(() => plusSlides(1), 5000); // Restart auto-slide
-});
-</script>

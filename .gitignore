@@ -1,3 +1,14 @@
 # Python compiled files
 __pycache__/
 *.pyc
+
+# Google Cloud Credentials (YOUR ACTUAL FILENAME HERE)
+django-vision-ai-6839fef9dc39.json
+
+# Database
+db.sqlite3
+
+# Virtual environment
+.venv/
+venv/
+env/

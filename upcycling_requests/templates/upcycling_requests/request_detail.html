@@ -258,7 +258,7 @@
     {% if offer_form and request.status == 'Request Received' and not has_made_offer %}
     <div class="offer-form-container">
         <h3>Make an Offer</h3>
-        <form method="post" action="{% url 'make_offer' request.id %}">
+        <form method="post" action="{% url 'upcycling_requests:make_offer' request.id %}">
             {% csrf_token %}
             {# Render each field individually to apply custom styling #}
             <div class="form-field">

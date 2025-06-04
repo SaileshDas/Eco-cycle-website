@@ -68,7 +68,7 @@
         <ul class="conversation-list"> {# Applied new class here #}
             {% for conversation in conversations %}
                 <li class="conversation-item"> {# Applied new class here #}
-                    <a href="{% url 'conversation_detail' conversation.id %}" class="conversation-link"> {# Applied new class here #}
+                    <a href="{% url 'upcycling_requests:conversation_detail' conversation.id %}" class="conversation-link"> {# Applied new class here #}
                         <strong>
                             Conversation with
                             {% if conversation.participant1 == request.user %}

@@ -108,7 +108,7 @@
                 <p><strong>Pickup Location:</strong> {{ request.pickup_location }}</p>
                 <p><strong>Budget:</strong> {% if request.budget %}${{ request.budget }}{% else %}Not specified{% endif %}</p>
                 <p><strong>Submitted On:</strong> {{ request.created_at|date:"F d, Y P" }}</p>
-                <a href="{% url 'request_detail' request_id=request.id %}">View Details & Make Offer</a>
+                <a href="{% url 'upcycling_requests:request_detail' request_id=request.id %}">View Details & Make Offer</a>
             </div>
         {% endfor %}
     {% else %}

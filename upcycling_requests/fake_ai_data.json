@@ -1,0 +1,3656 @@
+[
+  {
+    "keyword": "chair",
+    "product_type": "Broken Wooden Dining Chair",
+    "material_details": "Oak Wood, Torn Upholstery Fabric, Steel Nails",
+    "raw_labels": ["Furniture", "Chair", "Wood", "Textile", "Damaged", "Dining", "Seating"]
+  },
+  {
+    "keyword": "jeans",
+    "product_type": "Faded Blue Denim Jeans",
+    "material_details": "Cotton Denim, Polyester Thread, Metal Zipper",
+    "raw_labels": ["Clothing", "Jeans", "Denim", "Fabric", "Worn", "Apparel", "Cotton"]
+  },
+  {
+    "keyword": "bottle",
+    "product_type": "Assorted Clear Glass Bottles",
+    "material_details": "Soda-Lime Glass, Plastic Caps, Paper Labels",
+    "raw_labels": ["Container", "Bottle", "Glass", "Transparent", "Recyclable", "Beverage Container"]
+  },
+  {
+    "keyword": "plastic",
+    "product_type": "Mixed Household Plastic Waste",
+    "material_details": "HDPE, PET, PP Plastics, Film Packaging",
+    "raw_labels": ["Plastic", "Waste", "Recyclable", "Household Items", "Mixed Materials"]
+  },
+  {
+    "keyword": "fabric",
+    "product_type": "Large Textile Remnants",
+    "material_details": "Cotton, Linen, Synthetic Blends, Wool Scraps",
+    "raw_labels": ["Textile", "Fabric", "Scraps", "Material", "Cloth", "Assorted"]
+  },
+  {
+    "keyword": "wood",
+    "product_type": "Damaged Wooden Pallets",
+    "material_details": "Pine Wood, Corroded Nails",
+    "raw_labels": ["Industrial Material", "Wood", "Pallet", "Timber", "Shipping"]
+  },
+  {
+    "keyword": "tire",
+    "product_type": "Worn-out Car Tire",
+    "material_details": "Vulcanized Rubber, Steel Belting, Nylon Cord",
+    "raw_labels": ["Tire", "Vehicle Part", "Rubber", "Black", "Heavy Duty"]
+  },
+  {
+    "keyword": "lamp",
+    "product_type": "Non-functional Desk Lamp",
+    "material_details": "Metal Base, Plastic Shade, Electrical Wiring",
+    "raw_labels": ["Lighting", "Appliance", "Metal", "Plastic", "Home Decor"]
+  },
+  {
+    "keyword": "box",
+    "product_type": "Flattened Cardboard Boxes",
+    "material_details": "Corrugated Cardboard, Adhesive Tape Residue",
+    "raw_labels": ["Packaging", "Cardboard", "Brown", "Empty", "Recyclable"]
+  },
+  {
+    "keyword": "electronics",
+    "product_type": "Obsolete Computer Tower",
+    "material_details": "Steel Casing, Circuit Boards, Copper Wires",
+    "raw_labels": ["Electronics", "Computer", "E-waste", "Metal", "Circuitry"]
+  },
+  {
+    "keyword": "jar",
+    "product_type": "Variety of Empty Glass Jars",
+    "material_details": "Clear Glass, Metal Lids, Residue",
+    "raw_labels": ["Container", "Glass", "Kitchenware", "Food Packaging", "Transparent"]
+  },
+  {
+    "keyword": "door",
+    "product_type": "Old Solid Wood Panel Door",
+    "material_details": "Pine Wood, Peeling Paint, Rusty Hinges",
+    "raw_labels": ["Building Material", "Door", "Wood", "Architectural", "Antique"]
+  },
+  {
+    "keyword": "shelf",
+    "product_type": "Dismantled Wire Shelving Unit",
+    "material_details": "Chrome-Plated Steel",
+    "raw_labels": ["Furniture", "Shelf", "Metal", "Storage", "Modular"]
+  },
+  {
+    "keyword": "cabinet",
+    "product_type": "Damaged Kitchen Base Cabinet",
+    "material_details": "Particle Board, Melamine Veneer, Plastic Handles",
+    "raw_labels": ["Furniture", "Cabinet", "Kitchen", "Wood Composite", "Storage"]
+  },
+  {
+    "keyword": "table",
+    "product_type": "Scratched Wooden End Table",
+    "material_details": "Maple Wood, Varnish Coating",
+    "raw_labels": ["Furniture", "Table", "Wood", "Living Room", "Damaged"]
+  },
+  {
+    "keyword": "mirror",
+    "product_type": "Cracked Framed Wall Mirror",
+    "material_details": "Silvered Glass, Gold-painted Wood Frame",
+    "raw_labels": ["Home Decor", "Mirror", "Glass", "Reflection", "Broken"]
+  },
+  {
+    "keyword": "curtain",
+    "product_type": "Heavy Faded Drapes",
+    "material_details": "Velvet Fabric, Cotton Lining",
+    "raw_labels": ["Textile", "Curtain", "Window Treatment", "Fabric", "Soft Furnishing"]
+  },
+  {
+    "keyword": "shoe",
+    "product_type": "Pair of Worn Sneakers",
+    "material_details": "Canvas, Rubber Sole, Polyester Laces",
+    "raw_labels": ["Footwear", "Shoe", "Textile", "Rubber", "Casual"]
+  },
+  {
+    "keyword": "brick",
+    "product_type": "Loose Red Clay Bricks",
+    "material_details": "Fired Clay, Mortar Residue",
+    "raw_labels": ["Construction Material", "Brick", "Masonry", "Building Block"]
+  },
+  {
+    "keyword": "pipe",
+    "product_type": "Scrap Copper Piping",
+    "material_details": "Copper Metal, Soldering Residue",
+    "raw_labels": ["Plumbing", "Metal", "Pipe", "Industrial", "Copper"]
+  },
+  {
+    "keyword": "can",
+    "product_type": "Crushed Aluminum Drink Cans",
+    "material_details": "Aluminum",
+    "raw_labels": ["Container", "Can", "Metal", "Beverage", "Recyclable"]
+  },
+  {
+    "keyword": "magazine",
+    "product_type": "Large Stack of Glossy Magazines",
+    "material_details": "Coated Paper, Color Ink",
+    "raw_labels": ["Paper Product", "Magazine", "Print Media", "Reading Material"]
+  },
+  {
+    "keyword": "newspaper",
+    "product_type": "Bundled Old Newspapers",
+    "material_details": "Newsprint Paper, Black Ink",
+    "raw_labels": ["Paper Product", "Newspaper", "Print Media", "Recyclable"]
+  },
+  {
+    "keyword": "phone",
+    "product_type": "Cracked Screen Smartphone",
+    "material_details": "Glass, Plastic, Lithium-Ion Battery",
+    "raw_labels": ["Electronics", "Mobile Phone", "Gadget", "Damaged", "E-waste"]
+  },
+  {
+    "keyword": "keyboard",
+    "product_type": "Non-functional PC Keyboard",
+    "material_details": "ABS Plastic, Rubber Domes, Copper Traces",
+    "raw_labels": ["Electronics", "Computer Peripheral", "Input Device", "Plastic"]
+  },
+  {
+    "keyword": "wire",
+    "product_type": "Coiled Electrical Cables",
+    "material_details": "Copper Wire, PVC Insulation",
+    "raw_labels": ["Electronics", "Wire", "Cable", "Electrical", "Copper"]
+  },
+  {
+    "keyword": "pvc",
+    "product_type": "Assorted PVC Pipe Sections",
+    "material_details": "Polyvinyl Chloride Plastic",
+    "raw_labels": ["Plumbing", "Plastic", "Pipe", "Construction"]
+  },
+  {
+    "keyword": "garden",
+    "product_type": "Broken Garden Hose Reel",
+    "material_details": "Plastic, Metal Axle",
+    "raw_labels": ["Garden Equipment", "Plastic", "Metal", "Outdoor"]
+  },
+  {
+    "keyword": "window",
+    "product_type": "Shattered Window Pane",
+    "material_details": "Float Glass, Putty Residue",
+    "raw_labels": ["Building Material", "Window", "Glass", "Broken", "Transparent"]
+  },
+  {
+    "keyword": "tile",
+    "product_type": "Broken Ceramic Wall Tiles",
+    "material_details": "Glazed Ceramic",
+    "raw_labels": ["Construction Material", "Tile", "Ceramic", "Bathroom"]
+  },
+  {
+    "keyword": "bucket",
+    "product_type": "Dented Metal Bucket",
+    "material_details": "Galvanized Steel, Rust",
+    "raw_labels": ["Container", "Metal", "Utility", "Household", "Dented"]
+  },
+  {
+    "keyword": "umbrella",
+    "product_type": "Torn Beach Umbrella",
+    "material_details": "Aluminum Pole, Polyester Fabric",
+    "raw_labels": ["Outdoor Accessory", "Umbrella", "Fabric", "Aluminum"]
+  },
+  {
+    "keyword": "luggage",
+    "product_type": "Vintage Leather Suitcase",
+    "material_details": "Genuine Leather, Brass Buckles, Fabric Lining",
+    "raw_labels": ["Luggage", "Travel", "Leather", "Antique", "Bag"]
+  },
+  {
+    "keyword": "books",
+    "product_type": "Stack of Discarded Hardcover Books",
+    "material_details": "Paper, Cardboard, Cloth Binding",
+    "raw_labels": ["Paper Product", "Books", "Reading Material", "Library"]
+  },
+  {
+    "keyword": "skateboard",
+    "product_type": "Worn Skateboard Deck",
+    "material_details": "Layered Maple Plywood, Grip Tape",
+    "raw_labels": ["Sporting Goods", "Skateboard", "Wood", "Recreation"]
+  },
+  {
+    "keyword": "bike",
+    "product_type": "Parts of a Disassembled Bicycle",
+    "material_details": "Steel Frame, Aluminum Rims, Rubber Tires",
+    "raw_labels": ["Vehicle", "Bicycle", "Metal", "Rubber", "Parts"]
+  },
+  {
+    "keyword": "pot",
+    "product_type": "Cracked Ceramic Plant Pot",
+    "material_details": "Glazed Terracotta",
+    "raw_labels": ["Gardenware", "Pot", "Ceramic", "Planter"]
+  },
+  {
+    "keyword": "tool",
+    "product_type": "Rusty Wrench Set",
+    "material_details": "Forged Steel, Rubberized Grips",
+    "raw_labels": ["Tools", "Metal", "Hardware", "Repair"]
+  },
+  {
+    "keyword": "radio",
+    "product_type": "Old Transistor Radio",
+    "material_details": "Plastic Casing, Metal Speaker Grille, Circuit Board",
+    "raw_labels": ["Electronics", "Audio Device", "Retro", "Plastic", "Analog"]
+  },
+  {
+    "keyword": "record",
+    "product_type": "Scratched Vinyl LP Records",
+    "material_details": "Polyvinyl Chloride (PVC)",
+    "raw_labels": ["Audio Media", "Vinyl", "Music", "Record", "Plastic"]
+  },
+  {
+    "keyword": "camera",
+    "product_type": "Vintage Film Camera Body",
+    "material_details": "Metal, Leatherette, Glass Lens",
+    "raw_labels": ["Electronics", "Camera", "Photography", "Retro", "Metal"]
+  },
+  {
+    "keyword": "toy",
+    "product_type": "Mixed Children's Toys",
+    "material_details": "Various Plastics, Rubber, Small Metal Components",
+    "raw_labels": ["Toy", "Plastic", "Child's Plaything", "Assorted"]
+  },
+  {
+    "keyword": "basket",
+    "product_type": "Woven Willow Laundry Basket",
+    "material_details": "Natural Willow, Cotton Lining",
+    "raw_labels": ["Container", "Basket", "Woven", "Natural Fiber"]
+  },
+  {
+    "keyword": "cardboard_tube",
+    "product_type": "Large Cardboard Shipping Tubes",
+    "material_details": "Rolled Cardboard",
+    "raw_labels": ["Packaging", "Cardboard", "Tube", "Recyclable"]
+  },
+  {
+    "keyword": "hanger",
+    "product_type": "Assorted Clothes Hangers",
+    "material_details": "Plastic, Wire Metal, Lacquered Wood",
+    "raw_labels": ["Clothing Accessory", "Hanger", "Plastic", "Metal", "Wood"]
+  },
+  {
+    "keyword": "cooler",
+    "product_type": "Broken Hard-Sided Cooler",
+    "material_details": "HDPE Plastic, Polyurethane Foam Insulation",
+    "raw_labels": ["Container", "Plastic", "Insulated", "Outdoor Gear"]
+  },
+  {
+    "keyword": "doorframe",
+    "product_type": "Scrap Aluminum Door Frame",
+    "material_details": "Aluminum Alloy",
+    "raw_labels": ["Building Material", "Metal", "Frame", "Construction"]
+  },
+  {
+    "keyword": "ladder",
+    "product_type": "Bent Aluminum Extension Ladder",
+    "material_details": "Aluminum Alloy, Plastic Caps",
+    "raw_labels": ["Tool", "Ladder", "Metal", "Construction"]
+  },
+  {
+    "keyword": "pallet",
+    "product_type": "Heavily Damaged Wooden Pallet",
+    "material_details": "Mixed Hardwood, Rusty Nails",
+    "raw_labels": ["Industrial Material", "Wood", "Pallet", "Shipping"]
+  },
+  {
+    "keyword": "cork",
+    "product_type": "Bag of Used Wine Corks",
+    "material_details": "Natural Cork",
+    "raw_labels": ["Natural Material", "Cork", "Bottle Stopper", "Wine Byproduct"]
+  },
+  {
+    "keyword": "bookcase",
+    "product_type": "Disassembled Particle Board Bookcase",
+    "material_details": "Particle Board, Melamine Laminate",
+    "raw_labels": ["Furniture", "Bookcase", "Wood Composite", "Storage"]
+  },
+  {
+    "keyword": "utensil",
+    "product_type": "Mixed Metal Kitchen Utensils",
+    "material_details": "Stainless Steel, Aluminum, Plastic Handles",
+    "raw_labels": ["Kitchenware", "Utensil", "Metal", "Plastic"]
+  },
+  {
+    "keyword": "boot",
+    "product_type": "Pair of Worn Work Boots",
+    "material_details": "Genuine Leather, Rubber Sole, Steel Toe",
+    "raw_labels": ["Footwear", "Boots", "Leather", "Workwear"]
+  },
+  {
+    "keyword": "hose",
+    "product_type": "Frayed Garden Hose",
+    "material_details": "Reinforced Rubber, Brass Fittings",
+    "raw_labels": ["Garden Equipment", "Hose", "Rubber", "Outdoor"]
+  },
+  {
+    "keyword": "grill",
+    "product_type": "Rusty Cast Iron Grill Grate",
+    "material_details": "Cast Iron, Heavy Rust",
+    "raw_labels": ["Outdoor Cooking", "Grill", "Metal", "Cast Iron"]
+  },
+  {
+    "keyword": "fence",
+    "product_type": "Broken Plastic Fence Sections",
+    "material_details": "PVC Plastic",
+    "raw_labels": ["Garden", "Fence", "Plastic", "Outdoor"]
+  },
+  {
+    "keyword": "patio_umbrella",
+    "product_type": "Torn Patio Umbrella Canopy",
+    "material_details": "Acrylic Fabric, Aluminum Pole",
+    "raw_labels": ["Outdoor Furniture", "Umbrella", "Fabric", "Aluminum"]
+  },
+  {
+    "keyword": "suitcase",
+    "product_type": "Damaged Hard-Shell Suitcase",
+    "material_details": "Polycarbonate Plastic, Aluminum Handle, Nylon Zipper",
+    "raw_labels": ["Luggage", "Travel", "Plastic", "Damaged"]
+  },
+  {
+    "keyword": "window_frame",
+    "product_type": "Old Wooden Window Frame",
+    "material_details": "Weathered Wood, Peeling Paint",
+    "raw_labels": ["Building Material", "Window", "Wood", "Frame"]
+  },
+  {
+    "keyword": "drainpipe",
+    "product_type": "Segment of Galvanized Drainpipe",
+    "material_details": "Galvanized Steel, Dirt Residue",
+    "raw_labels": ["Plumbing", "Metal", "Pipe", "Outdoor"]
+  },
+  {
+    "keyword": "towel",
+    "product_type": "Worn-out Cotton Bath Towel",
+    "material_details": "Terry Cloth Cotton, Frayed Edges",
+    "raw_labels": ["Textile", "Towel", "Cotton", "Bathroom"]
+  },
+  {
+    "keyword": "bed_frame",
+    "product_type": "Dismantled Wooden Bed Frame",
+    "material_details": "Solid Pine Wood, Metal Brackets",
+    "raw_labels": ["Furniture", "Bed", "Wood", "Bedroom"]
+  },
+  {
+    "keyword": "mug",
+    "product_type": "Chipped Ceramic Coffee Mug",
+    "material_details": "Glazed Stoneware Ceramic",
+    "raw_labels": ["Kitchenware", "Mug", "Ceramic", "Drinkware"]
+  },
+  {
+    "keyword": "backpack",
+    "product_type": "Torn Fabric Hiking Backpack",
+    "material_details": "Nylon Fabric, Plastic Buckles, Aluminum Frame",
+    "raw_labels": ["Bag", "Backpack", "Fabric", "Outdoor Gear"]
+  },
+  {
+    "keyword": "picture_frame",
+    "product_type": "Ornate Empty Picture Frame",
+    "material_details": "Molded Polymer, Gold Leaf Effect",
+    "raw_labels": ["Home Decor", "Frame", "Plastic", "Art Display"]
+  },
+  {
+    "keyword": "tire_rim",
+    "product_type": "Corroded Steel Tire Rim",
+    "material_details": "Steel, Heavy Rust",
+    "raw_labels": ["Vehicle Part", "Rim", "Metal", "Automotive"]
+  },
+  {
+    "keyword": "scooter",
+    "product_type": "Broken Electric Scooter",
+    "material_details": "Aluminum Frame, Plastic Deck, Lithium Battery (internal)",
+    "raw_labels": ["Vehicle", "Scooter", "Aluminum", "Plastic", "Electronics"]
+  },
+  {
+    "keyword": "pottery",
+    "product_type": "Collection of Broken Terracotta Pots",
+    "material_details": "Unglazed Fired Clay",
+    "raw_labels": ["Ceramic", "Pottery", "Clay", "Garden Decor"]
+  },
+  {
+    "keyword": "car_seat",
+    "product_type": "Expired Child Car Seat",
+    "material_details": "HDPE Plastic Shell, Polyester Fabric, Metal Hardware",
+    "raw_labels": ["Automotive", "Safety Seat", "Plastic", "Fabric"]
+  },
+  {
+    "keyword": "carpet",
+    "product_type": "Stained Area Rug",
+    "material_details": "Nylon Fibers, Jute Backing",
+    "raw_labels": ["Flooring", "Carpet", "Textile", "Home Furnishing"]
+  },
+  {
+    "keyword": "dryer",
+    "product_type": "Non-functional Hair Dryer",
+    "material_details": "ABS Plastic, Heating Element (metal), Fan",
+    "raw_labels": ["Appliance", "Electronics", "Plastic", "Hair Care"]
+  },
+  {
+    "keyword": "chain",
+    "product_type": "Long Rusty Metal Chain",
+    "material_details": "Steel, Oxide Rust",
+    "raw_labels": ["Metal", "Chain", "Hardware", "Industrial"]
+  },
+  {
+    "keyword": "shovel",
+    "product_type": "Broken Digging Shovel",
+    "material_details": "Steel Blade, Ash Wood Handle",
+    "raw_labels": ["Tool", "Garden", "Metal", "Wood"]
+  },
+  {
+    "keyword": "blender",
+    "product_type": "Countertop Blender (motor seized)",
+    "material_details": "ABS Plastic Base, Glass Jar, Stainless Steel Blades",
+    "raw_labels": ["Appliance", "Kitchenware", "Plastic", "Glass", "Electronics"]
+  },
+  {
+    "keyword": "guitar",
+    "product_type": "Damaged Acoustic Guitar Body",
+    "material_details": "Spruce Top, Mahogany Sides/Back, Rosewood Fretboard",
+    "raw_labels": ["Musical Instrument", "Guitar", "Wood", "Damaged"]
+  },
+  {
+    "keyword": "glove",
+    "product_type": "Single Worn Gardening Glove",
+    "material_details": "Cotton Canvas, Nitrile Coating",
+    "raw_labels": ["Accessory", "Glove", "Textile", "Garden"]
+  },
+  {
+    "keyword": "cd",
+    "product_type": "Stack of Unused Music CDs",
+    "material_details": "Polycarbonate, Aluminum Layer",
+    "raw_labels": ["Digital Media", "CD", "Plastic", "Music"]
+  },
+  {
+    "keyword": "vcr",
+    "product_type": "Obsolete VHS Player",
+    "material_details": "ABS Plastic Casing, Metal Components",
+    "raw_labels": ["Electronics", "Video Player", "Retro", "Plastic"]
+  },
+  {
+    "keyword": "speaker",
+    "product_type": "Broken Bookshelf Speaker",
+    "material_details": "MDF Wood, Fabric Grille, Paper Cone Speaker",
+    "raw_labels": ["Electronics", "Audio Equipment", "Wood", "Fabric"]
+  },
+  {
+    "keyword": "paint_can",
+    "product_type": "Empty Metal Paint Can",
+    "material_details": "Steel, Dried Paint Residue",
+    "raw_labels": ["Container", "Metal", "Paint", "Art Supplies"]
+  },
+  {
+    "keyword": "clothes_iron",
+    "product_type": "Broken Steam Iron",
+    "material_details": "Plastic Handle, Aluminum Soleplate",
+    "raw_labels": ["Appliance", "Electronics", "Plastic", "Metal"]
+  },
+  {
+    "keyword": "wicker",
+    "product_type": "Damaged Wicker Chair Seat",
+    "material_details": "Woven Rattan, Wood Frame",
+    "raw_labels": ["Furniture", "Wicker", "Natural Fiber", "Seating"]
+  },
+  {
+    "keyword": "shredder",
+    "product_type": "Non-functional Paper Shredder",
+    "material_details": "Plastic Housing, Steel Blades",
+    "raw_labels": ["Office Equipment", "Electronics", "Plastic", "Metal"]
+  },
+  {
+    "keyword": "dvd_player",
+    "product_type": "Broken DVD Player",
+    "material_details": "Plastic Casing, Optical Drive (metal)",
+    "raw_labels": ["Electronics", "Media Player", "Plastic", "E-waste"]
+  },
+  {
+    "keyword": "garden_tool",
+    "product_type": "Rusty Trowel",
+    "material_details": "Carbon Steel, Wooden Handle",
+    "raw_labels": ["Garden Tool", "Metal", "Wood"]
+  },
+  {
+    "keyword": "skateboard_truck",
+    "product_type": "Worn Skateboard Truck Assembly",
+    "material_details": "Aluminum Alloy, Steel Axle, Urethane Bushings",
+    "raw_labels": ["Sporting Goods", "Skateboard Part", "Aluminum", "Metal"]
+  },
+  {
+    "keyword": "water_heater",
+    "product_type": "Old Electric Water Heater Tank",
+    "material_details": "Steel Tank, Copper Elements, Insulation",
+    "raw_labels": ["Appliance", "Metal", "Plumbing", "Heavy"]
+  },
+  {
+    "keyword": "toaster",
+    "product_type": "Non-working Toaster",
+    "material_details": "Stainless Steel, Plastic Knobs, Heating Elements",
+    "raw_labels": ["Appliance", "Kitchenware", "Metal", "Plastic"]
+  },
+  {
+    "keyword": "fan",
+    "product_type": "Broken Oscillating Fan",
+    "material_details": "Plastic Blades, Metal Motor, Plastic Casing",
+    "raw_labels": ["Appliance", "Plastic", "Metal", "Cooling"]
+  },
+  {
+    "keyword": "bike_wheel",
+    "product_type": "Bent Bicycle Wheel",
+    "material_details": "Aluminum Rim, Steel Spokes, Rubber Tire",
+    "raw_labels": ["Vehicle Part", "Bicycle", "Aluminum", "Rubber"]
+  },
+  {
+    "keyword": "birdcage",
+    "product_type": "Rusty Decorative Birdcage",
+    "material_details": "Wrought Iron, Peeling Paint",
+    "raw_labels": ["Home Decor", "Metal", "Cage", "Decorative"]
+  },
+  {
+    "keyword": "planter",
+    "product_type": "Large Plastic Planter",
+    "material_details": "HDPE Plastic",
+    "raw_labels": ["Gardenware", "Plastic", "Planter", "Outdoor"]
+  },
+  {
+    "keyword": "printer",
+    "product_type": "Non-functional Inkjet Printer",
+    "material_details": "ABS Plastic, Steel Components, Circuit Boards",
+    "raw_labels": ["Office Equipment", "Electronics", "Plastic", "E-waste"]
+  },
+  {
+    "keyword": "sewing_machine",
+    "product_type": "Vintage Sewing Machine Head",
+    "material_details": "Cast Iron, Steel Components",
+    "raw_labels": ["Appliance", "Metal", "Textile Craft", "Antique"]
+  },
+  {
+    "keyword": "skis",
+    "product_type": "Old Wooden Skis",
+    "material_details": "Laminated Wood, Metal Edges, Plastic Bindings",
+    "raw_labels": ["Sporting Goods", "Wood", "Winter Sports"]
+  },
+  {
+    "keyword": "tennis_racket",
+    "product_type": "Broken Tennis Racket",
+    "material_details": "Graphite Composite, Nylon Strings",
+    "raw_labels": ["Sporting Goods", "Composite", "Tennis"]
+  },
+  {
+    "keyword": "fire_extinguisher",
+    "product_type": "Empty Fire Extinguisher Tank",
+    "material_details": "Steel Cylinder, Brass Valve",
+    "raw_labels": ["Safety Equipment", "Metal", "Cylinder"]
+  },
+  {
+    "keyword": "faucet",
+    "product_type": "Leaky Bathroom Faucet",
+    "material_details": "Brass, Chrome Plating, Rubber Washers",
+    "raw_labels": ["Plumbing", "Metal", "Bathroom"]
+  },
+  {
+    "keyword": "roofing",
+    "product_type": "Torn Asphalt Roofing Shingles",
+    "material_details": "Asphalt, Fiberglass Mat, Mineral Granules",
+    "raw_labels": ["Construction Material", "Roofing", "Asphalt", "Shingles"]
+  },
+  {
+    "keyword": "drainage",
+    "product_type": "Corroded Metal Drainage Grate",
+    "material_details": "Cast Iron, Heavy Rust",
+    "raw_labels": ["Outdoor", "Metal", "Drainage", "Grate"]
+  },
+  {
+    "keyword": "toolbox",
+    "product_type": "Rusty Metal Toolbox",
+    "material_details": "Steel, Paint (chipped)",
+    "raw_labels": ["Storage", "Metal", "Tool Container"]
+  },
+  {
+    "keyword": "trolley",
+    "product_type": "Broken Shopping Trolley",
+    "material_details": "Steel Wire, Plastic Wheels",
+    "raw_labels": ["Shopping", "Metal", "Plastic", "Cart"]
+  },
+  {
+    "keyword": "water_bottle",
+    "product_type": "Dented Stainless Steel Water Bottle",
+    "material_details": "Stainless Steel, Silicone Seal",
+    "raw_labels": ["Container", "Metal", "Drinkware", "Reusable"]
+  },
+  {
+    "keyword": "cushion",
+    "product_type": "Faded Outdoor Cushion",
+    "material_details": "Polyester Fabric, Foam Filling",
+    "raw_labels": ["Home Decor", "Textile", "Outdoor", "Seating"]
+  },
+  {
+    "keyword": "sculpture",
+    "product_type": "Broken Garden Gnome Sculpture",
+    "material_details": "Resin, Paint (peeling)",
+    "raw_labels": ["Garden Decor", "Resin", "Figurine", "Damaged"]
+  },
+  {
+    "keyword": "suit",
+    "product_type": "Old Wool Suit Jacket",
+    "material_details": "Wool Fabric, Polyester Lining, Plastic Buttons",
+    "raw_labels": ["Clothing", "Suit", "Wool", "Apparel"]
+  },
+  {
+    "keyword": "backpack_frame",
+    "product_type": "Aluminum Backpack Frame",
+    "material_details": "Aluminum Tubing",
+    "raw_labels": ["Outdoor Gear", "Aluminum", "Frame"]
+  },
+  {
+    "keyword": "fishing_rod",
+    "product_type": "Broken Fishing Rod",
+    "material_details": "Fiberglass Rod, Cork Handle, Metal Guides",
+    "raw_labels": ["Sporting Goods", "Fishing", "Fiberglass", "Cork"]
+  },
+  {
+    "keyword": "golf_club",
+    "product_type": "Single Damaged Golf Club",
+    "material_details": "Steel Shaft, Metal Head, Rubber Grip",
+    "raw_labels": ["Sporting Goods", "Golf", "Metal"]
+  },
+  {
+    "keyword": "picture_frame",
+    "product_type": "Empty Wooden Picture Frame",
+    "material_details": "Oak Wood, Clear Finish",
+    "raw_labels": ["Home Decor", "Frame", "Wood", "Art Display"]
+  },
+  {
+    "keyword": "doll",
+    "product_type": "Old Porcelain Doll (chipped)",
+    "material_details": "Porcelain, Fabric Clothes",
+    "raw_labels": ["Toy", "Doll", "Ceramic", "Vintage"]
+  },
+  {
+    "keyword": "vase",
+    "product_type": "Cracked Ceramic Flower Vase",
+    "material_details": "Glazed Ceramic",
+    "raw_labels": ["Home Decor", "Vase", "Ceramic", "Container"]
+  },
+  {
+    "keyword": "mug_set",
+    "product_type": "Mismatched Ceramic Mug Set",
+    "material_details": "Stoneware, Glaze",
+    "raw_labels": ["Kitchenware", "Mugs", "Ceramic", "Assorted"]
+  },
+  {
+    "keyword": "bicycle_tire",
+    "product_type": "Punctured Bicycle Tire",
+    "material_details": "Rubber, Fabric Carcass",
+    "raw_labels": ["Vehicle Part", "Bicycle", "Rubber", "Tire"]
+  },
+  {
+    "keyword": "skateboard_wheels",
+    "product_type": "Worn Skateboard Wheels",
+    "material_details": "Urethane Plastic, Steel Bearings",
+    "raw_labels": ["Sporting Goods", "Skateboard Part", "Plastic", "Wheels"]
+  },
+  {
+    "keyword": "helmet",
+    "product_type": "Cracked Bicycle Helmet",
+    "material_details": "EPS Foam, Polycarbonate Shell, Plastic Straps",
+    "raw_labels": ["Safety Gear", "Plastic", "Foam"]
+  },
+  {
+    "keyword": "fishing_reel",
+    "product_type": "Broken Fishing Reel",
+    "material_details": "Aluminum, Plastic Gears",
+    "raw_labels": ["Sporting Goods", "Fishing", "Aluminum", "Plastic"]
+  },
+  {
+    "keyword": "camera_lens",
+    "product_type": "Scratched Camera Lens",
+    "material_details": "Optical Glass, Aluminum Housing",
+    "raw_labels": ["Photography", "Glass", "Aluminum", "Lens"]
+  },
+  {
+    "keyword": "headphones",
+    "product_type": "Broken Over-Ear Headphones",
+    "material_details": "Plastic, Metal, Leatherette Ear Pads",
+    "raw_labels": ["Electronics", "Audio Device", "Plastic", "Damaged"]
+  },
+  {
+    "keyword": "router",
+    "product_type": "Obsolete Wi-Fi Router",
+    "material_details": "ABS Plastic, Circuit Board, Antennae",
+    "raw_labels": ["Electronics", "Network Device", "Plastic", "E-waste"]
+  },
+  {
+    "keyword": "game_console",
+    "product_type": "Non-working Video Game Console",
+    "material_details": "ABS Plastic, Metal Heatsinks, Circuit Board",
+    "raw_labels": ["Electronics", "Gaming", "Plastic", "E-waste"]
+  },
+  {
+    "keyword": "dvd_discs",
+    "product_type": "Stack of Scratched DVD Discs",
+    "material_details": "Polycarbonate Plastic",
+    "raw_labels": ["Digital Media", "DVD", "Plastic", "Obsolete"]
+  },
+  {
+    "keyword": "printer_cartridge",
+    "product_type": "Empty Printer Ink Cartridges",
+    "material_details": "Plastic, Residual Ink, Circuitry",
+    "raw_labels": ["Office Supplies", "Plastic", "E-waste"]
+  },
+  {
+    "keyword": "scanner",
+    "product_type": "Broken Flatbed Scanner",
+    "material_details": "Plastic Casing, Glass Platen, Metal Components",
+    "raw_labels": ["Office Equipment", "Electronics", "Plastic", "Glass"]
+  },
+  {
+    "keyword": "projector",
+    "product_type": "Non-functional Digital Projector",
+    "material_details": "Plastic Housing, Glass Lens, Lamp (mercury)",
+    "raw_labels": ["Electronics", "Presentation Equipment", "Plastic", "Glass"]
+  },
+  {
+    "keyword": "remote_control",
+    "product_type": "Broken TV Remote Control",
+    "material_details": "ABS Plastic, Rubber Buttons, Small Circuit Board",
+    "raw_labels": ["Electronics", "Plastic", "Control Device"]
+  },
+  {
+    "keyword": "speakers",
+    "product_type": "Pair of Old Computer Speakers",
+    "material_details": "Plastic Housing, Paper Cones, Copper Wire",
+    "raw_labels": ["Electronics", "Audio Equipment", "Plastic", "Damaged"]
+  },
+  {
+    "keyword": "power_supply",
+    "product_type": "Discarded Computer Power Supply Unit",
+    "material_details": "Steel Casing, Copper Coils, Plastic Wires",
+    "raw_labels": ["Electronics", "Computer Part", "Metal", "E-waste"]
+  },
+  {
+    "keyword": "charger",
+    "product_type": "Assorted Mobile Phone Chargers",
+    "material_details": "Plastic Casing, Copper Wire",
+    "raw_labels": ["Electronics", "Charger", "Plastic", "Cable"]
+  },
+  {
+    "keyword": "battery",
+    "product_type": "Dead Laptop Battery Pack",
+    "material_details": "Lithium-Ion Cells, Plastic Casing, Circuit Board",
+    "raw_labels": ["Electronics", "Battery", "E-waste", "Hazardous"]
+  },
+  {
+    "keyword": "fire_pit",
+    "product_type": "Rusty Outdoor Fire Pit Bowl",
+    "material_details": "Steel, Heavy Rust",
+    "raw_labels": ["Outdoor Decor", "Metal", "Garden"]
+  },
+  {
+    "keyword": "bird_feeder",
+    "product_type": "Broken Wooden Bird Feeder",
+    "material_details": "Pine Wood, Plastic Panes",
+    "raw_labels": ["Garden Decor", "Wood", "Plastic"]
+  },
+  {
+    "keyword": "compost_bin",
+    "product_type": "Damaged Plastic Compost Bin",
+    "material_details": "Recycled Plastic",
+    "raw_labels": ["Garden Equipment", "Plastic", "Compost"]
+  },
+  {
+    "keyword": "fountain",
+    "product_type": "Broken Outdoor Water Fountain",
+    "material_details": "Concrete, Small Pump (metal/plastic)",
+    "raw_labels": ["Garden Decor", "Concrete", "Outdoor"]
+  },
+  {
+    "keyword": "gnome",
+    "product_type": "Chipped Garden Gnome",
+    "material_details": "Ceramic, Paint",
+    "raw_labels": ["Garden Decor", "Ceramic", "Figurine"]
+  },
+  {
+    "keyword": "statue",
+    "product_type": "Broken Concrete Garden Statue",
+    "material_details": "Cast Concrete",
+    "raw_labels": ["Garden Decor", "Concrete", "Statue"]
+  },
+  {
+    "keyword": "trellis",
+    "product_type": "Rusty Metal Garden Trellis",
+    "material_details": "Wrought Iron, Rust",
+    "raw_labels": ["Garden Equipment", "Metal", "Support Structure"]
+  },
+  {
+    "keyword": "birdbath",
+    "product_type": "Cracked Concrete Birdbath",
+    "material_details": "Cast Concrete",
+    "raw_labels": ["Garden Decor", "Concrete", "Birdbath"]
+  },
+  {
+    "keyword": "mailbox",
+    "product_type": "Dented Metal Mailbox",
+    "material_details": "Sheet Steel, Paint",
+    "raw_labels": ["Outdoor Fixture", "Metal", "Mail"]
+  },
+  {
+    "keyword": "hose_nozzle",
+    "product_type": "Broken Garden Hose Nozzle",
+    "material_details": "Plastic, Brass Fittings",
+    "raw_labels": ["Garden Equipment", "Plastic", "Brass"]
+  },
+  {
+    "keyword": "rain_barrel",
+    "product_type": "Leaking Plastic Rain Barrel",
+    "material_details": "HDPE Plastic",
+    "raw_labels": ["Garden Equipment", "Plastic", "Water Storage"]
+  },
+  {
+    "keyword": "grill_cover",
+    "product_type": "Torn BBQ Grill Cover",
+    "material_details": "Polyester Fabric",
+    "raw_labels": ["Outdoor Accessory", "Fabric", "Grill"]
+  },
+  {
+    "keyword": "flower_pot",
+    "product_type": "Assorted Plastic Flower Pots",
+    "material_details": "Polypropylene Plastic",
+    "raw_labels": ["Gardenware", "Plastic", "Planter"]
+  },
+  {
+    "keyword": "swing",
+    "product_type": "Old Wooden Swing Seat",
+    "material_details": "Treated Pine Wood, Rope",
+    "raw_labels": ["Outdoor Play", "Wood", "Recreation"]
+  },
+  {
+    "keyword": "picnic_basket",
+    "product_type": "Worn Wicker Picnic Basket",
+    "material_details": "Woven Wicker, Leather Straps",
+    "raw_labels": ["Container", "Wicker", "Natural Fiber", "Outdoor"]
+  },
+  {
+    "keyword": "lantern",
+    "product_type": "Rusty Metal Decorative Lantern",
+    "material_details": "Wrought Iron, Glass Panels",
+    "raw_labels": ["Home Decor", "Metal", "Lighting"]
+  },
+  {
+    "keyword": "candlestick",
+    "product_type": "Dented Brass Candlestick",
+    "material_details": "Brass Alloy",
+    "raw_labels": ["Home Decor", "Metal", "Decorative"]
+  },
+  {
+    "keyword": "clock",
+    "product_type": "Non-working Wall Clock",
+    "material_details": "Plastic Casing, Glass Face, Metal Movement",
+    "raw_labels": ["Home Decor", "Plastic", "Glass"]
+  },
+  {
+    "keyword": "vase_glass",
+    "product_type": "Clear Glass Flower Vase",
+    "material_details": "Soda-Lime Glass",
+    "raw_labels": ["Home Decor", "Glass", "Container", "Floral"]
+  },
+  {
+    "keyword": "sculpture_metal",
+    "product_type": "Broken Metal Abstract Sculpture",
+    "material_details": "Welded Steel",
+    "raw_labels": ["Art", "Metal", "Sculpture", "Abstract"]
+  },
+  {
+    "keyword": "candle_holder",
+    "product_type": "Wooden Pillar Candle Holder",
+    "material_details": "Carved Wood",
+    "raw_labels": ["Home Decor", "Wood", "Lighting"]
+  },
+  {
+    "keyword": "tapestry",
+    "product_type": "Faded Wall Tapestry",
+    "material_details": "Woven Cotton, Dye",
+    "raw_labels": ["Home Decor", "Textile", "Art", "Wall Hanging"]
+  },
+  {
+    "keyword": "rug",
+    "product_type": "Small Woven Area Rug",
+    "material_details": "Wool, Cotton Weft",
+    "raw_labels": ["Flooring", "Textile", "Home Decor", "Wool"]
+  },
+  {
+    "keyword": "doormat",
+    "product_type": "Worn Coir Doormat",
+    "material_details": "Coconut Coir Fibers, Rubber Backing",
+    "raw_labels": ["Home Decor", "Natural Fiber", "Doormat"]
+  },
+  {
+    "keyword": "curtain_rod",
+    "product_type": "Bent Metal Curtain Rod",
+    "material_details": "Steel, Decorative Finials (plastic)",
+    "raw_labels": ["Home Decor", "Metal", "Window Treatment"]
+  },
+  {
+    "keyword": "throw_pillow",
+    "product_type": "Old Decorative Throw Pillow",
+    "material_details": "Polyester Fabric, Synthetic Filling",
+    "raw_labels": ["Home Decor", "Textile", "Pillow", "Soft Furnishing"]
+  },
+  {
+    "keyword": "blanket",
+    "product_type": "Frayed Fleece Blanket",
+    "material_details": "Polyester Fleece",
+    "raw_labels": ["Textile", "Blanket", "Soft", "Home Comfort"]
+  },
+  {
+    "keyword": "quilt",
+    "product_type": "Patchwork Quilt (torn)",
+    "material_details": "Cotton Fabric, Cotton Batting",
+    "raw_labels": ["Textile", "Quilt", "Handmade", "Bedding"]
+  },
+  {
+    "keyword": "tablecloth",
+    "product_type": "Stained Linen Tablecloth",
+    "material_details": "Linen Fabric",
+    "raw_labels": ["Textile", "Tableware", "Linen", "Dining"]
+  },
+  {
+    "keyword": "scarf",
+    "product_type": "Knitted Wool Scarf",
+    "material_details": "Wool Yarn",
+    "raw_labels": ["Clothing Accessory", "Wool", "Knitted", "Fashion"]
+  },
+  {
+    "keyword": "hat",
+    "product_type": "Felt Fedora Hat (crushed)",
+    "material_details": "Wool Felt, Grosgrain Ribbon",
+    "raw_labels": ["Clothing Accessory", "Hat", "Wool", "Fashion"]
+  },
+  {
+    "keyword": "belt",
+    "product_type": "Old Leather Belt with Metal Buckle",
+    "material_details": "Genuine Leather, Brass Buckle",
+    "raw_labels": ["Clothing Accessory", "Leather", "Metal", "Fashion"]
+  },
+  {
+    "keyword": "purse",
+    "product_type": "Damaged Faux Leather Purse",
+    "material_details": "Polyurethane Leather, Polyester Lining, Metal Zipper",
+    "raw_labels": ["Accessory", "Bag", "Faux Leather", "Fashion"]
+  },
+  {
+    "keyword": "wallet",
+    "product_type": "Worn Leather Wallet",
+    "material_details": "Genuine Leather",
+    "raw_labels": ["Accessory", "Leather", "Personal Item"]
+  },
+  {
+    "keyword": "glasses",
+    "product_type": "Broken Plastic Eyeglasses Frame",
+    "material_details": "Acetate Plastic, Metal Hinges",
+    "raw_labels": ["Accessory", "Plastic", "Eyewear"]
+  },
+  {
+    "keyword": "sunglasses",
+    "product_type": "Scratched Plastic Sunglasses",
+    "material_details": "Polycarbonate Lenses, Plastic Frame",
+    "raw_labels": ["Accessory", "Plastic", "Eyewear"]
+  },
+  {
+    "keyword": "jewelry",
+    "product_type": "Tangled Costume Jewelry",
+    "material_details": "Mixed Base Metals, Plastic Beads, Glass Stones",
+    "raw_labels": ["Accessory", "Jewelry", "Metal", "Plastic"]
+  },
+  {
+    "keyword": "necklace",
+    "product_type": "Broken Beaded Necklace",
+    "material_details": "Glass Beads, Nylon Thread",
+    "raw_labels": ["Accessory", "Jewelry", "Glass", "Beads"]
+  },
+  {
+    "keyword": "bracelet",
+    "product_type": "Metal Bangle Bracelet (dented)",
+    "material_details": "Brass, Copper",
+    "raw_labels": ["Accessory", "Jewelry", "Metal"]
+  },
+  {
+    "keyword": "earring",
+    "product_type": "Single Unmatched Earring",
+    "material_details": "Sterling Silver, Gemstone (missing)",
+    "raw_labels": ["Accessory", "Jewelry", "Silver"]
+  },
+  {
+    "keyword": "ring",
+    "product_type": "Costume Ring (missing stone)",
+    "material_details": "Base Metal, Glass Setting",
+    "raw_labels": ["Accessory", "Jewelry", "Metal"]
+  },
+  {
+    "keyword": "watch",
+    "product_type": "Non-working Wrist Watch",
+    "material_details": "Stainless Steel Case, Glass Crystal, Leather Strap",
+    "raw_labels": ["Accessory", "Watch", "Metal", "Leather"]
+  },
+  {
+    "keyword": "backpack_zipper",
+    "product_type": "Backpack with Broken Zipper",
+    "material_details": "Nylon Fabric, Plastic Zipper Teeth",
+    "raw_labels": ["Bag", "Backpack", "Fabric", "Damaged"]
+  },
+  {
+    "keyword": "duffel_bag",
+    "product_type": "Torn Canvas Duffel Bag",
+    "material_details": "Heavy Duty Canvas, Metal Zippers",
+    "raw_labels": ["Bag", "Travel", "Canvas", "Fabric"]
+  },
+  {
+    "keyword": "shopping_bag",
+    "product_type": "Reusable Shopping Bag (worn)",
+    "material_details": "Non-woven Polypropylene Fabric",
+    "raw_labels": ["Bag", "Reusable", "Plastic Fabric"]
+  },
+  {
+    "keyword": "handbag",
+    "product_type": "Vintage Fabric Handbag",
+    "material_details": "Tapestry Fabric, Metal Clasp, Leather Handle",
+    "raw_labels": ["Accessory", "Bag", "Fabric", "Vintage"]
+  },
+  {
+    "keyword": "suit_jacket",
+    "product_type": "Outdated Tweed Suit Jacket",
+    "material_details": "Wool Tweed, Satin Lining, Plastic Buttons",
+    "raw_labels": ["Clothing", "Jacket", "Wool", "Apparel"]
+  },
+  {
+    "keyword": "dress",
+    "product_type": "Torn Evening Dress",
+    "material_details": "Silk Fabric, Sequins (plastic)",
+    "raw_labels": ["Clothing", "Dress", "Silk", "Damaged"]
+  },
+  {
+    "keyword": "shirt",
+    "product_type": "Stained Cotton T-shirt",
+    "material_details": "Cotton Knit Fabric",
+    "raw_labels": ["Clothing", "Shirt", "Cotton", "Fabric"]
+  },
+  {
+    "keyword": "pants",
+    "product_type": "Worn Corduroy Pants",
+    "material_details": "Cotton Corduroy, Metal Buttons",
+    "raw_labels": ["Clothing", "Pants", "Cotton", "Fabric"]
+  },
+  {
+    "keyword": "sweater",
+    "product_type": "Shredded Wool Sweater",
+    "material_details": "Merino Wool Yarn",
+    "raw_labels": ["Clothing", "Sweater", "Wool", "Damaged"]
+  },
+  {
+    "keyword": "coat",
+    "product_type": "Old Trench Coat (missing buttons)",
+    "material_details": "Cotton Gabardine, Polyester Lining",
+    "raw_labels": ["Clothing", "Coat", "Cotton", "Outerwear"]
+  },
+  {
+    "keyword": "skirt",
+    "product_type": "Denim Skirt (torn hem)",
+    "material_details": "Cotton Denim",
+    "raw_labels": ["Clothing", "Skirt", "Denim", "Fabric"]
+  },
+  {
+    "keyword": "blouse",
+    "product_type": "Silk Blouse (stained)",
+    "material_details": "Pure Silk Fabric",
+    "raw_labels": ["Clothing", "Blouse", "Silk", "Fabric"]
+  },
+  {
+    "keyword": "socks",
+    "product_type": "Mismatched Cotton Socks",
+    "material_details": "Cotton Blend",
+    "raw_labels": ["Clothing", "Socks", "Textile"]
+  },
+  {
+    "keyword": "bra",
+    "product_type": "Old Lace Bra (underwire broken)",
+    "material_details": "Nylon Lace, Spandex, Metal Underwire",
+    "raw_labels": ["Clothing", "Intimates", "Fabric", "Underwear"]
+  },
+  {
+    "keyword": "scarf_silk",
+    "product_type": "Damaged Silk Scarf",
+    "material_details": "Pure Silk Fabric",
+    "raw_labels": ["Clothing Accessory", "Scarf", "Silk", "Fabric"]
+  },
+  {
+    "keyword": "gloves",
+    "product_type": "Pair of Worn Winter Gloves",
+    "material_details": "Wool Knit, Leather Palms",
+    "raw_labels": ["Clothing Accessory", "Gloves", "Wool", "Leather"]
+  },
+  {
+    "keyword": "cap",
+    "product_type": "Faded Baseball Cap",
+    "material_details": "Cotton Twill, Plastic Snapback",
+    "raw_labels": ["Clothing Accessory", "Hat", "Cotton"]
+  },
+  {
+    "keyword": "tie",
+    "product_type": "Silk Necktie (stained)",
+    "material_details": "Silk Fabric",
+    "raw_labels": ["Clothing Accessory", "Tie", "Silk"]
+  },
+  {
+    "keyword": "backpack_child",
+    "product_type": "Small Child's Backpack",
+    "material_details": "Polyester Fabric, Cartoon Print",
+    "raw_labels": ["Bag", "Backpack", "Child", "Fabric"]
+  },
+  {
+    "keyword": "baby_clothes",
+    "product_type": "Bundle of Outgrown Baby Clothes",
+    "material_details": "Soft Cotton, Polyester",
+    "raw_labels": ["Clothing", "Baby", "Textile", "Cotton"]
+  },
+  {
+    "keyword": "doll_house",
+    "product_type": "Broken Wooden Doll House",
+    "material_details": "Plywood, Paint, Small Plastic Parts",
+    "raw_labels": ["Toy", "Wood", "Miniature"]
+  },
+  {
+    "keyword": "puzzle",
+    "product_type": "Incomplete Jigsaw Puzzle",
+    "material_details": "Cardboard, Ink",
+    "raw_labels": ["Toy", "Cardboard", "Game"]
+  },
+  {
+    "keyword": "action_figure",
+    "product_type": "Damaged Plastic Action Figure",
+    "material_details": "PVC Plastic, Paint",
+    "raw_labels": ["Toy", "Plastic", "Figurine"]
+  },
+  {
+    "keyword": "board_game",
+    "product_type": "Old Board Game (missing pieces)",
+    "material_details": "Cardboard Box, Plastic Pieces, Paper Board",
+    "raw_labels": ["Game", "Cardboard", "Plastic"]
+  },
+  {
+    "keyword": "stuffed_animal",
+    "product_type": "Worn Stuffed Animal",
+    "material_details": "Polyester Plush Fabric, Synthetic Filling",
+    "raw_labels": ["Toy", "Textile", "Plush"]
+  },
+  {
+    "keyword": "wagon",
+    "product_type": "Rusty Metal Pull Wagon",
+    "material_details": "Steel, Rubber Tires, Paint (chipped)",
+    "raw_labels": ["Toy", "Metal", "Outdoor Play"]
+  },
+  {
+    "keyword": "playpen",
+    "product_type": "Disassembled Baby Playpen",
+    "material_details": "Metal Frame, Mesh Fabric, Plastic Connectors",
+    "raw_labels": ["Baby Gear", "Metal", "Fabric", "Plastic"]
+  },
+  {
+    "keyword": "crib",
+    "product_type": "Old Wooden Crib (broken slat)",
+    "material_details": "Solid Hardwood, Paint",
+    "raw_labels": ["Baby Furniture", "Wood", "Crib"]
+  },
+  {
+    "keyword": "stroller",
+    "product_type": "Broken Child Stroller",
+    "material_details": "Aluminum Frame, Polyester Fabric, Plastic Wheels",
+    "raw_labels": ["Baby Gear", "Aluminum", "Fabric", "Plastic"]
+  },
+  {
+    "keyword": "highchair",
+    "product_type": "Plastic Baby Highchair",
+    "material_details": "HDPE Plastic, Metal Legs",
+    "raw_labels": ["Baby Furniture", "Plastic", "Metal"]
+  },
+  {
+    "keyword": "baby_monitor",
+    "product_type": "Non-working Baby Monitor",
+    "material_details": "ABS Plastic, Small Electronic Components",
+    "raw_labels": ["Electronics", "Baby Gear", "Plastic"]
+  },
+  {
+    "keyword": "carseat_base",
+    "product_type": "Child Car Seat Base (plastic)",
+    "material_details": "HDPE Plastic, Metal Latch",
+    "raw_labels": ["Automotive", "Baby Gear", "Plastic"]
+  },
+  {
+    "keyword": "swing_set",
+    "product_type": "Disassembled Metal Swing Set Parts",
+    "material_details": "Powder-Coated Steel Tubing, Plastic Seats",
+    "raw_labels": ["Outdoor Play", "Metal", "Plastic"]
+  },
+  {
+    "keyword": "slide",
+    "product_type": "Plastic Playground Slide (cracked)",
+    "material_details": "Rotational Molded Plastic",
+    "raw_labels": ["Outdoor Play", "Plastic"]
+  },
+  {
+    "keyword": "sandbox",
+    "product_type": "Empty Plastic Sandbox",
+    "material_details": "HDPE Plastic",
+    "raw_labels": ["Outdoor Play", "Plastic"]
+  },
+  {
+    "keyword": "bicycle_helmet",
+    "product_type": "Used Bicycle Helmet (scratched)",
+    "material_details": "Expanded Polystyrene (EPS), Polycarbonate Shell",
+    "raw_labels": ["Safety Gear", "Plastic", "Foam"]
+  },
+  {
+    "keyword": "rollerblades",
+    "product_type": "Old Rollerblades (broken buckle)",
+    "material_details": "Plastic Boots, Urethane Wheels, Aluminum Frame",
+    "raw_labels": ["Sporting Goods", "Plastic", "Wheels"]
+  },
+  {
+    "keyword": "tent",
+    "product_type": "Torn Camping Tent",
+    "material_details": "Nylon Fabric, Aluminum Poles",
+    "raw_labels": ["Outdoor Gear", "Fabric", "Aluminum"]
+  },
+  {
+    "keyword": "sleeping_bag",
+    "product_type": "Old Sleeping Bag (torn)",
+    "material_details": "Polyester Fabric, Synthetic Insulation",
+    "raw_labels": ["Outdoor Gear", "Textile", "Camping"]
+  },
+  {
+    "keyword": "cooler_soft",
+    "product_type": "Fabric Soft-Sided Cooler",
+    "material_details": "Polyester Fabric, Foam Insulation, Plastic Zipper",
+    "raw_labels": ["Container", "Fabric", "Insulated"]
+  },
+  {
+    "keyword": "camp_chair",
+    "product_type": "Broken Folding Camp Chair",
+    "material_details": "Steel Frame, Polyester Fabric Seat",
+    "raw_labels": ["Outdoor Furniture", "Metal", "Fabric"]
+  },
+  {
+    "keyword": "kayak",
+    "product_type": "Damaged Plastic Kayak",
+    "material_details": "Rotomolded Polyethylene Plastic",
+    "raw_labels": ["Sporting Goods", "Plastic", "Watercraft"]
+  },
+  {
+    "keyword": "paddle",
+    "product_type": "Broken Kayak Paddle",
+    "material_details": "Aluminum Shaft, Plastic Blades",
+    "raw_labels": ["Sporting Goods", "Aluminum", "Plastic"]
+  },
+  {
+    "keyword": "life_jacket",
+    "product_type": "Worn Life Jacket",
+    "material_details": "Nylon Fabric, Foam Inserts, Plastic Buckles",
+    "raw_labels": ["Safety Gear", "Fabric", "Foam"]
+  },
+  {
+    "keyword": "fishing_tackle_box",
+    "product_type": "Empty Plastic Tackle Box",
+    "material_details": "Polypropylene Plastic",
+    "raw_labels": ["Storage", "Plastic", "Fishing"]
+  },
+  {
+    "keyword": "tennis_ball",
+    "product_type": "Worn Tennis Balls",
+    "material_details": "Rubber Core, Felt Cover",
+    "raw_labels": ["Sporting Goods", "Rubber", "Felt"]
+  },
+  {
+    "keyword": "basketball",
+    "product_type": "Deflated Basketball",
+    "material_details": "Rubber, Synthetic Leather",
+    "raw_labels": ["Sporting Goods", "Rubber", "Ball"]
+  },
+  {
+    "keyword": "football",
+    "product_type": "Old American Football",
+    "material_details": "Composite Leather, Rubber Bladder",
+    "raw_labels": ["Sporting Goods", "Leather", "Ball"]
+  },
+  {
+    "keyword": "soccer_ball",
+    "product_type": "Punctured Soccer Ball",
+    "material_details": "Synthetic Leather, Rubber Bladder",
+    "raw_labels": ["Sporting Goods", "Plastic", "Ball"]
+  },
+  {
+    "keyword": "baseball_bat",
+    "product_type": "Broken Aluminum Baseball Bat",
+    "material_details": "Aluminum Alloy",
+    "raw_labels": ["Sporting Goods", "Aluminum", "Bat"]
+  },
+  {
+    "keyword": "baseball_glove",
+    "product_type": "Worn Leather Baseball Glove",
+    "material_details": "Cowhide Leather",
+    "raw_labels": ["Sporting Goods", "Leather", "Glove"]
+  },
+  {
+    "keyword": "hockey_stick",
+    "product_type": "Broken Wooden Hockey Stick",
+    "material_details": "Laminated Wood, Fiberglass Wrap",
+    "raw_labels": ["Sporting Goods", "Wood", "Hockey"]
+  },
+  {
+    "keyword": "golf_bag",
+    "product_type": "Old Golf Bag (torn)",
+    "material_details": "Nylon Fabric, Plastic Base",
+    "raw_labels": ["Sporting Goods", "Fabric", "Golf"]
+  },
+  {
+    "keyword": "skateboard_bearings",
+    "product_type": "Rusty Skateboard Bearings",
+    "material_details": "Steel, Lubricant (dried)",
+    "raw_labels": ["Sporting Goods", "Metal", "Bearings"]
+  },
+  {
+    "keyword": "camping_stove",
+    "product_type": "Broken Portable Camping Stove",
+    "material_details": "Stainless Steel, Brass Burners, Plastic Case",
+    "raw_labels": ["Outdoor Gear", "Metal", "Plastic"]
+  },
+  {
+    "keyword": "thermos",
+    "product_type": "Dented Stainless Steel Thermos",
+    "material_details": "Stainless Steel, Plastic Cap",
+    "raw_labels": ["Container", "Metal", "Insulated"]
+  },
+  {
+    "keyword": "picnic_table",
+    "product_type": "Dismantled Wooden Picnic Table",
+    "material_details": "Pressure-Treated Pine Wood",
+    "raw_labels": ["Outdoor Furniture", "Wood", "Table"]
+  },
+  {
+    "keyword": "patio_chair",
+    "product_type": "Broken Plastic Patio Chair",
+    "material_details": "Molded Polypropylene Plastic",
+    "raw_labels": ["Outdoor Furniture", "Plastic", "Seating"]
+  },
+  {
+    "keyword": "decking_boards",
+    "product_type": "Weathered Wooden Decking Boards",
+    "material_details": "Treated Softwood",
+    "raw_labels": ["Construction Material", "Wood", "Outdoor"]
+  },
+  {
+    "keyword": "shutter",
+    "product_type": "Old Wooden Window Shutters",
+    "material_details": "Painted Wood",
+    "raw_labels": ["Building Material", "Wood", "Window"]
+  },
+  {
+    "keyword": "gutter",
+    "product_type": "Bent Aluminum Gutter Section",
+    "material_details": "Aluminum, Paint",
+    "raw_labels": ["Building Material", "Aluminum", "Roofing"]
+  },
+  {
+    "keyword": "siding",
+    "product_type": "Scrap Vinyl Siding Panels",
+    "material_details": "PVC Plastic",
+    "raw_labels": ["Building Material", "Plastic", "Siding"]
+  },
+  {
+    "keyword": "insulation",
+    "product_type": "Discarded Fiberglass Insulation Batts",
+    "material_details": "Fiberglass, Paper Facing",
+    "raw_labels": ["Construction Material", "Fiberglass", "Insulation"]
+  },
+  {
+    "keyword": "concrete_slab",
+    "product_type": "Broken Concrete Paving Slabs",
+    "material_details": "Concrete, Aggregate",
+    "raw_labels": ["Construction Material", "Concrete", "Paving"]
+  },
+  {
+    "keyword": "rebar",
+    "product_type": "Rusty Steel Rebar Sections",
+    "material_details": "Carbon Steel, Heavy Rust",
+    "raw_labels": ["Construction Material", "Metal", "Steel"]
+  },
+  {
+    "keyword": "drywall",
+    "product_type": "Scrap Drywall Pieces",
+    "material_details": "Gypsum, Paper Facing",
+    "raw_labels": ["Construction Material", "Gypsum", "Paper"]
+  },
+  {
+    "keyword": "roof_tile",
+    "product_type": "Broken Clay Roof Tiles",
+    "material_details": "Fired Clay",
+    "raw_labels": ["Building Material", "Ceramic", "Roofing"]
+  },
+  {
+    "keyword": "chimney_pot",
+    "product_type": "Cracked Terracotta Chimney Pot",
+    "material_details": "Fired Clay",
+    "raw_labels": ["Building Material", "Ceramic", "Chimney"]
+  },
+  {
+    "keyword": "kitchen_sink",
+    "product_type": "Old Stainless Steel Kitchen Sink",
+    "material_details": "Stainless Steel, Rubber Drain",
+    "raw_labels": ["Kitchenware", "Metal", "Plumbing"]
+  },
+  {
+    "keyword": "toilet",
+    "product_type": "Cracked Ceramic Toilet Bowl",
+    "material_details": "Vitreous China (Ceramic)",
+    "raw_labels": ["Bathroom Fixture", "Ceramic", "Plumbing"]
+  },
+  {
+    "keyword": "bathtub",
+    "product_type": "Chipped Cast Iron Bathtub",
+    "material_details": "Cast Iron, Enamel Coating",
+    "raw_labels": ["Bathroom Fixture", "Metal", "Cast Iron"]
+  },
+  {
+    "keyword": "vanity",
+    "product_type": "Bathroom Vanity Cabinet (damaged)",
+    "material_details": "Particle Board, Laminate Countertop, Ceramic Sink",
+    "raw_labels": ["Bathroom Furniture", "Wood Composite", "Ceramic"]
+  },
+  {
+    "keyword": "mirror_bathroom",
+    "product_type": "Frameless Bathroom Mirror (chipped)",
+    "material_details": "Silvered Glass",
+    "raw_labels": ["Bathroom Decor", "Glass", "Mirror"]
+  },
+  {
+    "keyword": "shower_door",
+    "product_type": "Broken Glass Shower Door Panel",
+    "material_details": "Tempered Glass, Aluminum Frame",
+    "raw_labels": ["Bathroom Fixture", "Glass", "Aluminum"]
+  },
+  {
+    "keyword": "medicine_cabinet",
+    "product_type": "Old Metal Medicine Cabinet",
+    "material_details": "Sheet Steel, Glass Mirror",
+    "raw_labels": ["Bathroom Storage", "Metal", "Glass"]
+  },
+  {
+    "keyword": "towel_rack",
+    "product_type": "Rusty Wall-Mounted Towel Rack",
+    "material_details": "Chrome-Plated Steel",
+    "raw_labels": ["Bathroom Fixture", "Metal"]
+  },
+  {
+    "keyword": "toilet_paper_holder",
+    "product_type": "Broken Toilet Paper Holder",
+    "material_details": "Plastic, Spring (metal)",
+    "raw_labels": ["Bathroom Fixture", "Plastic"]
+  },
+  {
+    "keyword": "soap_dish",
+    "product_type": "Chipped Ceramic Soap Dish",
+    "material_details": "Ceramic",
+    "raw_labels": ["Bathroom Accessory", "Ceramic"]
+  },
+  {
+    "keyword": "toothbrush_holder",
+    "product_type": "Plastic Toothbrush Holder",
+    "material_details": "Polypropylene Plastic",
+    "raw_labels": ["Bathroom Accessory", "Plastic"]
+  },
+  {
+    "keyword": "laundry_hamper",
+    "product_type": "Wicker Laundry Hamper",
+    "material_details": "Woven Willow",
+    "raw_labels": ["Container", "Wicker", "Laundry"]
+  },
+  {
+    "keyword": "ironing_board",
+    "product_type": "Broken Ironing Board",
+    "material_details": "Steel Frame, Fabric Cover, Foam Pad",
+    "raw_labels": ["Laundry Equipment", "Metal", "Fabric"]
+  },
+  {
+    "keyword": "clothesline",
+    "product_type": "Rusty Metal Clothesline Pole",
+    "material_details": "Galvanized Steel",
+    "raw_labels": ["Laundry Equipment", "Metal", "Outdoor"]
+  },
+  {
+    "keyword": "laundry_basket",
+    "product_type": "Cracked Plastic Laundry Basket",
+    "material_details": "HDPE Plastic",
+    "raw_labels": ["Container", "Plastic", "Laundry"]
+  },
+  {
+    "keyword": "vacuum",
+    "product_type": "Non-functional Vacuum Cleaner",
+    "material_details": "ABS Plastic, Electric Motor (metal), Rubber Hose",
+    "raw_labels": ["Appliance", "Electronics", "Plastic"]
+  },
+  {
+    "keyword": "sewing_kit",
+    "product_type": "Old Sewing Kit Box",
+    "material_details": "Wooden Box, Plastic Spools",
+    "raw_labels": ["Crafts", "Wood", "Plastic"]
+  },
+  {
+    "keyword": "yarn",
+    "product_type": "Skeins of Unused Yarn",
+    "material_details": "Acrylic Yarn, Wool Blend",
+    "raw_labels": ["Crafts", "Textile", "Yarn"]
+  },
+  {
+    "keyword": "fabric_scraps",
+    "product_type": "Bag of Assorted Fabric Scraps",
+    "material_details": "Cotton, Denim, Silk, Polyester",
+    "raw_labels": ["Textile", "Fabric", "Scraps", "Crafts"]
+  },
+  {
+    "keyword": "buttons",
+    "product_type": "Collection of Loose Buttons",
+    "material_details": "Plastic, Mother-of-Pearl, Metal",
+    "raw_labels": ["Crafts", "Plastic", "Textile Accessory"]
+  },
+  {
+    "keyword": "zippers",
+    "product_type": "Assorted Zippers",
+    "material_details": "Nylon Teeth, Metal Sliders, Polyester Tape",
+    "raw_labels": ["Textile Accessory", "Plastic", "Metal"]
+  },
+  {
+    "keyword": "ribbon",
+    "product_type": "Rolls of Used Ribbon",
+    "material_details": "Satin, Grosgrain (Polyester)",
+    "raw_labels": ["Crafts", "Textile", "Ribbon"]
+  },
+  {
+    "keyword": "beads",
+    "product_type": "Jar of Mixed Craft Beads",
+    "material_details": "Glass, Plastic, Wood, Metal",
+    "raw_labels": ["Crafts", "Beads", "Mixed Materials"]
+  },
+  {
+    "keyword": "crayons",
+    "product_type": "Box of Broken Crayons",
+    "material_details": "Wax, Pigment",
+    "raw_labels": ["Art Supplies", "Wax", "Children's Art"]
+  },
+  {
+    "keyword": "markers",
+    "product_type": "Dried-out Felt Tip Markers",
+    "material_details": "Plastic Casing, Felt Nib, Ink",
+    "raw_labels": ["Art Supplies", "Plastic", "Drawing"]
+  },
+  {
+    "keyword": "pencils",
+    "product_type": "Stubs of Colored Pencils",
+    "material_details": "Wood, Pigment Core",
+    "raw_labels": ["Art Supplies", "Wood", "Drawing"]
+  },
+  {
+    "keyword": "paint",
+    "product_type": "Partially Used Acrylic Paint Tubes",
+    "material_details": "Aluminum Tube, Acrylic Paint",
+    "raw_labels": ["Art Supplies", "Aluminum", "Paint"]
+  },
+  {
+    "keyword": "brushes",
+    "product_type": "Worn Paint Brushes",
+    "material_details": "Wooden Handles, Synthetic Bristles, Metal Ferrule",
+    "raw_labels": ["Art Supplies", "Wood", "Synthetic"]
+  },
+  {
+    "keyword": "easel",
+    "product_type": "Broken Wooden Artist's Easel",
+    "material_details": "Beechwood",
+    "raw_labels": ["Art Supplies", "Wood", "Stand"]
+  },
+  {
+    "keyword": "canvas",
+    "product_type": "Used Stretched Art Canvas",
+    "material_details": "Cotton Canvas, Pine Wood Frame",
+    "raw_labels": ["Art Supplies", "Canvas", "Wood"]
+  },
+  {
+    "keyword": "glue",
+    "product_type": "Empty Glue Bottles",
+    "material_details": "Plastic Bottle, Dried Glue Residue",
+    "raw_labels": ["Container", "Plastic", "Art Supplies"]
+  },
+  {
+    "keyword": "paper_roll",
+    "product_type": "Large Kraft Paper Roll (partially used)",
+    "material_details": "Recycled Paper",
+    "raw_labels": ["Paper Product", "Crafts", "Packaging"]
+  },
+  {
+    "keyword": "clipboard",
+    "product_type": "Old Wooden Clipboard",
+    "material_details": "MDF Board, Metal Clip",
+    "raw_labels": ["Office Supplies", "Wood", "Metal"]
+  },
+  {
+    "keyword": "stapler",
+    "product_type": "Broken Metal Stapler",
+    "material_details": "Steel, Plastic Casing",
+    "raw_labels": ["Office Supplies", "Metal", "Plastic"]
+  },
+  {
+    "keyword": "hole_punch",
+    "product_type": "Rusty Metal Hole Punch",
+    "material_details": "Steel, Paint",
+    "raw_labels": ["Office Supplies", "Metal"]
+  },
+  {
+    "keyword": "desk_organizer",
+    "product_type": "Plastic Desk Organizer",
+    "material_details": "Polystyrene Plastic",
+    "raw_labels": ["Office Supplies", "Plastic", "Storage"]
+  },
+  {
+    "keyword": "calculator",
+    "product_type": "Non-functional Electronic Calculator",
+    "material_details": "ABS Plastic, LCD Screen, Circuitry",
+    "raw_labels": ["Office Equipment", "Electronics", "Plastic"]
+  },
+  {
+    "keyword": "filing_cabinet",
+    "product_type": "Dented Metal Filing Cabinet",
+    "material_details": "Sheet Steel, Paint",
+    "raw_labels": ["Office Furniture", "Metal", "Storage"]
+  },
+  {
+    "keyword": "shredded_paper",
+    "product_type": "Bag of Shredded Paper",
+    "material_details": "Mixed Paper Fibers",
+    "raw_labels": ["Paper Product", "Recyclable", "Waste"]
+  },
+  {
+    "keyword": "binder",
+    "product_type": "Old Three-Ring Binders",
+    "material_details": "Cardboard, Vinyl Covering, Metal Rings",
+    "raw_labels": ["Office Supplies", "Cardboard", "Plastic", "Metal"]
+  },
+  {
+    "keyword": "calendar",
+    "product_type": "Used Wall Calendar",
+    "material_details": "Paper, Wire Binding (metal)",
+    "raw_labels": ["Paper Product", "Office Supplies"]
+  },
+  {
+    "keyword": "envelopes",
+    "product_type": "Stack of Assorted Envelopes",
+    "material_details": "Paper",
+    "raw_labels": ["Paper Product", "Office Supplies"]
+  },
+  {
+    "keyword": "folders",
+    "product_type": "Used Manila Folders",
+    "material_details": "Recycled Paperboard",
+    "raw_labels": ["Office Supplies", "Paper"]
+  },
+  {
+    "keyword": "staple_remover",
+    "product_type": "Broken Staple Remover",
+    "material_details": "Plastic, Metal Jaws",
+    "raw_labels": ["Office Supplies", "Plastic", "Metal"]
+  },
+  {
+    "keyword": "tape_dispenser",
+    "product_type": "Broken Desk Tape Dispenser",
+    "material_details": "Plastic, Metal Blade",
+    "raw_labels": ["Office Supplies", "Plastic", "Metal"]
+  },
+  {
+    "keyword": "pencil_holder",
+    "product_type": "Empty Mesh Pencil Holder",
+    "material_details": "Steel Mesh, Paint",
+    "raw_labels": ["Office Supplies", "Metal", "Storage"]
+  },
+  {
+    "keyword": "clipboard_plastic",
+    "product_type": "Cracked Plastic Clipboard",
+    "material_details": "Acrylic Plastic, Metal Clip",
+    "raw_labels": ["Office Supplies", "Plastic", "Metal"]
+  },
+  {
+    "keyword": "desk_chair",
+    "product_type": "Broken Office Desk Chair",
+    "material_details": "Plastic Base, Metal Frame, Fabric Upholstery, Foam",
+    "raw_labels": ["Furniture", "Office Chair", "Plastic", "Metal", "Textile"]
+  },
+  {
+    "keyword": "projector_screen",
+    "product_type": "Torn Projector Screen",
+    "material_details": "Vinyl Fabric, Aluminum Frame",
+    "raw_labels": ["Office Equipment", "Fabric", "Aluminum"]
+  },
+  {
+    "keyword": "whiteboard",
+    "product_type": "Scratched Whiteboard",
+    "material_details": "Melamine Surface, Fiberboard Backing, Aluminum Frame",
+    "raw_labels": ["Office Equipment", "Plastic", "Aluminum"]
+  },
+  {
+    "keyword": "flipchart",
+    "product_type": "Broken Flipchart Easel",
+    "material_details": "Steel Frame, Plastic Components",
+    "raw_labels": ["Office Equipment", "Metal", "Plastic"]
+  },
+  {
+    "keyword": "tv",
+    "product_type": "Obsolete CRT Television",
+    "material_details": "Glass Screen, Plastic Casing, Copper Wiring",
+    "raw_labels": ["Electronics", "Television", "Glass", "Plastic", "E-waste"]
+  },
+  {
+    "keyword": "monitor",
+    "product_type": "Non-working LCD Monitor",
+    "material_details": "Plastic Bezel, LCD Panel (glass/liquid crystal), Metal Stand",
+    "raw_labels": ["Electronics", "Computer Display", "Plastic", "Glass", "E-waste"]
+  },
+  {
+    "keyword": "speakers_large",
+    "product_type": "Large Wooden Hi-Fi Speakers",
+    "material_details": "MDF Wood, Fabric Grilles, Magnetic Components",
+    "raw_labels": ["Electronics", "Audio Equipment", "Wood", "Fabric"]
+  },
+  {
+    "keyword": "dvd_rack",
+    "product_type": "Plastic DVD Storage Rack",
+    "material_details": "Polystyrene Plastic",
+    "raw_labels": ["Storage", "Plastic", "Media"]
+  },
+  {
+    "keyword": "gaming_controller",
+    "product_type": "Broken Video Game Controller",
+    "material_details": "ABS Plastic, Rubber Buttons, Small Circuit Board",
+    "raw_labels": ["Electronics", "Gaming Accessory", "Plastic"]
+  },
+  {
+    "keyword": "rc_car",
+    "product_type": "Broken Remote Control Car",
+    "material_details": "Plastic Body, Metal Chassis, Electric Motor",
+    "raw_labels": ["Toy", "Electronics", "Plastic", "RC Vehicle"]
+  },
+  {
+    "keyword": "drone",
+    "product_type": "Damaged Small Drone",
+    "material_details": "ABS Plastic Frame, Electric Motors, Lithium Battery",
+    "raw_labels": ["Electronics", "Drone", "Plastic", "E-waste"]
+  },
+  {
+    "keyword": "robot_toy",
+    "product_type": "Non-functional Robot Toy",
+    "material_details": "Plastic, Gears (plastic/metal), Small Circuitry",
+    "raw_labels": ["Toy", "Electronics", "Plastic"]
+  },
+  {
+    "keyword": "circuit_board",
+    "product_type": "Scrap Electronic Circuit Boards",
+    "material_details": "Fiberglass, Copper Traces, Solder (lead-free)",
+    "raw_labels": ["Electronics", "Circuitry", "E-waste", "Components"]
+  },
+  {
+    "keyword": "resistor",
+    "product_type": "Loose Electronic Resistors",
+    "material_details": "Ceramic, Carbon Film, Metal Leads",
+    "raw_labels": ["Electronics", "Components", "Ceramic"]
+  },
+  {
+    "keyword": "capacitor",
+    "product_type": "Assorted Electronic Capacitors",
+    "material_details": "Aluminum, Plastic Casing, Electrolyte",
+    "raw_labels": ["Electronics", "Components", "Aluminum"]
+  },
+  {
+    "keyword": "transistor",
+    "product_type": "Discarded Transistors",
+    "material_details": "Silicon, Plastic/Metal Casing",
+    "raw_labels": ["Electronics", "Components", "Silicon"]
+  },
+  {
+    "keyword": "led",
+    "product_type": "Bag of Mixed LEDs",
+    "material_details": "Plastic Lens, Semiconductor Chip, Metal Leads",
+    "raw_labels": ["Electronics", "Lighting", "Components"]
+  },
+  {
+    "keyword": "motor_small",
+    "product_type": "Small Electric Motor",
+    "material_details": "Copper Windings, Steel Casing, Carbon Brushes",
+    "raw_labels": ["Electronics", "Motor", "Metal", "Copper"]
+  },
+  {
+    "keyword": "solar_panel",
+    "product_type": "Broken Small Solar Panel",
+    "material_details": "Silicon Cells, Glass, Aluminum Frame",
+    "raw_labels": ["Electronics", "Solar", "Glass", "Aluminum"]
+  },
+  {
+    "keyword": "usb_cable",
+    "product_type": "Tangled USB Cables",
+    "material_details": "Copper Wire, PVC Insulation, Plastic Connectors",
+    "raw_labels": ["Electronics", "Cable", "Plastic", "Copper"]
+  },
+  {
+    "keyword": "power_adapter",
+    "product_type": "Broken AC Power Adapter",
+    "material_details": "ABS Plastic, Copper Transformer, Circuit Board",
+    "raw_labels": ["Electronics", "Charger", "Plastic"]
+  },
+  {
+    "keyword": "hard_drive",
+    "product_type": "Old Computer Hard Drive",
+    "material_details": "Aluminum Casing, Magnetic Platters (glass/aluminum), Circuit Board",
+    "raw_labels": ["Electronics", "Computer Part", "Aluminum", "E-waste"]
+  },
+  {
+    "keyword": "ram",
+    "product_type": "Discarded RAM Sticks",
+    "material_details": "Fiberglass Circuit Board, Silicon Chips, Gold Contacts",
+    "raw_labels": ["Electronics", "Computer Part", "E-waste"]
+  },
+  {
+    "keyword": "cpu",
+    "product_type": "Old Computer CPU (processor)",
+    "material_details": "Silicon, Ceramic Substrate, Gold Pins",
+    "raw_labels": ["Electronics", "Computer Part", "E-waste", "Silicon"]
+  },
+  {
+    "keyword": "motherboard",
+    "product_type": "Damaged Desktop PC Motherboard",
+    "material_details": "Fiberglass, Copper Traces, Various Chips (silicon)",
+    "raw_labels": ["Electronics", "Computer Part", "E-waste", "Circuitry"]
+  },
+  {
+    "keyword": "graphics_card",
+    "product_type": "Obsolete Graphics Card",
+    "material_details": "Fiberglass PCB, Copper Heatsink, Silicon GPU",
+    "raw_labels": ["Electronics", "Computer Part", "E-waste"]
+  },
+  {
+    "keyword": "modem",
+    "product_type": "Non-functional Internet Modem",
+    "material_details": "ABS Plastic, Circuit Board, Metal Connectors",
+    "raw_labels": ["Electronics", "Network Device", "Plastic"]
+  },
+  {
+    "keyword": "server_rack",
+    "product_type": "Empty Server Rack Frame",
+    "material_details": "Steel, Paint",
+    "raw_labels": ["Industrial Equipment", "Metal", "Server"]
+  },
+  {
+    "keyword": "server_case",
+    "product_type": "Old Computer Server Case",
+    "material_details": "Galvanized Steel",
+    "raw_labels": ["Electronics", "Metal", "Computer Case"]
+  },
+  {
+    "keyword": "power_strip",
+    "product_type": "Broken Power Strip/Surge Protector",
+    "material_details": "ABS Plastic, Copper Wiring, Metal Contacts",
+    "raw_labels": ["Electronics", "Plastic", "Electrical"]
+  },
+  {
+    "keyword": "extension_cord",
+    "product_type": "Frayed Electrical Extension Cord",
+    "material_details": "Copper Wire, PVC Insulation, Rubber Outer Jacket",
+    "raw_labels": ["Electronics", "Cable", "Copper", "Rubber"]
+  },
+  {
+    "keyword": "outlet",
+    "product_type": "Used Electrical Outlet Cover",
+    "material_details": "Thermoplastic Plastic",
+    "raw_labels": ["Electrical", "Plastic", "Housing"]
+  },
+  {
+    "keyword": "light_switch",
+    "product_type": "Old Plastic Light Switch",
+    "material_details": "Polycarbonate Plastic, Brass Contacts",
+    "raw_labels": ["Electrical", "Plastic", "Switch"]
+  },
+  {
+    "keyword": "light_fixture",
+    "product_type": "Broken Ceiling Light Fixture",
+    "material_details": "Metal Base, Glass Shade, Ceramic Socket",
+    "raw_labels": ["Lighting", "Metal", "Glass", "Electrical"]
+  },
+  {
+    "keyword": "light_bulb",
+    "product_type": "Burnt-out Incandescent Light Bulbs",
+    "material_details": "Glass, Tungsten Filament, Aluminum Base",
+    "raw_labels": ["Lighting", "Glass", "E-waste"]
+  },
+  {
+    "keyword": "fluorescent_tube",
+    "product_type": "Broken Fluorescent Light Tube",
+    "material_details": "Glass, Mercury Vapor, Phosphor Coating",
+    "raw_labels": ["Lighting", "Glass", "Hazardous", "E-waste"]
+  },
+  {
+    "keyword": "led_strip",
+    "product_type": "Short LED Light Strip",
+    "material_details": "Flexible PCB, LEDs (plastic/silicon), Adhesive",
+    "raw_labels": ["Lighting", "Electronics", "Plastic"]
+  },
+  {
+    "keyword": "christmas_lights",
+    "product_type": "Tangled Christmas Lights",
+    "material_details": "Copper Wire, Plastic Bulbs, PVC Insulation",
+    "raw_labels": ["Lighting", "Plastic", "Copper", "Seasonal"]
+  },
+  {
+    "keyword": "old_stereo",
+    "product_type": "Vintage Stereo Receiver",
+    "material_details": "Aluminum Faceplate, Steel Chassis, Wood Sides",
+    "raw_labels": ["Electronics", "Audio Equipment", "Metal", "Wood", "Retro"]
+  },
+  {
+    "keyword": "cassette_player",
+    "product_type": "Broken Portable Cassette Player",
+    "material_details": "ABS Plastic, Small Motors (metal)",
+    "raw_labels": ["Electronics", "Audio Device", "Plastic", "Retro"]
+  },
+  {
+    "keyword": "turntable",
+    "product_type": "Non-working Record Player",
+    "material_details": "MDF Base, Plastic Platter, Metal Tone Arm",
+    "raw_labels": ["Electronics", "Audio Device", "Wood Composite", "Plastic"]
+  },
+  {
+    "keyword": "boombox",
+    "product_type": "Old Portable Boombox",
+    "material_details": "ABS Plastic, Paper Cone Speakers, Metal Handle",
+    "raw_labels": ["Electronics", "Audio Device", "Plastic", "Retro"]
+  },
+  {
+    "keyword": "microphone",
+    "product_type": "Broken Wired Microphone",
+    "material_details": "Metal Body, Plastic Grille, Copper Wire",
+    "raw_labels": ["Audio Equipment", "Metal", "Plastic"]
+  },
+  {
+    "keyword": "guitar_amp",
+    "product_type": "Damaged Guitar Amplifier",
+    "material_details": "Particle Board Cabinet, Fabric Grille, Metal Chassis",
+    "raw_labels": ["Musical Instrument", "Electronics", "Wood Composite", "Audio"]
+  },
+  {
+    "keyword": "drum",
+    "product_type": "Broken Plastic Toy Drum",
+    "material_details": "ABS Plastic, Mylar Head",
+    "raw_labels": ["Musical Instrument", "Toy", "Plastic"]
+  },
+  {
+    "keyword": "flute",
+    "product_type": "Old Metal Flute",
+    "material_details": "Nickel Silver Alloy",
+    "raw_labels": ["Musical Instrument", "Metal", "Wind Instrument"]
+  },
+  {
+    "keyword": "clarinet",
+    "product_type": "Broken Wooden Clarinet",
+    "material_details": "Grenadilla Wood, Metal Keys",
+    "raw_labels": ["Musical Instrument", "Wood", "Wind Instrument"]
+  },
+  {
+    "keyword": "violin",
+    "product_type": "Damaged Wooden Violin",
+    "material_details": "Spruce, Maple Wood, Ebony Fingerboard",
+    "raw_labels": ["Musical Instrument", "Wood", "String Instrument"]
+  },
+  {
+    "keyword": "cello",
+    "product_type": "Broken Cello Bridge/Tailpiece",
+    "material_details": "Maple Wood, Ebony Wood",
+    "raw_labels": ["Musical Instrument", "Wood", "String Instrument"]
+  },
+  {
+    "keyword": "keyboard_piano",
+    "product_type": "Non-working Electronic Keyboard Piano",
+    "material_details": "ABS Plastic Casing, Rubber Keys, Circuitry",
+    "raw_labels": ["Musical Instrument", "Electronics", "Plastic"]
+  },
+  {
+    "keyword": "microphone_stand",
+    "product_type": "Bent Metal Microphone Stand",
+    "material_details": "Steel Tubing, Cast Iron Base",
+    "raw_labels": ["Audio Equipment", "Metal", "Stand"]
+  },
+  {
+    "keyword": "music_stand",
+    "product_type": "Broken Folding Music Stand",
+    "material_details": "Aluminum, Plastic Joints",
+    "raw_labels": ["Musical Equipment", "Aluminum", "Plastic"]
+  },
+  {
+    "keyword": "guitar_case",
+    "product_type": "Empty Hard-shell Guitar Case",
+    "material_details": "Plywood, Tolex Covering (vinyl), Metal Latches",
+    "raw_labels": ["Musical Equipment", "Wood", "Vinyl", "Storage"]
+  },
+  {
+    "keyword": "drum_set",
+    "product_type": "Parts of a Broken Drum Set",
+    "material_details": "Wood Shells, Metal Hardware, Plastic Heads",
+    "raw_labels": ["Musical Instrument", "Wood", "Metal", "Plastic"]
+  },
+  {
+    "keyword": "cymbal",
+    "product_type": "Cracked Drum Cymbal",
+    "material_details": "Bronze Alloy",
+    "raw_labels": ["Musical Instrument", "Metal", "Bronze"]
+  },
+  {
+    "keyword": "pedal_bike",
+    "product_type": "Broken Bicycle Pedals",
+    "material_details": "Aluminum Body, Steel Axle, Rubber Grips",
+    "raw_labels": ["Vehicle Part", "Bicycle", "Aluminum", "Rubber"]
+  },
+  {
+    "keyword": "car_mirror",
+    "product_type": "Broken Car Side Mirror",
+    "material_details": "Plastic Casing, Glass Mirror, Metal Mount",
+    "raw_labels": ["Automotive", "Plastic", "Glass"]
+  },
+  {
+    "keyword": "hubcap",
+    "product_type": "Scratched Plastic Hubcap",
+    "material_details": "ABS Plastic, Chrome Coating",
+    "raw_labels": ["Automotive", "Plastic", "Wheel Accessory"]
+  },
+  {
+    "keyword": "windshield_wiper",
+    "product_type": "Worn Windshield Wiper Blades",
+    "material_details": "Rubber Blade, Steel Frame",
+    "raw_labels": ["Automotive", "Rubber", "Steel"]
+  },
+  {
+    "keyword": "car_light",
+    "product_type": "Broken Car Taillight Assembly",
+    "material_details": "Plastic Lens, Plastic Housing, Small Bulbs",
+    "raw_labels": ["Automotive", "Plastic", "Lighting"]
+  },
+  {
+    "keyword": "car_bumper",
+    "product_type": "Damaged Plastic Car Bumper",
+    "material_details": "Polypropylene Plastic",
+    "raw_labels": ["Automotive", "Plastic", "Car Part"]
+  },
+  {
+    "keyword": "car_seat_belt",
+    "product_type": "Cut Car Seat Belt",
+    "material_details": "Polyester Webbing, Metal Buckle",
+    "raw_labels": ["Automotive", "Textile", "Metal"]
+  },
+  {
+    "keyword": "steering_wheel",
+    "product_type": "Worn Car Steering Wheel",
+    "material_details": "Polyurethane Foam, Steel Frame, Plastic Cover",
+    "raw_labels": ["Automotive", "Plastic", "Foam"]
+  },
+  {
+    "keyword": "dashboard",
+    "product_type": "Cracked Car Dashboard Panel",
+    "material_details": "ABS Plastic, Vinyl Coating",
+    "raw_labels": ["Automotive", "Plastic", "Interior"]
+  },
+  {
+    "keyword": "air_filter",
+    "product_type": "Dirty Car Air Filter",
+    "material_details": "Paper, Rubber Seal, Metal Mesh",
+    "raw_labels": ["Automotive", "Paper", "Rubber", "Filter"]
+  },
+  {
+    "keyword": "oil_filter",
+    "product_type": "Used Car Oil Filter",
+    "material_details": "Steel Canister, Paper Filter Media",
+    "raw_labels": ["Automotive", "Metal", "Paper", "Filter"]
+  },
+  {
+    "keyword": "exhaust_pipe",
+    "product_type": "Rusty Car Exhaust Pipe Section",
+    "material_details": "Mild Steel, Heavy Rust",
+    "raw_labels": ["Automotive", "Metal", "Exhaust"]
+  },
+  {
+    "keyword": "catalytic_converter",
+    "product_type": "Old Catalytic Converter (auto)",
+    "material_details": "Steel Casing, Ceramic Honeycomb (platinum/palladium/rhodium)",
+    "raw_labels": ["Automotive", "Metal", "Ceramic", "Hazardous"]
+  },
+  {
+    "keyword": "car_battery",
+    "product_type": "Dead Car Lead-Acid Battery",
+    "material_details": "Lead Plates, Sulfuric Acid, Polypropylene Casing",
+    "raw_labels": ["Automotive", "Battery", "Lead", "Hazardous"]
+  },
+  {
+    "keyword": "car_door",
+    "product_type": "Dented Car Door Panel",
+    "material_details": "Sheet Steel, Paint, Glass (window)",
+    "raw_labels": ["Automotive", "Metal", "Glass", "Damaged"]
+  },
+  {
+    "keyword": "car_hood",
+    "product_type": "Rusty Car Hood",
+    "material_details": "Sheet Steel, Paint, Rust",
+    "raw_labels": ["Automotive", "Metal", "Car Body"]
+  },
+  {
+    "keyword": "car_fender",
+    "product_type": "Cracked Plastic Car Fender",
+    "material_details": "Polypropylene Plastic",
+    "raw_labels": ["Automotive", "Plastic", "Car Body"]
+  },
+  {
+    "keyword": "car_radiator",
+    "product_type": "Leaking Car Radiator",
+    "material_details": "Aluminum Fins, Copper Tubes, Plastic Tanks",
+    "raw_labels": ["Automotive", "Aluminum", "Copper", "Plastic"]
+  },
+  {
+    "keyword": "car_engine",
+    "product_type": "Partial Car Engine Block",
+    "material_details": "Cast Iron, Aluminum, Steel Components",
+    "raw_labels": ["Automotive", "Metal", "Engine"]
+  },
+  {
+    "keyword": "transmission",
+    "product_type": "Broken Car Transmission Case",
+    "material_details": "Aluminum Alloy",
+    "raw_labels": ["Automotive", "Metal", "Aluminum"]
+  },
+  {
+    "keyword": "car_wheel",
+    "product_type": "Complete Car Wheel Assembly (tire and rim)",
+    "material_details": "Rubber Tire, Steel Rim",
+    "raw_labels": ["Automotive", "Rubber", "Steel", "Wheel"]
+  },
+  {
+    "keyword": "seat_cover",
+    "product_type": "Torn Fabric Car Seat Covers",
+    "material_details": "Polyester Fabric",
+    "raw_labels": ["Automotive", "Textile", "Interior"]
+  },
+  {
+    "keyword": "floor_mats",
+    "product_type": "Worn Rubber Car Floor Mats",
+    "material_details": "Vulcanized Rubber",
+    "raw_labels": ["Automotive", "Rubber", "Interior"]
+  },
+  {
+    "keyword": "airbag",
+    "product_type": "Deployed Car Airbag",
+    "material_details": "Nylon Fabric, Inflator (metal/chemicals)",
+    "raw_labels": ["Automotive", "Safety Device", "Fabric", "Hazardous"]
+  },
+  {
+    "keyword": "windshield",
+    "product_type": "Shattered Car Windshield",
+    "material_details": "Laminated Safety Glass, PVB Interlayer",
+    "raw_labels": ["Automotive", "Glass", "Broken"]
+  },
+  {
+    "keyword": "sun_visor",
+    "product_type": "Broken Car Sun Visor",
+    "material_details": "Plastic Core, Fabric Covering",
+    "raw_labels": ["Automotive", "Plastic", "Fabric"]
+  },
+  {
+    "keyword": "dashboard_camera",
+    "product_type": "Non-working Dash Cam",
+    "material_details": "ABS Plastic, Glass Lens, Circuit Board",
+    "raw_labels": ["Automotive", "Electronics", "Plastic"]
+  },
+  {
+    "keyword": "gps",
+    "product_type": "Obsolete Car GPS Device",
+    "material_details": "Plastic Casing, LCD Screen, Circuitry",
+    "raw_labels": ["Electronics", "Automotive", "Plastic"]
+  },
+  {
+    "keyword": "car_speaker",
+    "product_type": "Blown Car Speaker",
+    "material_details": "Plastic Frame, Paper Cone, Magnet (metal)",
+    "raw_labels": ["Automotive", "Electronics", "Plastic", "Audio"]
+  },
+  {
+    "keyword": "car_radio",
+    "product_type": "Old Car Stereo Head Unit",
+    "material_details": "Plastic Faceplate, Metal Chassis, Circuitry",
+    "raw_labels": ["Automotive", "Electronics", "Plastic", "Audio"]
+  },
+  {
+    "keyword": "power_window",
+    "product_type": "Broken Power Window Motor",
+    "material_details": "Steel Housing, Copper Motor, Plastic Gears",
+    "raw_labels": ["Automotive", "Electronics", "Metal", "Plastic"]
+  },
+  {
+    "keyword": "wiper_motor",
+    "product_type": "Non-functional Windshield Wiper Motor",
+    "material_details": "Steel Casing, Copper Coils, Plastic Gearbox",
+    "raw_labels": ["Automotive", "Electronics", "Metal", "Plastic"]
+  },
+  {
+    "keyword": "alternator",
+    "product_type": "Dead Car Alternator",
+    "material_details": "Aluminum Casing, Copper Windings, Steel Bearings",
+    "raw_labels": ["Automotive", "Electronics", "Aluminum", "Copper"]
+  },
+  {
+    "keyword": "starter_motor",
+    "product_type": "Broken Car Starter Motor",
+    "material_details": "Steel, Copper Windings, Carbon Brushes",
+    "raw_labels": ["Automotive", "Electronics", "Metal", "Copper"]
+  },
+  {
+    "keyword": "car_seat_frame",
+    "product_type": "Rusty Car Seat Frame",
+    "material_details": "Steel Tubing",
+    "raw_labels": ["Automotive", "Metal", "Frame"]
+  },
+  {
+    "keyword": "plastic_bumper",
+    "product_type": "Scratched Plastic Bumper Cover",
+    "material_details": "Polypropylene Plastic",
+    "raw_labels": ["Automotive", "Plastic", "Body Part"]
+  },
+  {
+    "keyword": "glass_shards",
+    "product_type": "Bag of Mixed Glass Shards",
+    "material_details": "Assorted Glass Types (bottle, window)",
+    "raw_labels": ["Waste", "Glass", "Broken"]
+  },
+  {
+    "keyword": "ceramic_pieces",
+    "product_type": "Collection of Broken Ceramic Pieces",
+    "material_details": "Glazed Ceramic, Porcelain",
+    "raw_labels": ["Waste", "Ceramic", "Broken"]
+  },
+  {
+    "keyword": "metal_scraps",
+    "product_type": "Mixed Metal Scraps (small)",
+    "material_details": "Aluminum, Steel, Copper, Brass",
+    "raw_labels": ["Waste", "Metal", "Scrap", "Recyclable"]
+  },
+  {
+    "keyword": "plastic_pellets",
+    "product_type": "Bag of Mixed Recycled Plastic Pellets",
+    "material_details": "Various Recycled Plastics",
+    "raw_labels": ["Raw Material", "Plastic", "Recycled"]
+  },
+  {
+    "keyword": "wood_chips",
+    "product_type": "Pile of Wood Chips/Sawdust",
+    "material_details": "Pine Wood, Oak Wood",
+    "raw_labels": ["Raw Material", "Wood", "Byproduct"]
+  },
+  {
+    "keyword": "paper_pulp",
+    "product_type": "Wet Paper Pulp",
+    "material_details": "Recycled Cellulose Fibers",
+    "raw_labels": ["Raw Material", "Paper", "Pulp"]
+  },
+  {
+    "keyword": "textile_fibers",
+    "product_type": "Bag of Mixed Textile Fibers",
+    "material_details": "Cotton, Polyester, Wool, Nylon",
+    "raw_labels": ["Raw Material", "Textile", "Fibers"]
+  },
+  {
+    "keyword": "rubber_crumb",
+    "product_type": "Bag of Recycled Rubber Crumb",
+    "material_details": "Recycled Tire Rubber",
+    "raw_labels": ["Raw Material", "Rubber", "Recycled"]
+  },
+  {
+    "keyword": "circuit_dust",
+    "product_type": "Fine Dust from Circuit Boards",
+    "material_details": "Mixed Metals, Fiberglass Particles",
+    "raw_labels": ["Waste", "E-waste", "Hazardous"]
+  },
+  {
+    "keyword": "plastic_film",
+    "product_type": "Bundled Plastic Film Packaging",
+    "material_details": "Low-Density Polyethylene (LDPE)",
+    "raw_labels": ["Packaging", "Plastic", "Recyclable"]
+  },
+  {
+    "keyword": "styrofoam",
+    "product_type": "Crumbled Styrofoam Packaging",
+    "material_details": "Expanded Polystyrene (EPS)",
+    "raw_labels": ["Packaging", "Plastic", "Foam"]
+  },
+  {
+    "keyword": "bubble_wrap",
+    "product_type": "Used Bubble Wrap",
+    "material_details": "Low-Density Polyethylene (LDPE)",
+    "raw_labels": ["Packaging", "Plastic", "Cushioning"]
+  },
+  {
+    "keyword": "packing_peanuts",
+    "product_type": "Bag of Packing Peanuts",
+    "material_details": "Expanded Polystyrene (EPS)",
+    "raw_labels": ["Packaging", "Plastic", "Loose Fill"]
+  },
+  {
+    "keyword": "aluminum_foil",
+    "product_type": "Crumbled Aluminum Foil",
+    "material_details": "Aluminum",
+    "raw_labels": ["Kitchenware", "Aluminum", "Recyclable"]
+  },
+  {
+    "keyword": "tin_cans",
+    "product_type": "Empty Steel Food Cans",
+    "material_details": "Tin-Plated Steel",
+    "raw_labels": ["Container", "Metal", "Food Packaging", "Recyclable"]
+  },
+  {
+    "keyword": "glass_jar",
+    "product_type": "Empty Jam Jar",
+    "material_details": "Clear Glass, Metal Lid",
+    "raw_labels": ["Container", "Glass", "Food Packaging"]
+  },
+  {
+    "keyword": "plastic_jug",
+    "product_type": "Empty Milk Jug",
+    "material_details": "HDPE Plastic",
+    "raw_labels": ["Container", "Plastic", "Beverage"]
+  },
+  {
+    "keyword": "detergent_bottle",
+    "product_type": "Empty Laundry Detergent Bottle",
+    "material_details": "HDPE Plastic",
+    "raw_labels": ["Container", "Plastic", "Household Cleaner"]
+  },
+  {
+    "keyword": "shampoo_bottle",
+    "product_type": "Empty Shampoo Bottle",
+    "material_details": "PET Plastic",
+    "raw_labels": ["Container", "Plastic", "Personal Care"]
+  },
+  {
+    "keyword": "soda_bottle",
+    "product_type": "Crushed Plastic Soda Bottle",
+    "material_details": "PET Plastic",
+    "raw_labels": ["Container", "Plastic", "Beverage"]
+  },
+  {
+    "keyword": "water_bottle_plastic",
+    "product_type": "Disposable Plastic Water Bottle",
+    "material_details": "PET Plastic",
+    "raw_labels": ["Container", "Plastic", "Beverage"]
+  },
+  {
+    "keyword": "yogurt_cup",
+    "product_type": "Empty Plastic Yogurt Cup",
+    "material_details": "Polypropylene Plastic",
+    "raw_labels": ["Container", "Plastic", "Food Packaging"]
+  },
+  {
+    "keyword": "takeaway_container",
+    "product_type": "Used Plastic Takeaway Food Container",
+    "material_details": "Polypropylene Plastic, Polystyrene Lid",
+    "raw_labels": ["Container", "Plastic", "Food Packaging"]
+  },
+  {
+    "keyword": "plastic_cutlery",
+    "product_type": "Used Disposable Plastic Cutlery",
+    "material_details": "Polystyrene Plastic",
+    "raw_labels": ["Tableware", "Plastic", "Disposable"]
+  },
+  {
+    "keyword": "coffee_cup",
+    "product_type": "Used Disposable Coffee Cup",
+    "material_details": "Paper, Plastic Lining, Plastic Lid",
+    "raw_labels": ["Container", "Paper", "Plastic", "Disposable"]
+  },
+  {
+    "keyword": "pizza_box",
+    "product_type": "Greasy Cardboard Pizza Box",
+    "material_details": "Corrugated Cardboard, Grease Stains",
+    "raw_labels": ["Packaging", "Cardboard", "Food Packaging"]
+  },
+  {
+    "keyword": "egg_carton",
+    "product_type": "Empty Paper Egg Carton",
+    "material_details": "Molded Pulp Paper",
+    "raw_labels": ["Packaging", "Paper", "Food Packaging"]
+  },
+  {
+    "keyword": "cereal_box",
+    "product_type": "Flattened Cereal Box",
+    "material_details": "Paperboard, Ink",
+    "raw_labels": ["Packaging", "Paperboard", "Food Packaging"]
+  },
+  {
+    "keyword": "toilet_roll_tube",
+    "product_type": "Empty Toilet Paper Roll Tube",
+    "material_details": "Cardboard",
+    "raw_labels": ["Paper Product", "Cardboard", "Recyclable"]
+  },
+  {
+    "keyword": "paper_towel_roll",
+    "product_type": "Empty Paper Towel Roll Tube",
+    "material_details": "Cardboard",
+    "raw_labels": ["Paper Product", "Cardboard", "Recyclable"]
+  },
+  {
+    "keyword": "paper_bag",
+    "product_type": "Used Paper Shopping Bag",
+    "material_details": "Kraft Paper, Paper Handles",
+    "raw_labels": ["Bag", "Paper", "Recyclable"]
+  },
+  {
+    "keyword": "gift_wrap",
+    "product_type": "Crumbled Gift Wrapping Paper",
+    "material_details": "Paper, Metallic Ink, Plastic Coating",
+    "raw_labels": ["Paper Product", "Decorative", "Holiday"]
+  },
+  {
+    "keyword": "cardboard_tube_small",
+    "product_type": "Small Craft Cardboard Tubes",
+    "material_details": "Cardboard",
+    "raw_labels": ["Crafts", "Cardboard", "Tube"]
+  },
+  {
+    "keyword": "corrugated_sheet",
+    "product_type": "Large Sheet of Corrugated Cardboard",
+    "material_details": "Recycled Cardboard",
+    "raw_labels": ["Packaging", "Cardboard", "Flat Sheet"]
+  },
+  {
+    "keyword": "plastic_tubing",
+    "product_type": "Coiled Plastic Tubing",
+    "material_details": "Polyethylene Plastic",
+    "raw_labels": ["Industrial Material", "Plastic", "Tubing"]
+  },
+  {
+    "keyword": "rubber_sheet",
+    "product_type": "Scrap Rubber Sheet",
+    "material_details": "Natural Rubber, Synthetic Rubber",
+    "raw_labels": ["Industrial Material", "Rubber", "Flat Sheet"]
+  },
+  {
+    "keyword": "foam_sheet",
+    "product_type": "Used Foam Packaging Sheet",
+    "material_details": "Polyethylene Foam",
+    "raw_labels": ["Packaging", "Foam", "Plastic"]
+  },
+  {
+    "keyword": "insulation_board",
+    "product_type": "Rigid Foam Insulation Board Scraps",
+    "material_details": "Extruded Polystyrene (XPS) Foam",
+    "raw_labels": ["Construction Material", "Foam", "Insulation"]
+  },
+  {
+    "keyword": "fiberglass_mat",
+    "product_type": "Roll of Fiberglass Mat (partial)",
+    "material_details": "Fiberglass Fibers",
+    "raw_labels": ["Raw Material", "Fiberglass", "Composite"]
+  },
+  {
+    "keyword": "resin_bucket",
+    "product_type": "Empty Epoxy Resin Bucket",
+    "material_details": "Plastic, Dried Resin Residue",
+    "raw_labels": ["Container", "Plastic", "Chemicals"]
+  },
+  {
+    "keyword": "gel_coat_can",
+    "product_type": "Empty Gel Coat Can",
+    "material_details": "Metal, Dried Resin Residue",
+    "raw_labels": ["Container", "Metal", "Chemicals"]
+  },
+  {
+    "keyword": "paint_brush_hard",
+    "product_type": "Hardened Paint Brush",
+    "material_details": "Wooden Handle, Natural Bristles (paint hardened)",
+    "raw_labels": ["Art Supplies", "Wood", "Brush"]
+  },
+  {
+    "keyword": "paint_roller",
+    "product_type": "Used Paint Roller Cover",
+    "material_details": "Polyester Nap, Cardboard Core",
+    "raw_labels": ["Art Supplies", "Textile", "Cardboard"]
+  },
+  {
+    "keyword": "drop_cloth",
+    "product_type": "Stained Canvas Drop Cloth",
+    "material_details": "Heavy Duty Canvas, Paint Stains",
+    "raw_labels": ["Textile", "Canvas", "Protective Gear"]
+  },
+  {
+    "keyword": "masking_tape",
+    "product_type": "Roll of Used Masking Tape",
+    "material_details": "Crepe Paper, Adhesive",
+    "raw_labels": ["Office Supplies", "Paper", "Adhesive"]
+  },
+  {
+    "keyword": "duct_tape",
+    "product_type": "Roll of Used Duct Tape",
+    "material_details": "Polyethylene-Coated Fabric, Adhesive",
+    "raw_labels": ["Hardware", "Fabric", "Adhesive"]
+  },
+  {
+    "keyword": "glue_gun",
+    "product_type": "Broken Hot Glue Gun",
+    "material_details": "Plastic Casing, Metal Nozzle, Heating Element",
+    "raw_labels": ["Crafts", "Electronics", "Plastic"]
+  },
+  {
+    "keyword": "glue_stick",
+    "product_type": "Used Hot Glue Sticks",
+    "material_details": "EVA Polymer",
+    "raw_labels": ["Crafts", "Plastic", "Adhesive"]
+  },
+  {
+    "keyword": "scissors",
+    "product_type": "Rusty Metal Scissors",
+    "material_details": "Stainless Steel, Plastic Handles",
+    "raw_labels": ["Tool", "Metal", "Plastic"]
+  },
+  {
+    "keyword": "tape_measure",
+    "product_type": "Broken Retractable Tape Measure",
+    "material_details": "Steel Blade, Plastic Casing",
+    "raw_labels": ["Tool", "Metal", "Plastic"]
+  },
+  {
+    "keyword": "wrench",
+    "product_type": "Single Old Wrench",
+    "material_details": "Forged Steel",
+    "raw_labels": ["Tool", "Metal", "Hardware"]
+  },
+  {
+    "keyword": "screwdriver",
+    "product_type": "Set of Mismatched Screwdrivers",
+    "material_details": "Steel Shaft, Plastic/Rubber Handle",
+    "raw_labels": ["Tool", "Metal", "Plastic"]
+  },
+  {
+    "keyword": "hammer",
+    "product_type": "Wooden Handle Claw Hammer",
+    "material_details": "Steel Head, Hickory Wood Handle",
+    "raw_labels": ["Tool", "Metal", "Wood"]
+  },
+  {
+    "keyword": "pliers",
+    "product_type": "Rusty Pliers",
+    "material_details": "Forged Steel, Rubber Grips",
+    "raw_labels": ["Tool", "Metal", "Rubber"]
+  },
+  {
+    "keyword": "saw",
+    "product_type": "Hand Saw with Dull Blade",
+    "material_details": "Steel Blade, Wooden Handle",
+    "raw_labels": ["Tool", "Metal", "Wood"]
+  },
+  {
+    "keyword": "drill",
+    "product_type": "Non-working Electric Drill",
+    "material_details": "Plastic Housing, Metal Chuck, Electric Motor",
+    "raw_labels": ["Tool", "Electronics", "Plastic", "Metal"]
+  },
+  {
+    "keyword": "power_drill",
+    "product_type": "Broken Cordless Drill",
+    "material_details": "Plastic Housing, Metal Chuck, Lithium-Ion Battery (internal)",
+    "raw_labels": ["Tool", "Electronics", "Plastic", "Battery"]
+  },
+  {
+    "keyword": "sander",
+    "product_type": "Broken Electric Sander",
+    "material_details": "Plastic Housing, Metal Base Plate, Electric Motor",
+    "raw_labels": ["Tool", "Electronics", "Plastic", "Metal"]
+  },
+  {
+    "keyword": "router_wood",
+    "product_type": "Non-functional Wood Router",
+    "material_details": "Aluminum Base, Plastic Handles, Electric Motor",
+    "raw_labels": ["Tool", "Electronics", "Aluminum", "Plastic"]
+  },
+  {
+    "keyword": "jigsaw",
+    "product_type": "Broken Electric Jigsaw",
+    "material_details": "Plastic Housing, Metal Base, Electric Motor",
+    "raw_labels": ["Tool", "Electronics", "Plastic", "Metal"]
+  },
+  {
+    "keyword": "circular_saw",
+    "product_type": "Rusty Circular Saw Blade",
+    "material_details": "Carbide-Tipped Steel",
+    "raw_labels": ["Tool", "Metal", "Blade"]
+  },
+  {
+    "keyword": "level",
+    "product_type": "Damaged Spirit Level",
+    "material_details": "Aluminum Body, Acrylic Vials",
+    "raw_labels": ["Tool", "Aluminum", "Plastic"]
+  },
+  {
+    "keyword": "stud_finder",
+    "product_type": "Non-working Electronic Stud Finder",
+    "material_details": "ABS Plastic, Small Electronics",
+    "raw_labels": ["Tool", "Electronics", "Plastic"]
+  },
+  {
+    "keyword": "oscillating_tool",
+    "product_type": "Broken Oscillating Multi-Tool",
+    "material_details": "Plastic Housing, Metal Head, Electric Motor",
+    "raw_labels": ["Tool", "Electronics", "Plastic", "Metal"]
+  },
+  {
+    "keyword": "air_compressor",
+    "product_type": "Non-functional Portable Air Compressor",
+    "material_details": "Steel Tank, Plastic Housing, Electric Motor",
+    "raw_labels": ["Tool", "Metal", "Plastic", "Motor"]
+  },
+  {
+    "keyword": "pressure_washer",
+    "product_type": "Broken Electric Pressure Washer",
+    "material_details": "Plastic Casing, Metal Pump, Electric Motor",
+    "raw_labels": ["Tool", "Electronics", "Plastic", "Metal"]
+  },
+  {
+    "keyword": "lawn_mower",
+    "product_type": "Non-functional Electric Lawn Mower",
+    "material_details": "Plastic Deck, Steel Blade, Electric Motor",
+    "raw_labels": ["Garden Equipment", "Electronics", "Plastic", "Metal"]
+  },
+  {
+    "keyword": "string_trimmer",
+    "product_type": "Broken Electric String Trimmer",
+    "material_details": "Plastic Housing, Steel Shaft, Electric Motor",
+    "raw_labels": ["Garden Equipment", "Electronics", "Plastic", "Metal"]
+  },
+  {
+    "keyword": "leaf_blower",
+    "product_type": "Non-working Electric Leaf Blower",
+    "material_details": "Plastic Housing, Electric Motor, Fan",
+    "raw_labels": ["Garden Equipment", "Electronics", "Plastic"]
+  },
+  {
+    "keyword": "hedge_trimmer",
+    "product_type": "Broken Electric Hedge Trimmer",
+    "material_details": "Plastic Housing, Steel Blades, Electric Motor",
+    "raw_labels": ["Garden Equipment", "Electronics", "Plastic", "Metal"]
+  },
+  {
+    "keyword": "chainsaw",
+    "product_type": "Non-working Electric Chainsaw",
+    "material_details": "Plastic Housing, Steel Bar/Chain, Electric Motor",
+    "raw_labels": ["Tool", "Electronics", "Plastic", "Metal"]
+  },
+  {
+    "keyword": "wheelbarrow",
+    "product_type": "Rusty Metal Wheelbarrow",
+    "material_details": "Steel Tub, Wooden Handles, Rubber Tire",
+    "raw_labels": ["Garden Equipment", "Metal", "Wood", "Rubber"]
+  },
+  {
+    "keyword": "rake",
+    "product_type": "Broken Garden Rake",
+    "material_details": "Steel Head, Wooden Handle",
+    "raw_labels": ["Garden Tool", "Metal", "Wood"]
+  },
+  {
+    "keyword": "hoe",
+    "product_type": "Rusty Garden Hoe",
+    "material_details": "Steel Blade, Wooden Handle",
+    "raw_labels": ["Garden Tool", "Metal", "Wood"]
+  },
+  {
+    "keyword": "spade",
+    "product_type": "Worn Garden Spade",
+    "material_details": "Steel Blade, Wooden Handle",
+    "raw_labels": ["Garden Tool", "Metal", "Wood"]
+  },
+  {
+    "keyword": "pickaxe",
+    "product_type": "Broken Pickaxe Head",
+    "material_details": "Forged Steel",
+    "raw_labels": ["Tool", "Metal", "Mining"]
+  },
+  {
+    "keyword": "sledgehammer",
+    "product_type": "Old Sledgehammer Head",
+    "material_details": "Forged Steel",
+    "raw_labels": ["Tool", "Metal", "Demolition"]
+  },
+  {
+    "keyword": "crowbar",
+    "product_type": "Rusty Steel Crowbar",
+    "material_details": "High-Carbon Steel",
+    "raw_labels": ["Tool", "Metal", "Leverage"]
+  },
+  {
+    "keyword": "pipe_wrench",
+    "product_type": "Broken Pipe Wrench",
+    "material_details": "Cast Iron, Steel Jaws",
+    "raw_labels": ["Tool", "Metal", "Plumbing"]
+  },
+  {
+    "keyword": "bolt_cutters",
+    "product_type": "Rusty Bolt Cutters",
+    "material_details": "Steel, Rubber Grips",
+    "raw_labels": ["Tool", "Metal", "Cutting"]
+  },
+  {
+    "keyword": "chainsaw_blade",
+    "product_type": "Dull Chainsaw Chain",
+    "material_details": "Hardened Steel",
+    "raw_labels": ["Tool Part", "Metal", "Cutting"]
+  },
+  {
+    "keyword": "drill_bits",
+    "product_type": "Set of Mixed Drill Bits",
+    "material_details": "High-Speed Steel, Carbide",
+    "raw_labels": ["Tool Accessory", "Metal", "Drilling"]
+  },
+  {
+    "keyword": "saw_blade",
+    "product_type": "Broken Reciprocating Saw Blade",
+    "material_details": "Bi-Metal Composite",
+    "raw_labels": ["Tool Accessory", "Metal", "Cutting"]
+  },
+  {
+    "keyword": "sanding_discs",
+    "product_type": "Used Sanding Discs (assorted grits)",
+    "material_details": "Aluminum Oxide Abrasive, Paper/Fabric Backing",
+    "raw_labels": ["Tool Accessory", "Abrasive", "Paper", "Fabric"]
+  },
+  {
+    "keyword": "paint_tray",
+    "product_type": "Used Plastic Paint Tray",
+    "material_details": "Polypropylene Plastic, Dried Paint",
+    "raw_labels": ["Art Supplies", "Plastic", "Painting"]
+  },
+  {
+    "keyword": "step_stool",
+    "product_type": "Broken Plastic Step Stool",
+    "material_details": "HDPE Plastic",
+    "raw_labels": ["Household Item", "Plastic", "Utility"]
+  },
+  {
+    "keyword": "laundry_detergent",
+    "product_type": "Empty Laundry Detergent Pod Container",
+    "material_details": "HDPE Plastic",
+    "raw_labels": ["Container", "Plastic", "Household Cleaner"]
+  },
+  {
+    "keyword": "cleaning_spray",
+    "product_type": "Empty All-Purpose Cleaning Spray Bottle",
+    "material_details": "PET Plastic, Plastic Sprayer",
+    "raw_labels": ["Container", "Plastic", "Household Cleaner"]
+  },
+  {
+    "keyword": "bleach_bottle",
+    "product_type": "Empty Bleach Bottle",
+    "material_details": "HDPE Plastic",
+    "raw_labels": ["Container", "Plastic", "Household Cleaner"]
+  },
+  {
+    "keyword": "sponge",
+    "product_type": "Worn Kitchen Sponges",
+    "material_details": "Cellulose, Abrasive Scrubber (plastic)",
+    "raw_labels": ["Kitchenware", "Cellulose", "Plastic"]
+  },
+  {
+    "keyword": "scrub_brush",
+    "product_type": "Old Cleaning Scrub Brush",
+    "material_details": "Plastic Handle, Synthetic Bristles",
+    "raw_labels": ["Household Item", "Plastic", "Cleaning"]
+  },
+  {
+    "keyword": "mop_head",
+    "product_type": "Worn Cotton Mop Head",
+    "material_details": "Cotton Yarn, Plastic Connector",
+    "raw_labels": ["Household Item", "Textile", "Cleaning"]
+  },
+  {
+    "keyword": "broom",
+    "product_type": "Broken Plastic Broom Head",
+    "material_details": "Polypropylene Plastic, Synthetic Bristles",
+    "raw_labels": ["Household Item", "Plastic", "Cleaning"]
+  },
+  {
+    "keyword": "dustpan",
+    "product_type": "Cracked Plastic Dustpan",
+    "material_details": "Polypropylene Plastic",
+    "raw_labels": ["Household Item", "Plastic", "Cleaning"]
+  },
+  {
+    "keyword": "garbage_can",
+    "product_type": "Dented Metal Garbage Can",
+    "material_details": "Galvanized Steel",
+    "raw_labels": ["Container", "Metal", "Waste"]
+  },
+  {
+    "keyword": "recycling_bin",
+    "product_type": "Cracked Plastic Recycling Bin",
+    "material_details": "HDPE Plastic",
+    "raw_labels": ["Container", "Plastic", "Recycling"]
+  },
+  {
+    "keyword": "storage_container",
+    "product_type": "Broken Plastic Storage Container (clear)",
+    "material_details": "Polypropylene Plastic",
+    "raw_labels": ["Container", "Plastic", "Storage"]
+  },
+  {
+    "keyword": "crate",
+    "product_type": "Plastic Milk Crate",
+    "material_details": "HDPE Plastic",
+    "raw_labels": ["Container", "Plastic", "Storage"]
+  },
+  {
+    "keyword": "cooler_jug",
+    "product_type": "Large Plastic Water Cooler Jug",
+    "material_details": "HDPE Plastic",
+    "raw_labels": ["Container", "Plastic", "Beverage"]
+  },
+  {
+    "keyword": "coffee_maker",
+    "product_type": "Non-working Drip Coffee Maker",
+    "material_details": "Plastic Housing, Glass Carafe, Heating Element (metal)",
+    "raw_labels": ["Appliance", "Kitchenware", "Plastic", "Glass"]
+  },
+  {
+    "keyword": "microwave",
+    "product_type": "Broken Countertop Microwave Oven",
+    "material_details": "Steel Casing, Glass Door, Plastic Controls",
+    "raw_labels": ["Appliance", "Kitchenware", "Metal", "Glass", "Electronics"]
+  },
+  {
+    "keyword": "toaster_oven",
+    "product_type": "Rusty Toaster Oven",
+    "material_details": "Stainless Steel, Glass Door, Plastic Knobs",
+    "raw_labels": ["Appliance", "Kitchenware", "Metal", "Glass"]
+  },
+  {
+    "keyword": "kettle",
+    "product_type": "Broken Electric Kettle",
+    "material_details": "Stainless Steel, Plastic Handle, Heating Element",
+    "raw_labels": ["Appliance", "Kitchenware", "Metal", "Plastic"]
+  },
+  {
+    "keyword": "food_processor",
+    "product_type": "Non-functional Food Processor",
+    "material_details": "Plastic Base, Glass Bowl, Metal Blades",
+    "raw_labels": ["Appliance", "Kitchenware", "Plastic", "Glass"]
+  },
+  {
+    "keyword": "mixer",
+    "product_type": "Broken Stand Mixer",
+    "material_details": "Cast Metal Housing, Stainless Steel Bowl, Plastic Controls",
+    "raw_labels": ["Appliance", "Kitchenware", "Metal", "Plastic"]
+  },
+  {
+    "keyword": "dish_rack",
+    "product_type": "Rusty Metal Dish Drying Rack",
+    "material_details": "Chrome-Plated Steel",
+    "raw_labels": ["Kitchenware", "Metal", "Storage"]
+  },
+  {
+    "keyword": "cutting_board",
+    "product_type": "Worn Plastic Cutting Board",
+    "material_details": "HDPE Plastic",
+    "raw_labels": ["Kitchenware", "Plastic", "Cooking"]
+  },
+  {
+    "keyword": "frying_pan",
+    "product_type": "Scratched Non-stick Frying Pan",
+    "material_details": "Aluminum, PTFE Coating, Plastic Handle",
+    "raw_labels": ["Kitchenware", "Aluminum", "Plastic"]
+  },
+  {
+    "keyword": "pot_lid",
+    "product_type": "Mismatched Glass Pot Lid",
+    "material_details": "Tempered Glass, Stainless Steel Rim, Plastic Knob",
+    "raw_labels": ["Kitchenware", "Glass", "Metal", "Plastic"]
+  },
+  {
+    "keyword": "baking_sheet",
+    "product_type": "Rusty Metal Baking Sheet",
+    "material_details": "Aluminum, Rust",
+    "raw_labels": ["Kitchenware", "Aluminum", "Baking"]
+  },
+  {
+    "keyword": "muffin_tin",
+    "product_type": "Worn Non-stick Muffin Tin",
+    "material_details": "Carbon Steel, PTFE Coating",
+    "raw_labels": ["Kitchenware", "Metal", "Baking"]
+  },
+  {
+    "keyword": "cookie_sheet",
+    "product_type": "Dented Aluminum Cookie Sheet",
+    "material_details": "Aluminum",
+    "raw_labels": ["Kitchenware", "Aluminum", "Baking"]
+  },
+  {
+    "keyword": "colander",
+    "product_type": "Dented Stainless Steel Colander",
+    "material_details": "Stainless Steel",
+    "raw_labels": ["Kitchenware", "Metal", "Cooking"]
+  },
+  {
+    "keyword": "mixing_bowl",
+    "product_type": "Chipped Ceramic Mixing Bowl",
+    "material_details": "Stoneware Ceramic",
+    "raw_labels": ["Kitchenware", "Ceramic", "Mixing"]
+  },
+  {
+    "keyword": "measuring_cups",
+    "product_type": "Set of Plastic Measuring Cups",
+    "material_details": "Polypropylene Plastic",
+    "raw_labels": ["Kitchenware", "Plastic", "Measuring"]
+  },
+  {
+    "keyword": "food_container",
+    "product_type": "Glass Food Storage Container (missing lid)",
+    "material_details": "Borosilicate Glass",
+    "raw_labels": ["Container", "Glass", "Food Storage"]
+  },
+  {
+    "keyword": "blender_jar",
+    "product_type": "Cracked Glass Blender Jar",
+    "material_details": "Tempered Glass",
+    "raw_labels": ["Kitchenware", "Glass", "Appliance Part"]
+  },
+  {
+    "keyword": "coffee_pot",
+    "product_type": "Broken Glass Coffee Pot",
+    "material_details": "Borosilicate Glass, Plastic Handle",
+    "raw_labels": ["Kitchenware", "Glass", "Beverage"]
+  },
+  {
+    "keyword": "silverware",
+    "product_type": "Mismatched Stainless Steel Silverware",
+    "material_details": "Stainless Steel",
+    "raw_labels": ["Kitchenware", "Metal", "Cutlery"]
+  },
+  {
+    "keyword": "knife_block",
+    "product_type": "Empty Wooden Knife Block",
+    "material_details": "Bamboo Wood",
+    "raw_labels": ["Kitchenware", "Wood", "Storage"]
+  },
+  {
+    "keyword": "k cup",
+    "product_type": "Used Plastic K-Cups",
+    "material_details": "Polypropylene Plastic, Aluminum Lid, Coffee Grounds",
+    "raw_labels": ["Container", "Plastic", "Coffee", "Single Use"]
+  },
+  {
+    "keyword": "disposable_plate",
+    "product_type": "Used Paper Plates",
+    "material_details": "Coated Paper",
+    "raw_labels": ["Tableware", "Paper", "Disposable"]
+  },
+  {
+    "keyword": "disposable_cup",
+    "product_type": "Used Plastic Party Cups",
+    "material_details": "Polypropylene Plastic",
+    "raw_labels": ["Tableware", "Plastic", "Disposable"]
+  },
+  {
+    "keyword": "paper_napkin",
+    "product_type": "Used Paper Napkins",
+    "material_details": "Paper",
+    "raw_labels": ["Paper Product", "Tableware", "Disposable"]
+  },
+  {
+    "keyword": "plastic_straws",
+    "product_type": "Bundle of Used Plastic Straws",
+    "material_details": "Polypropylene Plastic",
+    "raw_labels": ["Tableware", "Plastic", "Disposable"]
+  },
+  {
+    "keyword": "drink_carrier",
+    "product_type": "Cardboard Drink Carrier",
+    "material_details": "Molded Pulp Cardboard",
+    "raw_labels": ["Packaging", "Cardboard", "Beverage"]
+  },
+  {
+    "keyword": "plastic_bag",
+    "product_type": "Bundled Plastic Grocery Bags",
+    "material_details": "HDPE Plastic",
+    "raw_labels": ["Bag", "Plastic", "Disposable"]
+  },
+  {
+    "keyword": "mesh_bag",
+    "product_type": "Mesh Produce Bags (worn)",
+    "material_details": "Nylon Mesh",
+    "raw_labels": ["Bag", "Fabric", "Reusable"]
+  },
+  {
+    "keyword": "styrofoam_cup",
+    "product_type": "Used Styrofoam Coffee Cup",
+    "material_details": "Expanded Polystyrene (EPS)",
+    "raw_labels": ["Container", "Plastic", "Disposable"]
+  },
+  {
+    "keyword": "aluminum_tray",
+    "product_type": "Used Disposable Aluminum Baking Tray",
+    "material_details": "Aluminum",
+    "raw_labels": ["Kitchenware", "Aluminum", "Disposable"]
+  },
+  {
+    "keyword": "plastic_clamshell",
+    "product_type": "Used Plastic Clamshell Container",
+    "material_details": "PET Plastic",
+    "raw_labels": ["Packaging", "Plastic", "Food Packaging"]
+  },
+  {
+    "keyword": "blister_pack",
+    "product_type": "Empty Plastic Blister Pack",
+    "material_details": "PVC Plastic, Paperboard Backing",
+    "raw_labels": ["Packaging", "Plastic", "Paperboard"]
+  },
+  {
+    "keyword": "plastic_netting",
+    "product_type": "Plastic Produce Netting Bag",
+    "material_details": "Polyethylene Mesh",
+    "raw_labels": ["Packaging", "Plastic", "Mesh"]
+  },
+  {
+    "keyword": "packing_strap",
+    "product_type": "Used Plastic Packing Straps",
+    "material_details": "Polypropylene Plastic",
+    "raw_labels": ["Packaging", "Plastic", "Strapping"]
+  },
+  {
+    "keyword": "shipping_label",
+    "product_type": "Peeling Shipping Labels",
+    "material_details": "Adhesive Paper",
+    "raw_labels": ["Packaging", "Paper", "Label"]
+  },
+  {
+    "keyword": "bubble_mailer",
+    "product_type": "Used Padded Bubble Mailer",
+    "material_details": "Kraft Paper, Plastic Bubble Lining",
+    "raw_labels": ["Packaging", "Paper", "Plastic"]
+  },
+  {
+    "keyword": "foam_block",
+    "product_type": "Large Foam Packaging Block",
+    "material_details": "Expanded Polystyrene (EPS)",
+    "raw_labels": ["Packaging", "Foam", "Plastic"]
+  },
+  {
+    "keyword": "stretch_film",
+    "product_type": "Roll of Used Plastic Stretch Film",
+    "material_details": "Linear Low-Density Polyethylene (LLDPE)",
+    "raw_labels": ["Packaging", "Plastic", "Film"]
+  },
+  {
+    "keyword": "strapping_bands",
+    "product_type": "Bundled Plastic Strapping Bands",
+    "material_details": "Polypropylene Plastic",
+    "raw_labels": ["Packaging", "Plastic", "Bands"]
+  },
+  {
+    "keyword": "plastic_sheeting",
+    "product_type": "Roll of Used Plastic Sheeting",
+    "material_details": "Polyethylene Plastic",
+    "raw_labels": ["Construction Material", "Plastic", "Film"]
+  },
+  {
+    "keyword": "tarpaulin",
+    "product_type": "Torn Blue Tarpaulin",
+    "material_details": "Polyethylene Fabric (coated)",
+    "raw_labels": ["Outdoor Gear", "Plastic", "Fabric"]
+  },
+  {
+    "keyword": "sandbag",
+    "product_type": "Empty Woven Sandbag",
+    "material_details": "Polypropylene Fabric",
+    "raw_labels": ["Construction Material", "Fabric", "Bag"]
+  },
+  {
+    "keyword": "geotextile",
+    "product_type": "Scrap Geotextile Fabric",
+    "material_details": "Polyester Non-woven Fabric",
+    "raw_labels": ["Construction Material", "Fabric", "Geotextile"]
+  },
+  {
+    "keyword": "drainage_pipe",
+    "product_type": "Corrugated Plastic Drainage Pipe",
+    "material_details": "HDPE Plastic",
+    "raw_labels": ["Plumbing", "Plastic", "Pipe"]
+  },
+  {
+    "keyword": "insulation_batts",
+    "product_type": "Compresssed Fiberglass Insulation Batts",
+    "material_details": "Fiberglass, Paper Vapor Barrier",
+    "raw_labels": ["Construction Material", "Fiberglass", "Insulation"]
+  },
+  {
+    "keyword": "roof_shingles",
+    "product_type": "Pile of Old Asphalt Roofing Shingles",
+    "material_details": "Asphalt, Fiberglass Mat, Mineral Granules",
+    "raw_labels": ["Construction Material", "Asphalt", "Shingles"]
+  },
+  {
+    "keyword": "vinyl_flooring",
+    "product_type": "Scrap Vinyl Flooring Pieces",
+    "material_details": "PVC Vinyl, Felt Backing",
+    "raw_labels": ["Flooring", "Plastic", "Vinyl"]
+  },
+  {
+    "keyword": "laminate_flooring",
+    "product_type": "Broken Laminate Flooring Planks",
+    "material_details": "HDF Core, Melamine Laminate",
+    "raw_labels": ["Flooring", "Wood Composite", "Plastic"]
+  },
+  {
+    "keyword": "hardwood_flooring",
+    "product_type": "Scrap Hardwood Flooring Planks",
+    "material_details": "Oak Wood, Polyurethane Finish",
+    "raw_labels": ["Flooring", "Wood", "Hardwood"]
+  },
+  {
+    "keyword": "door_knob",
+    "product_type": "Old Metal Door Knob",
+    "material_details": "Brass, Steel Mechanism",
+    "raw_labels": ["Hardware", "Metal", "Door Accessory"]
+  },
+  {
+    "keyword": "hinge",
+    "product_type": "Rusty Door Hinges",
+    "material_details": "Steel, Rust",
+    "raw_labels": ["Hardware", "Metal", "Door Accessory"]
+  },
+  {
+    "keyword": "screw",
+    "product_type": "Assorted Loose Screws and Nails",
+    "material_details": "Steel, Zinc Coating",
+    "raw_labels": ["Hardware", "Metal", "Fasteners"]
+  },
+  {
+    "keyword": "bolt",
+    "product_type": "Collection of Bolts and Nuts",
+    "material_details": "Steel, Galvanized Finish",
+    "raw_labels": ["Hardware", "Metal", "Fasteners"]
+  },
+  {
+    "keyword": "washer",
+    "product_type": "Mixed Metal Washers",
+    "material_details": "Steel, Stainless Steel",
+    "raw_labels": ["Hardware", "Metal", "Fasteners"]
+  },
+  {
+    "keyword": "rivet",
+    "product_type": "Bag of Metal Rivets",
+    "material_details": "Aluminum, Steel",
+    "raw_labels": ["Hardware", "Metal", "Fasteners"]
+  },
+  {
+    "keyword": "spring",
+    "product_type": "Assorted Metal Springs",
+    "material_details": "Steel Wire",
+    "raw_labels": ["Hardware", "Metal", "Spring"]
+  },
+  {
+    "keyword": "chain_link",
+    "product_type": "Broken Chain Link Fencing",
+    "material_details": "Galvanized Steel Wire",
+    "raw_labels": ["Fencing", "Metal", "Outdoor"]
+  },
+  {
+    "keyword": "barbed_wire",
+    "product_type": "Coil of Rusty Barbed Wire",
+    "material_details": "Steel Wire, Barbs",
+    "raw_labels": ["Fencing", "Metal", "Hazardous"]
+  },
+  {
+    "keyword": "rebar_mesh",
+    "product_type": "Section of Steel Rebar Mesh",
+    "material_details": "Steel Wire (welded)",
+    "raw_labels": ["Construction Material", "Metal", "Reinforcement"]
+  },
+  {
+    "keyword": "corrugated_metal",
+    "product_type": "Rusty Corrugated Metal Sheet",
+    "material_details": "Galvanized Steel",
+    "raw_labels": ["Building Material", "Metal", "Sheet"]
+  },
+  {
+    "keyword": "sheet_metal",
+    "product_type": "Assorted Thin Sheet Metal Scraps",
+    "material_details": "Aluminum, Steel, Tin",
+    "raw_labels": ["Raw Material", "Metal", "Sheet"]
+  },
+  {
+    "keyword": "aluminum_can",
+    "product_type": "Crushed Aluminum Beverage Cans",
+    "material_details": "Aluminum",
+    "raw_labels": ["Container", "Aluminum", "Beverage", "Recyclable"]
+  },
+  {
+    "keyword": "soda_can",
+    "product_type": "Assorted Aluminum Soda Cans",
+    "material_details": "Aluminum",
+    "raw_labels": ["Container", "Aluminum", "Beverage", "Recyclable"]
+  },
+  {
+    "keyword": "beer_can",
+    "product_type": "Empty Aluminum Beer Cans",
+    "material_details": "Aluminum",
+    "raw_labels": ["Container", "Aluminum", "Beverage", "Recyclable"]
+  },
+  {
+    "keyword": "aluminum_foil_pan",
+    "product_type": "Used Aluminum Foil Baking Pans",
+    "material_details": "Aluminum",
+    "raw_labels": ["Kitchenware", "Aluminum", "Disposable"]
+  },
+  {
+    "keyword": "copper_wire",
+    "product_type": "Coiled Bare Copper Wire",
+    "material_details": "Pure Copper",
+    "raw_labels": ["Raw Material", "Metal", "Copper", "Electrical"]
+  },
+  {
+    "keyword": "brass_fittings",
+    "product_type": "Assorted Brass Plumbing Fittings",
+    "material_details": "Brass Alloy",
+    "raw_labels": ["Plumbing", "Metal", "Brass"]
+  },
+  {
+    "keyword": "lead_pipe",
+    "product_type": "Section of Old Lead Pipe",
+    "material_details": "Lead Metal, Corroded Surface",
+    "raw_labels": ["Plumbing", "Metal", "Lead", "Hazardous"]
+  },
+  {
+    "keyword": "cast_iron_pipe",
+    "product_type": "Segment of Cast Iron Drain Pipe",
+    "material_details": "Cast Iron, Rust",
+    "raw_labels": ["Plumbing", "Metal", "Cast Iron"]
+  },
+  {
+    "keyword": "stainless_steel_scrap",
+    "product_type": "Mixed Stainless Steel Scraps",
+    "material_details": "Stainless Steel Alloys",
+    "raw_labels": ["Raw Material", "Metal", "Stainless Steel"]
+  },
+  {
+    "keyword": "steel_beam",
+    "product_type": "Short Section of Steel I-Beam",
+    "material_details": "Structural Steel",
+    "raw_labels": ["Construction Material", "Metal", "Steel"]
+  },
+  {
+    "keyword": "aluminum_extrusion",
+    "product_type": "Scrap Aluminum Extrusion Profiles",
+    "material_details": "Aluminum Alloy",
+    "raw_labels": ["Raw Material", "Aluminum", "Profile"]
+  },
+  {
+    "keyword": "zinc_sheet",
+    "product_type": "Small Zinc Sheet Metal Scraps",
+    "material_details": "Zinc Metal",
+    "raw_labels": ["Raw Material", "Metal", "Zinc"]
+  },
+  {
+    "keyword": "titanium_scrap",
+    "product_type": "Small Titanium Alloy Scraps",
+    "material_details": "Titanium Alloy",
+    "raw_labels": ["Raw Material", "Metal", "Titanium"]
+  },
+  {
+    "keyword": "nickel_alloy",
+    "product_type": "Mixed Nickel Alloy Scraps",
+    "material_details": "Nickel Alloy",
+    "raw_labels": ["Raw Material", "Metal", "Nickel"]
+  },
+  {
+    "keyword": "gold_plated",
+    "product_type": "Gold Plated Electronic Connectors",
+    "material_details": "Copper, Gold Plating",
+    "raw_labels": ["Electronics", "Metal", "Precious Metal"]
+  },
+  {
+    "keyword": "silver_plated",
+    "product_type": "Silver Plated Cutlery (damaged)",
+    "material_details": "Base Metal, Silver Plating",
+    "raw_labels": ["Kitchenware", "Metal", "Silver"]
+  },
+  {
+    "keyword": "bronze_scrap",
+    "product_type": "Bronze Art Scraps",
+    "material_details": "Bronze Alloy",
+    "raw_labels": ["Raw Material", "Metal", "Bronze"]
+  },
+  {
+    "keyword": "glass_panel",
+    "product_type": "Large Broken Glass Panel",
+    "material_details": "Tempered Glass",
+    "raw_labels": ["Building Material", "Glass", "Broken"]
+  },
+  {
+    "keyword": "stained_glass",
+    "product_type": "Pieces of Broken Stained Glass",
+    "material_details": "Colored Glass, Lead Came",
+    "raw_labels": ["Art Material", "Glass", "Colored"]
+  },
+  {
+    "keyword": "glass_beads_craft",
+    "product_type": "Bag of Mixed Glass Craft Beads",
+    "material_details": "Glass",
+    "raw_labels": ["Crafts", "Glass", "Beads"]
+  },
+  {
+    "keyword": "laboratory_glassware",
+    "product_type": "Broken Laboratory Glassware (beakers, flasks)",
+    "material_details": "Borosilicate Glass",
+    "raw_labels": ["Laboratory Equipment", "Glass", "Chemical"]
+  },
+  {
+    "keyword": "fiberglass_panel",
+    "product_type": "Scrap Fiberglass Panel",
+    "material_details": "Fiberglass Reinforced Plastic (FRP)",
+    "raw_labels": ["Construction Material", "Composite", "Fiberglass"]
+  },
+  {
+    "keyword": "carbon_fiber",
+    "product_type": "Carbon Fiber Composite Scraps",
+    "material_details": "Carbon Fiber, Epoxy Resin",
+    "raw_labels": ["Raw Material", "Composite", "Carbon Fiber"]
+  },
+  {
+    "keyword": "kevlar_fabric",
+    "product_type": "Small Kevlar Fabric Scraps",
+    "material_details": "Aramid Fiber",
+    "raw_labels": ["Raw Material", "Fabric", "High-Performance"]
+  },
+  {
+    "keyword": "recycled_plastic_sheet",
+    "product_type": "Sheet of Recycled Plastic (mixed colors)",
+    "material_details": "Mixed Post-Consumer Plastics",
+    "raw_labels": ["Raw Material", "Plastic", "Recycled"]
+  },
+  {
+    "keyword": "recycled_wood_chips",
+    "product_type": "Bag of Recycled Wood Chips",
+    "material_details": "Mixed Wood Species",
+    "raw_labels": ["Raw Material", "Wood", "Recycled"]
+  },
+  {
+    "keyword": "recycled_glass_cullet",
+    "product_type": "Container of Recycled Glass Cullet",
+    "material_details": "Crushed Mixed Glass",
+    "raw_labels": ["Raw Material", "Glass", "Recycled"]
+  },
+  {
+    "keyword": "upcycled_fabric",
+    "product_type": "Large Roll of Upcycled Fabric",
+    "material_details": "Repurposed Cotton Blends",
+    "raw_labels": ["Textile", "Fabric", "Upcycled", "Reusable"]
+  },
+  {
+    "keyword": "upcycled_wood",
+    "product_type": "Stack of Upcycled Wooden Beams",
+    "material_details": "Reclaimed Barn Wood",
+    "raw_labels": ["Building Material", "Wood", "Upcycled", "Reclaimed"]
+  },
+  {
+    "keyword": "vintage_tile",
+    "product_type": "Collection of Vintage Patterned Tiles",
+    "material_details": "Glazed Ceramic",
+    "raw_labels": ["Home Decor", "Ceramic", "Vintage", "Tile"]
+  },
+  {
+    "keyword": "old_leather",
+    "product_type": "Large Piece of Old Leather",
+    "material_details": "Distressed Genuine Leather",
+    "raw_labels": ["Raw Material", "Leather", "Vintage"]
+  },
+  {
+    "keyword": "sari_fabric",
+    "product_type": "Colorful Silk Sari Fabric Scraps",
+    "material_details": "Silk, Metallic Thread",
+    "raw_labels": ["Textile", "Silk", "Cultural", "Colorful"]
+  },
+  {
+    "keyword": "kimono_fabric",
+    "product_type": "Vintage Kimono Silk Fabric Remnants",
+    "material_details": "Silk, Embroidery",
+    "raw_labels": ["Textile", "Silk", "Cultural", "Vintage"]
+  },
+  {
+    "keyword": "denim_patches",
+    "product_type": "Bag of Denim Patches and Scraps",
+    "material_details": "Cotton Denim",
+    "raw_labels": ["Textile", "Denim", "Crafts"]
+  },
+  {
+    "keyword": "wool_felt",
+    "product_type": "Sheets of Wool Felt (used)",
+    "material_details": "Pressed Wool Fibers",
+    "raw_labels": ["Textile", "Wool", "Crafts"]
+  },
+  {
+    "keyword": "leather_straps",
+    "product_type": "Assorted Leather Straps and Belts",
+    "material_details": "Genuine Leather, Metal Buckles",
+    "raw_labels": ["Raw Material", "Leather", "Straps"]
+  },
+  {
+    "keyword": "burlap_sacks",
+    "product_type": "Empty Burlap Sacks",
+    "material_details": "Jute Fabric",
+    "raw_labels": ["Container", "Fabric", "Natural Fiber"]
+  },
+  {
+    "keyword": "canvas_tarps",
+    "product_type": "Worn Canvas Tarpaulins",
+    "material_details": "Heavy Duty Cotton Canvas",
+    "raw_labels": ["Outdoor Gear", "Fabric", "Canvas"]
+  },
+  {
+    "keyword": "tire_shreds",
+    "product_type": "Bag of Shredded Tire Rubber",
+    "material_details": "Recycled Rubber, Steel Wire Fragments",
+    "raw_labels": ["Raw Material", "Rubber", "Recycled", "Industrial"]
+  },
+  {
+    "keyword": "wood_cuttings",
+    "product_type": "Pile of Small Wood Cuttings",
+    "material_details": "Mixed Softwood and Hardwood",
+    "raw_labels": ["Raw Material", "Wood", "Scrap"]
+  },
+  {
+    "keyword": "tree_branches",
+    "product_type": "Fallen Tree Branches",
+    "material_details": "Natural Wood, Bark",
+    "raw_labels": ["Natural Material", "Wood", "Garden Waste"]
+  },
+  {
+    "keyword": "leaves",
+    "product_type": "Bag of Dried Leaves",
+    "material_details": "Organic Matter",
+    "raw_labels": ["Organic Waste", "Garden Waste", "Compostable"]
+  },
+  {
+    "keyword": "grass_clippings",
+    "product_type": "Bag of Grass Clippings",
+    "material_details": "Organic Matter",
+    "raw_labels": ["Organic Waste", "Garden Waste", "Compostable"]
+  },
+  {
+    "keyword": "food_scraps",
+    "product_type": "Container of Mixed Food Scraps",
+    "material_details": "Organic Food Waste (vegetable peels, coffee grounds)",
+    "raw_labels": ["Organic Waste", "Food Waste", "Compostable"]
+  },
+  {
+    "keyword": "coffee_grounds",
+    "product_type": "Bag of Used Coffee Grounds",
+    "material_details": "Organic Coffee Residue",
+    "raw_labels": ["Organic Waste", "Food Waste", "Compostable"]
+  },
+  {
+    "keyword": "egg_shells",
+    "product_type": "Bag of Crushed Egg Shells",
+    "material_details": "Calcium Carbonate",
+    "raw_labels": ["Organic Waste", "Food Waste", "Calcium"]
+  },
+  {
+    "keyword": "nutshells",
+    "product_type": "Pile of Mixed Nut Shells",
+    "material_details": "Organic Plant Material",
+    "raw_labels": ["Organic Waste", "Food Waste", "Natural"]
+  },
+  {
+    "keyword": "tea_bags",
+    "product_type": "Collection of Used Tea Bags",
+    "material_details": "Paper Filter, Tea Leaves",
+    "raw_labels": ["Organic Waste", "Paper", "Compostable"]
+  },
+  {
+    "keyword": "wine_corks",
+    "product_type": "Bag of Used Wine Corks (natural)",
+    "material_details": "Natural Cork",
+    "raw_labels": ["Natural Material", "Cork", "Beverage Byproduct"]
+  },
+  {
+    "keyword": "cork_board",
+    "product_type": "Damaged Cork Board",
+    "material_details": "Cork, Particle Board Backing, Aluminum Frame",
+    "raw_labels": ["Office Supplies", "Cork", "Wood Composite"]
+  },
+  {
+    "keyword": "wine_bottle",
+    "product_type": "Empty Green Wine Bottles",
+    "material_details": "Green Glass",
+    "raw_labels": ["Container", "Glass", "Beverage"]
+  },
+  {
+    "keyword": "beer_bottle",
+    "product_type": "Empty Brown Beer Bottles",
+    "material_details": "Amber Glass",
+    "raw_labels": ["Container", "Glass", "Beverage"]
+  },
+  {
+    "keyword": "soda_bottle_glass",
+    "product_type": "Empty Clear Glass Soda Bottles",
+    "material_details": "Clear Glass",
+    "raw_labels": ["Container", "Glass", "Beverage"]
+  },
+  {
+    "keyword": "pickle_jar",
+    "product_type": "Empty Large Pickle Jar",
+    "material_details": "Clear Glass, Metal Lid",
+    "raw_labels": ["Container", "Glass", "Food Packaging"]
+  },
+  {
+    "keyword": "baby_food_jar",
+    "product_type": "Small Empty Baby Food Jars",
+    "material_details": "Clear Glass, Metal Lid",
+    "raw_labels": ["Container", "Glass", "Food Packaging"]
+  },
+  {
+    "keyword": "perfume_bottle",
+    "product_type": "Empty Decorative Perfume Bottle",
+    "material_details": "Art Glass, Plastic Sprayer",
+    "raw_labels": ["Container", "Glass", "Decorative"]
+  },
+  {
+    "keyword": "mason_jar",
+    "product_type": "Empty Mason Jars",
+    "material_details": "Clear Glass, Metal Lid",
+    "raw_labels": ["Container", "Glass", "Storage"]
+  },
+  {
+    "keyword": "medicine_bottle",
+    "product_type": "Empty Plastic Medicine Bottles",
+    "material_details": "HDPE/PET Plastic",
+    "raw_labels": ["Container", "Plastic", "Medical Waste"]
+  },
+  {
+    "keyword": "syringes",
+    "product_type": "Used Plastic Syringes (no needle)",
+    "material_details": "Polypropylene Plastic",
+    "raw_labels": ["Medical Waste", "Plastic", "Disposable"]
+  },
+  {
+    "keyword": "pill_blister",
+    "product_type": "Empty Pill Blister Packs",
+    "material_details": "PVC Plastic, Aluminum Foil",
+    "raw_labels": ["Medical Waste", "Plastic", "Aluminum"]
+  },
+  {
+    "keyword": "medical_tubing",
+    "product_type": "Plastic Medical Tubing Scraps",
+    "material_details": "PVC Plastic",
+    "raw_labels": ["Medical Waste", "Plastic", "Tubing"]
+  },
+  {
+    "keyword": "lab_plasticware",
+    "product_type": "Used Plastic Labware (beakers, tubes)",
+    "material_details": "Polypropylene Plastic",
+    "raw_labels": ["Laboratory Equipment", "Plastic"]
+  },
+  {
+    "keyword": "petri_dish",
+    "product_type": "Used Plastic Petri Dishes",
+    "material_details": "Polystyrene Plastic",
+    "raw_labels": ["Laboratory Equipment", "Plastic"]
+  },
+  {
+    "keyword": "microscope",
+    "product_type": "Non-functional Student Microscope",
+    "material_details": "Metal Body, Glass Lenses, Plastic Parts",
+    "raw_labels": ["Scientific Instrument", "Metal", "Glass", "Plastic"]
+  },
+  {
+    "keyword": "telescope",
+    "product_type": "Broken Small Telescope",
+    "material_details": "Aluminum Tube, Glass Lenses, Plastic Mount",
+    "raw_labels": ["Scientific Instrument", "Aluminum", "Glass", "Plastic"]
+  },
+  {
+    "keyword": "globe",
+    "product_type": "Damaged World Globe",
+    "material_details": "Cardboard Sphere, Paper Map, Metal Stand",
+    "raw_labels": ["Educational Item", "Cardboard", "Paper", "Metal"]
+  },
+  {
+    "keyword": "atlas",
+    "product_type": "Old World Atlas Book",
+    "material_details": "Paper, Cardboard Cover",
+    "raw_labels": ["Educational Item", "Book", "Paper"]
+  },
+  {
+    "keyword": "school_bag",
+    "product_type": "Worn School Backpack",
+    "material_details": "Nylon Fabric, Plastic Zippers",
+    "raw_labels": ["Bag", "School", "Fabric"]
+  },
+  {
+    "keyword": "lunch_box",
+    "product_type": "Plastic Lunch Box",
+    "material_details": "Polypropylene Plastic",
+    "raw_labels": ["Container", "Plastic", "Food Storage"]
+  },
+  {
+    "keyword": "water_cooler",
+    "product_type": "Non-working Electric Water Cooler",
+    "material_details": "Plastic Casing, Metal Components",
+    "raw_labels": ["Appliance", "Plastic", "Metal"]
+  }
+]

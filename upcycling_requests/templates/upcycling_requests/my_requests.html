@@ -127,7 +127,7 @@
                         <img src="{{ req.image.url }}" alt="{{ req.title }}" class="request-image">
                     {% endif %}
                     <p><strong>Submitted on:</strong> {{ req.created_at|date:"F j, Y, g:i a" }}</p>
-                    <a href="{% url 'request_detail' req.id %}" class="detail-link">View Details</a>
+                    <a href="{% url 'upcycling_requests:request_detail' req.id %}" class="detail-link">View Details</a>
 
                     {% if req.offers.all %}
                         <h4>Offers:</h4>
@@ -138,8 +138,8 @@
                                     <p><strong>Price:</strong> {{ offer.price }}</p>
                                     <p><strong>Message:</strong> {{ offer.message }}</p>
                                     {% if offer.status == 'Pending' and request.user == req.user %}
-                                        <a href="{% url 'accept_offer' offer.id %}" class="accept-link">Accept</a> |
-                                        <a href="{% url 'reject_offer' offer.id %}" class="reject-link">Reject</a>
+                                        <a href="{% url 'upcycling_requests:accept_offer' offer.id %}" class="accept-link">Accept</a> |
+                                        <a href="{% url 'upcycling_requests:reject_offer' offer.id %}" class="reject-link">Reject</a>
                                     {% endif %}
                                 </li>
                             {% endfor %}

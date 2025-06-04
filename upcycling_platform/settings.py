@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/5.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.2/ref/settings/
 """
-import os # Add this line at the very top of settings.py
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'requests',
+    'upcycling_requests.apps.UpcyclingRequestsConfig',
 ]
 
 MIDDLEWARE = [
@@ -55,6 +55,7 @@ ROOT_URLCONF = 'upcycling_platform.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        # DIRS now points to a 'templates' folder within the project root
         'DIRS': [os.path.join(BASE_DIR, 'upcycling_platform', 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -99,9 +100,12 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+# This is where Django will look for static files specific to your apps
+# You already have this correctly configured for 'upcycling_requests'
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'requests', 'static'),
-    # You might have other static folders
+    os.path.join(BASE_DIR, 'upcycling_requests', 'static'),
+    # Add any other project-wide static directories here if you have them, e.g.:
+    # os.path.join(BASE_DIR, 'static'),
 ]
 
 # Internationalization
@@ -120,7 +124,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = 'static/'
+# STATIC_ROOT is where collectstatic gathers all static files for deployment
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
@@ -128,10 +134,17 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # After logout, redirect to the home page
-LOGOUT_REDIRECT_URL = 'home'
+LOGOUT_REDIRECT_URL = 'upcycling_requests:home'
 # After login, redirect to the home page (can be changed later)
-LOGIN_REDIRECT_URL = 'home'
+LOGIN_REDIRECT_URL = 'upcycling_requests:home'
 
 # Media files (user-uploaded content)
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+# Google Cloud Vision AI Credentials
+# IMPORTANT: Replace 'your_google_cloud_credentials.json' with the actual filename
+# and ensure it's in the correct path relative to your BASE_DIR.
+# For example, if your JSON key file is in the same directory as manage.py,
+# this path is correct.
+GOOGLE_APPLICATION_CREDENTIALS = os.path.join(BASE_DIR, 'django-vision-ai-6839fef9dc39.json')

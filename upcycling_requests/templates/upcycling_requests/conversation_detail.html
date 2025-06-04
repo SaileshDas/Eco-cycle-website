@@ -156,13 +156,19 @@
         text-decoration: underline;
         color: #17a2b8;
     }
+    .chat-end {
+        height: 1px; /* Minimal height */
+        background: transparent;
+        margin-bottom: 0; /* No visual impact */
+        padding: 0;
+    }
 </style>
 {% endblock %}
 
 {% block content %}
     <h2>Conversation with {{ other_participant.username }}</h2>
     {% if conversation.upcycling_request %}
-        <p>About Request: <a href="{% url 'request_detail' conversation.upcycling_request.id %}" style="color: #20c997; text-decoration: none; font-weight: 600;">{{ conversation.upcycling_request.product_type }}</a></p>
+        <p>About Request: <a href="{% url 'upcycling_requests:request_detail' conversation.upcycling_request.id %}" style="color: #20c997; text-decoration: none; font-weight: 600;">{{ conversation.upcycling_request.product_type }}</a></p>
     {% endif %}
 
     {# THIS BLOCK IS FOR DJANGO'S FLASH MESSAGES - KEEP AS IS #}
@@ -174,7 +180,7 @@
         {% endfor %}
     {% endif %}
 
-    <div class="message-container">
+    <div class="message-container" id="messages-list"> {# ADDED ID HERE #}
         {% if messages_in_conversation %}
             {% for message in messages_in_conversation %}
                 <div class="message {% if message.sender == request.user %}sent{% else %}received{% endif %}">
@@ -197,16 +203,109 @@
         {% else %}
             <p>No messages in this conversation yet. Start chatting!</p>
         {% endif %}
+        <div id="chat-end" class="chat-end"></div> {# ADDED A SCROLL ANCHOR #}
     </div>
 
-    <form method="post" action="{% url 'conversation_detail' conversation.id %}">
+    {# ADDED ID TO THE FORM #}
+    <form method="post" action="{% url 'upcycling_requests:conversation_detail' conversation.id %}" id="message-form">
         {% csrf_token %}
-        {{ form.as_p }}
+        {# We'll manually render the content field to give it an ID #}
+        <p>
+            <label for="id_content" style="display: none;">Message:</label> {# Keep label hidden #}
+            <textarea name="content" id="id_content" rows="4" placeholder="Type your message..."></textarea>
+            {% if form.content.errors %}
+                <ul class="errorlist">{% for error in form.content.errors %}<li>{{ error }}</li>{% endfor %}</ul>
+            {% endif %}
+        </p>
         <button type="submit">Send Message</button>
     </form>
 
     <div class="back-link-container">
-        <p><a href="{% url 'conversation_list' %}">&larr; Back to Conversations</a></p>
+        <p><a href="{% url 'upcycling_requests:conversation_list' %}">&larr; Back to Conversations</a></p>
     </div>
 
+    {# Add the JavaScript at the end of the content block #}
+    <script>
+        const messageForm = document.getElementById('message-form');
+        const messageInput = document.getElementById('id_content');
+        const messagesList = document.getElementById('messages-list');
+        const chatEnd = document.getElementById('chat-end');
+
+        // Function to scroll to the bottom of the messages list
+        function scrollToBottom() {
+            chatEnd.scrollIntoView({ behavior: 'smooth', block: 'end' });
+        }
+
+        // Handle form submission via AJAX
+        if (messageForm) {
+            messageForm.addEventListener('submit', async (event) => {
+                event.preventDefault(); // Stop the default form submission (page reload)
+
+                const content = messageInput.value.trim();
+                if (!content) {
+                    // Optionally show a client-side error if message is empty
+                    return;
+                }
+
+                const csrfToken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+                const formData = new FormData();
+                formData.append('content', content);
+                // No need to append csrf_token to formData if using 'X-CSRFToken' header
+                // However, it's safer to send it both in body and header for robust CSRF protection.
+                // Fetch API doesn't automatically include it from form data.
+
+                try {
+                    const response = await fetch(messageForm.action, { // Send to the form's action URL
+                        method: 'POST',
+                        headers: {
+                            'X-Requested-With': 'XMLHttpRequest', // Signals to Django that this is an AJAX request
+                            'X-CSRFToken': csrfToken, // Send CSRF token in header
+                        },
+                        body: formData, // Send form data
+                    });
+
+                    const data = await response.json(); // Parse the JSON response from the server
+
+                    if (data.success) {
+                        // Create a new message bubble HTML element
+                        const newMessageDiv = document.createElement('div');
+                        newMessageDiv.className = 'message sent'; // Assume messages sent by current user
+
+                        newMessageDiv.innerHTML = `
+                            <div>
+                                <p>${data.message_content}</p>
+                                <small>${data.timestamp}</small>
+                            </div>
+                        `;
+
+                        // Append the new message to the list
+                        messagesList.appendChild(newMessageDiv);
+
+                        // Clear the input field
+                        messageInput.value = '';
+
+                        // Scroll to the bottom to show the new message
+                        scrollToBottom();
+
+                        // Remove any "No messages yet" text if it was present
+                        const noMessagesText = messagesList.querySelector('p');
+                        if (noMessagesText && noMessagesText.textContent === 'No messages in this conversation yet. Start chatting!') {
+                            noMessagesText.remove();
+                        }
+
+                    } else {
+                        // Handle server-side errors (e.g., validation errors)
+                        alert('Error sending message: ' + (data.errors ? JSON.stringify(data.errors) : 'Unknown error.'));
+                        console.error('Server errors:', data.errors);
+                    }
+                } catch (error) {
+                    console.error('AJAX Error:', error);
+                    alert('Failed to send message due to a network error.');
+                }
+            });
+        }
+
+        // Scroll to the bottom when the page loads
+        window.addEventListener('load', scrollToBottom);
+    </script>
 {% endblock content %}

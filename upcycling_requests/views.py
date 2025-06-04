@@ -1,4 +1,4 @@
-# requests/views.py
+# upcycling_requests/views.py
 from django.shortcuts import render, redirect, get_object_or_404
 from .forms import UpcyclingRequestForm, UserRegisterForm, OfferForm, MessageForm
 from .models import UpcyclingRequest, ArtisanProfile, Offer, Conversation, Message
@@ -8,23 +8,53 @@ from django.db import transaction
 from django.db.models import Q, Count
 from django.db.models.functions import TruncMonth
 from django.http import JsonResponse
+from django.views.decorators.csrf import csrf_exempt # For API endpoint that JavaScript calls
+from django.conf import settings # To access GOOGLE_APPLICATION_CREDENTIALS
+import os
+import json # Ensure json is imported for loading the file
 
-# --- NEW IMPORTS FOR DASHBOARD ---
+# For dashboard and fake AI
 import random
-import datetime # CORRECTED: Import the entire datetime module
-from django.http import JsonResponse
-from django.db.models import Count
-# --- END NEW IMPORTS ---
+import time # Add this for fake AI delay
+from datetime import date, timedelta, datetime
+
+# --- LOAD FAKE AI DATA ---
+# Construct the full path to the JSON file
+# Assumes fake_ai_data.json is in the same directory as views.py
+FAKE_AI_DATA_PATH = os.path.join(os.path.dirname(__file__), 'fake_ai_data.json')
+FAKE_AI_RESPONSES = []
+try:
+    with open(FAKE_AI_DATA_PATH, 'r', encoding='utf-8') as f:
+        FAKE_AI_RESPONSES = json.load(f)
+    print(f"Loaded {len(FAKE_AI_RESPONSES)} fake AI responses from {FAKE_AI_DATA_PATH}")
+except FileNotFoundError:
+    print(f"ERROR: fake_ai_data.json not found at {FAKE_AI_DATA_PATH}. Fake AI will use fallback only.")
+except json.JSONDecodeError:
+    print(f"ERROR: Could not decode fake_ai_data.json. Check JSON format.")
+# --- END LOAD FAKE AI DATA ---
+
+# --- Helper function for AI analysis (THIS IS NOW A BYPASSED PLACEHOLDER FOR DEMO) ---
+def analyze_image_with_vision_api(image_bytes):
+    """
+    This function is now a placeholder for the demo.
+    It will NOT be called by api_scan_image in demo mode.
+    """
+    print("DEMO MODE: analyze_image_with_vision_api is being bypassed.")
+    return {
+        'product_type': '',
+        'material_details': '',
+        'raw_labels': []
+    }
+
 
 # A simple home page view (optional, but good to have)
 def home_page(request):
     # Fetch up to 3 latest requests that are 'Request Received' (pending)
-    # Adjust 'status' as per your model's actual status values if needed
     latest_requests = UpcyclingRequest.objects.filter(status='Request Received').order_by('-created_at')[:3]
     context = {
         'latest_requests': latest_requests,
     }
-    return render(request, 'requests/home_page.html', context)
+    return render(request, 'upcycling_requests/home_page.html', context)
 
 def is_active_artisan(user):
     return user.is_authenticated and hasattr(user, 'artisan_profile') and user.artisan_profile.is_active_artisan
@@ -37,10 +67,17 @@ def create_upcycling_request(request):
         if form.is_valid():
             upcycling_request = form.save(commit=False)
             upcycling_request.user = request.user
+
+            # --- FOR DEMO MODE: AI labels for the final submission will be empty ---
+            # This ensures no real AI calls or errors when submitting the form
+            upcycling_request.ai_labels = []
+            # --- END IMPORTANT ---
+
             upcycling_request.save()
             messages.success(request, 'Your upcycling request has been submitted successfully!')
-            return redirect('my_requests')
+            return redirect('upcycling_requests:my_requests')
         else:
+            messages.error(request, 'Please correct the errors below.')
             pass # Form will be rendered again with errors if invalid
     else:
         form = UpcyclingRequestForm()
@@ -48,11 +85,11 @@ def create_upcycling_request(request):
     context = {
         'form': form
     }
-    return render(request, 'requests/create_upcycling_request.html', context)
+    return render(request, 'upcycling_requests/create_upcycling_request.html', context)
 
 # A simple success page view (this is currently not used by create_upcycling_request, can be removed if not needed elsewhere)
 def request_success(request):
-    return render(request, 'requests/request_success.html')
+    return render(request, 'upcycling_requests/request_success.html')
 
 
 @login_required
@@ -74,32 +111,13 @@ def request_detail(request, request_id):
             else:
                 # Only initialize the form if no offer has been made by this artisan
                 offer_form = OfferForm()
-                print("DEBUG: offer_form initialized successfully!")
-        else:
-            # If the user is the owner or not an active artisan, ensure offer_form is None
-            offer_form = None
-            print("DEBUG: Offer form not initialized (user is owner or not active artisan).")
-
-    print(f"DEBUG: Viewing request {upcycling_request.id}, Status: {upcycling_request.status}")
-    print(f"DEBUG: User authenticated: {request.user.is_authenticated}")
-    if request.user.is_authenticated:
-        print(f"DEBUG: User is owner of request: {request.user == upcycling_request.user}")
-        if hasattr(request.user, 'artisan_profile'):
-            print(f"DEBUG: User has artisan_profile attribute: True")
-            print(f"DEBUG: Artisan profile active: {request.user.artisan_profile.is_active_artisan}")
-            if request.user.artisan_profile.is_active_artisan:
-                print(f"DEBUG: Current artisan has already made offer: {has_made_offer}") # New debug line
-
-    print(f"DEBUG: upcycling_request.item_image value: {upcycling_request.item_image}") # Change from .image
-    if upcycling_request.item_image: # Change from .image
-        print(f"DEBUG: upcycling_request.item_image.url: {upcycling_request.item_image.url}") # Change from .image.url
 
     context = {
         'request': upcycling_request,
         'offer_form': offer_form, # This will be None if offer already made or not artisan
         'has_made_offer': has_made_offer, # Pass the flag to the template
     }
-    return render(request, 'requests/request_detail.html', context)
+    return render(request, 'upcycling_requests/request_detail.html', context)
 
 @login_required
 def my_requests(request):
@@ -107,7 +125,7 @@ def my_requests(request):
     context = {
         'requests': user_requests
     }
-    return render(request, 'requests/my_requests.html', context)
+    return render(request, 'upcycling_requests/my_requests.html', context)
 
 def register(request):
     if request.method == 'POST':
@@ -123,7 +141,7 @@ def register(request):
     context = {
         'form': form
     }
-    return render(request, 'requests/register.html', context)
+    return render(request, 'upcycling_requests/register.html', context)
 
 @login_required
 @user_passes_test(is_active_artisan, login_url='/accounts/login/')
@@ -136,26 +154,21 @@ def artisan_available_requests(request):
     context = {
         'available_requests': available_requests
     }
-    return render(request, 'requests/artisan_available_requests.html', context)
+    return render(request, 'upcycling_requests/artisan_available_requests.html', context)
 
 @login_required
 @user_passes_test(is_active_artisan, login_url='/accounts/login/') # Only active artisans can make offers
-# NOTE: Removed the duplicate @login_required and @user_passes_test decorators below,
-# as they are redundant when already applied above.
 def make_offer(request, request_id):
     upcycling_request = get_object_or_404(UpcyclingRequest, id=request_id)
 
     # Prevent request owner from making an offer on their own request
     if request.user == upcycling_request.user:
         messages.error(request, "You cannot make an offer on your own upcycling request.")
-        return redirect('request_detail', request_id=upcycling_request.id)
+        return redirect('upcycling_requests:request_detail', request_id=upcycling_request.id)
 
-    print(f"DEBUG (make_offer): Request method: {request.method}")
     if request.method == 'POST':
-        print(f"DEBUG (make_offer): Processing POST request for offer on request ID: {request_id}")
         form = OfferForm(request.POST)
         if form.is_valid():
-            print("DEBUG (make_offer): Form is VALID.")
             offer = form.save(commit=False)
             offer.request = upcycling_request
             offer.artisan = request.user.artisan_profile # Link to the artisan profile
@@ -164,8 +177,6 @@ def make_offer(request, request_id):
             messages.success(request, "Your offer has been submitted successfully!")
             return redirect('request_detail', request_id=upcycling_request.id)
         else:
-            print("DEBUG (make_offer): Form is INVALID.")
-            print(f"DEBUG (make_offer): Form errors: {form.errors}")
             # If form is invalid, re-render the detail page with the form and errors
             offer_form = form # Pass the form with errors
             context = {
@@ -173,7 +184,7 @@ def make_offer(request, request_id):
                 'offer_form': offer_form,
             }
             messages.error(request, "There was an error with your offer submission. Please check the details.")
-            return render(request, 'requests/request_detail.html', context)
+            return render(request, 'upcycling_requests/request_detail.html', context)
     # If it's not a POST request to make an offer, it shouldn't hit this view directly
     # It's intended for form submission from request_detail.html
     return redirect('request_detail', request_id=upcycling_request.id)
@@ -192,11 +203,11 @@ def accept_offer(request, offer_id):
     # Prevent accepting offers if the request is already accepted/completed
     if upcycling_request.status not in ['Request Received', 'Offer Made', 'Open']: # Added 'Open' to allowed statuses
         messages.error(request, f"This request (status: {upcycling_request.status}) can no longer accept offers.")
-        return redirect('request_detail', request_id=upcycling_request.id)
+        return redirect('upcycling_requests:request_detail', request_id=upcycling_request.id)
 
     # Check if the offer is still pending
     if offer.status != 'Pending':
-        messages.error(request, "This offer is no longer pending.")
+        messages.error(request, "This offer is not pending and cannot be rejected.")
         return redirect('request_detail', request_id=upcycling_request.id)
 
     # Start a database transaction for atomicity
@@ -226,8 +237,6 @@ def accept_offer(request, offer_id):
             defaults={} # No extra defaults needed if all fields are part of the lookup
         )
 
-        print(f"DEBUG: Conversation retrieved/created. ID: {conversation.id}, Created: {created}")
-
         # Add an initial message to the conversation
         initial_message_content = f"Your offer for '{upcycling_request.product_type}' has been accepted! Let's discuss details."
         try:
@@ -236,12 +245,12 @@ def accept_offer(request, offer_id):
                 sender=request.user,
                 content=initial_message_content
             )
-            print(f"DEBUG: Initial message created successfully for conversation ID: {conversation.id}")
         except Exception as e:
+            # Log the error, but don't prevent the offer acceptance
             print(f"ERROR: Failed to create initial message: {e}")
 
     messages.success(request, f"Offer from {offer.artisan.user.username} has been accepted! Request status updated.")
-    return redirect('request_detail', request_id=upcycling_request.id)
+    return redirect('upcycling_requests:request_detail', request_id=upcycling_request.id)
 
 
 @login_required
@@ -276,27 +285,23 @@ def conversation_list(request):
     context = {
         'conversations': conversations
     }
-    return render(request, 'requests/conversation_list.html', context)
+    return render(request, 'upcycling_requests/conversation_list.html', context)
 
 # NEW: View to display a specific conversation and allow sending messages
 @login_required
 def conversation_detail(request, conversation_id):
     conversation = get_object_or_404(Conversation, id=conversation_id)
-    print(f"DEBUG: Viewing conversation ID: {conversation.id}")
 
     # Ensure the logged-in user is a participant in this conversation
     if request.user not in [conversation.participant1, conversation.participant2]:
         messages.error(request, "You are not authorized to view this conversation.")
-        return redirect('conversation_list')
+        # If it's an AJAX request trying to send a message but unauthorized
+        if request.headers.get('x-requested-with') == 'XMLHttpRequest':
+            return JsonResponse({'success': False, 'error': 'Unauthorized access'}, status=403)
+        return redirect('upcycling_requests:conversation_list')
 
     # Mark all messages in this conversation sent by the *other* participant as read
     Message.objects.filter(conversation=conversation, is_read=False).exclude(sender=request.user).update(is_read=True)
-    print(f"DEBUG: Marked messages as read for conversation ID: {conversation.id}")
-
-    messages_in_conversation = conversation.messages.all().order_by('timestamp') # Fetch and order messages
-    print(f"DEBUG: Fetched {messages_in_conversation.count()} messages for conversation ID: {conversation.id}")
-    for msg in messages_in_conversation:
-        print(f"    DEBUG MESSAGE: Sender: {msg.sender.username}, Content: '{msg.content[:50]}...'")
 
     if request.method == 'POST':
         form = MessageForm(request.POST)
@@ -305,14 +310,36 @@ def conversation_detail(request, conversation_id):
             message.conversation = conversation
             message.sender = request.user
             message.save()
-            print(f"DEBUG: New message saved! Content: '{message.content[:50]}...'")
             # Update conversation's 'updated_at' timestamp
             conversation.save()
-            return redirect('conversation_detail', conversation_id=conversation.id)
+
+            # Check if the request is an AJAX request
+            if request.headers.get('x-requested-with') == 'XMLHttpRequest':
+                # Return a JSON response for AJAX requests
+                return JsonResponse({
+                    'success': True,
+                    'message_content': message.content,
+                    'timestamp': message.timestamp.strftime("%b %d, %H:%M") # Format timestamp to match template
+                })
+            else:
+                # This block serves as a fallback for non-AJAX POST requests
+                # (which should not happen with the JavaScript changes in place)
+                messages.success(request, "Message sent!")
+                return redirect('upcycling_requests:conversation_detail', conversation_id=conversation.id)
         else:
-            print(f"ERROR: Message form not valid: {form.errors}")
+            # If the form is not valid, return JSON errors for AJAX requests
+            if request.headers.get('x-requested-with') == 'XMLHttpRequest':
+                return JsonResponse({'success': False, 'errors': form.errors.as_json()}, status=400)
+            else:
+                # For non-AJAX requests, add error message and re-render the page
+                messages.error(request, "Failed to send message. Please check your input.")
+                # Fall through to render the template with form errors
     else:
+        # For GET requests, initialize an empty form
         form = MessageForm()
+
+    # Fetch and order messages for GET requests or if form is invalid (non-AJAX)
+    messages_in_conversation = conversation.messages.all().order_by('timestamp')
 
     context = {
         'conversation': conversation,
@@ -320,23 +347,24 @@ def conversation_detail(request, conversation_id):
         'form': form,
         'other_participant': conversation.participant1 if request.user == conversation.participant2 else conversation.participant2
     }
-    return render(request, 'requests/conversation_detail.html', context)
+    return render(request, 'upcycling_requests/conversation_detail.html', context)
 
 # --- NEW DASHBOARD VIEWS START HERE ---
 
+# Helper function to generate dummy data for the dashboard charts
 def generate_dummy_data():
-    """Generates dummy data for the dashboard charts."""
-    today = datetime.datetime.now() # CORRECTED: Changed to datetime.datetime.now()
+    today = date.today()
     data = {
         'requests_per_month': [],
         'offers_per_month': [],
         'top_product_types': [],
-        'waste_diverted_kg': [], # Dummy for overall impact
+        'waste_diverted_kg': 0,
     }
 
     # Data for past 6 months
-    for i in range(6, 0, -1):
-        month = (today - datetime.timedelta(days=30 * i)).strftime('%b %Y') # CORRECTED: Changed to datetime.timedelta
+    for i in range(6, 0, -1): # Iterate backwards to get correct chronological order
+        month_date = today - timedelta(days=30 * i)
+        month = month_date.strftime('%b %Y')
         data['requests_per_month'].append({
             'month': month,
             'count': random.randint(10, 50)
@@ -346,15 +374,19 @@ def generate_dummy_data():
             'count': random.randint(5, 40)
         })
 
-    # Top product types
-    product_types = ['Furniture', 'Textiles', 'Electronics', 'Decor', 'Other']
-    type_counts = {}
-    total_requests = sum(item['count'] for item in data['requests_per_month']) # rough estimate
-    for p_type in product_types:
-        type_counts[p_type] = random.randint(int(total_requests * 0.1), int(total_requests * 0.3))
+    # Top product types (dummy logic improved for better distribution)
+    product_types_list = ['Furniture', 'Textiles', 'Electronics', 'Decor', 'Other', 'Clothing', 'Accessory']
+    type_counts_sum = 0
+    temp_product_types_data = []
+    for p_type in product_types_list:
+        count = random.randint(15, 60)
+        temp_product_types_data.append({'label': p_type, 'value': count})
+        type_counts_sum += count
 
-    sorted_types = sorted(type_counts.items(), key=lambda item: item[1], reverse=True)
-    data['top_product_types'] = [{'label': item[0], 'value': item[1]} for item in sorted_types[:5]]
+    # Sort and take top 5, or all if less than 5
+    sorted_types = sorted(temp_product_types_data, key=lambda x: x['value'], reverse=True)
+    data['top_product_types'] = sorted_types[:min(5, len(sorted_types))]
+
 
     # Dummy waste diverted data (example: kilograms)
     data['waste_diverted_kg'] = random.randint(500, 2000)
@@ -363,86 +395,58 @@ def generate_dummy_data():
 
 @login_required
 def dashboard_view(request):
-    # --- Dummy Data Generation for Dashboard Charts ---
-
-    # Get today's date correctly
-    today = datetime.date.today() # This is correct with 'import datetime'
-
-    # Dummy data for Requests per Month (Bar Chart)
-    # Generate data for the last 6 months
-    requests_per_month_data = []
-    for i in range(6):
-        # Go back in months
-        # Use timedelta to subtract days correctly
-        month_date = today - datetime.timedelta(days=30 * i) # This is correct with 'import datetime'
-        month_label = month_date.strftime('%Y-%m') # Format as YYYY-MM
-        dummy_count = random.randint(10, 50) # Random number of requests
-        requests_per_month_data.insert(0, {'month': month_label, 'count': dummy_count}) # Insert at beginning to keep chronological order
-
-    # Dummy data for Offers per Month (Line Chart)
-    offers_per_month_data = []
-    for i in range(6):
-        month_date = today - datetime.timedelta(days=30 * i) # This is correct with 'import datetime'
-        month_label = month_date.strftime('%Y-%m')
-        dummy_count = random.randint(5, 30) # Random number of offers
-        offers_per_month_data.insert(0, {'month': month_label, 'count': dummy_count})
-
-    # Dummy data for Top Product Types (Pie Chart)
-    # Using a predefined list of common product types
-    product_types = ['Textile', 'Wood', 'Plastic', 'Metal', 'Glass', 'Electronics']
-    top_product_types_data = []
-    # Assign random values to a few top types
-    for p_type in random.sample(product_types, k=min(len(product_types), 5)): # Get up to 5 random types
-        dummy_value = random.randint(15, 60) # Random number of requests for this type
-        top_product_types_data.append({'label': p_type, 'value': dummy_value})
-
-    # Dummy data for Total Waste Diverted (just a single metric)
-    total_waste_diverted_kg = random.randint(500, 2000) # Random dummy value
-
-    dashboard_data = {
-        'requests_per_month': requests_per_month_data,
-        'offers_per_month': offers_per_month_data,
-        'top_product_types': top_product_types_data,
-        'waste_diverted_kg': total_waste_diverted_kg,
-    }
+    # Using the helper function to get dummy data
+    dashboard_data = generate_dummy_data()
 
     # Pass the data to the template
-    return render(request, 'requests/dashboard.html', {'dashboard_data': dashboard_data})
+    return render(request, 'upcycling_requests/dashboard.html', {'dashboard_data': dashboard_data})
 
 
 # Optional: JSON endpoint for dashboard data (if you want to fetch dynamically later)
 @login_required
 def get_dashboard_data_json(request):
     # This function can return the same dummy data or real data
-    # For now, let's return the same dummy data as dashboard_view
-    today = datetime.date.today() # This is correct with 'import datetime'
-
-    requests_per_month_data = []
-    for i in range(6):
-        month_date = today - datetime.timedelta(days=30 * i) # This is correct with 'import datetime'
-        month_label = month_date.strftime('%Y-%m')
-        dummy_count = random.randint(10, 50)
-        requests_per_month_data.insert(0, {'month': month_label, 'count': dummy_count})
-
-    offers_per_month_data = []
-    for i in range(6):
-        month_date = today - datetime.timedelta(days=30 * i) # This is correct with 'import datetime'
-        month_label = month_date.strftime('%Y-%m')
-        dummy_count = random.randint(5, 30)
-        offers_per_month_data.insert(0, {'month': month_label, 'count': dummy_count})
-
-    product_types = ['Textile', 'Wood', 'Plastic', 'Metal', 'Glass', 'Electronics']
-    top_product_types_data = []
-    for p_type in random.sample(product_types, k=min(len(product_types), 5)):
-        dummy_value = random.randint(15, 60)
-        top_product_types_data.append({'label': p_type, 'value': dummy_value})
-
-    total_waste_diverted_kg = random.randint(500, 2000)
-
-    dashboard_data = {
-        'requests_per_month': requests_per_month_data,
-        'offers_per_month': offers_per_month_data,
-        'top_product_types': top_product_types_data,
-        'waste_diverted_kg': total_waste_diverted_kg,
-    }
+    dashboard_data = generate_dummy_data() # Use the helper function here too
     return JsonResponse(dashboard_data)
+
+# --- MODIFIED: AI Image Scan API View (Contextual Fake for Demo using JSON) ---
+@csrf_exempt
+@login_required
+def api_scan_image(request):
+    if request.method == 'POST':
+        if 'image' not in request.FILES:
+            return JsonResponse({'success': False, 'error': 'No image provided for demo scan.'}, status=400)
+
+        uploaded_image = request.FILES['image']
+        image_name_lower = uploaded_image.name.lower() # Get the filename in lowercase
+
+        # --- Find a matching response based on filename keywords from the loaded JSON data ---
+        chosen_response = None
+        for item_data in FAKE_AI_RESPONSES:
+            if item_data["keyword"] in image_name_lower:
+                chosen_response = item_data
+                break # Use the first match found
+
+        # --- Fallback if no specific keyword is found ---
+        if chosen_response is None:
+            # Provide a sensible, but general, upcyclable item
+            fallback_options = [
+                {"product_type": "Mixed Household Waste", "material_details": "Assorted Plastics, Paper, Metal", "raw_labels": ["Waste", "Mixed Materials", "Recyclable"]},
+                {"product_type": "Random Discarded Item", "material_details": "Unknown Composite Materials", "raw_labels": ["Discarded", "Object", "Various Materials"]},
+                {"product_type": "Upcycling Candidate", "material_details": "Potentially Repurposable Goods", "raw_labels": ["Upcycle", "Item", "Re-use"]}
+            ]
+            chosen_response = random.choice(fallback_options)
+
+
+        # --- Optional: Simulate a realistic processing delay ---
+        time.sleep(4) # Wait for 4 second (adjust as needed for demo pace)
+
+        return JsonResponse({
+            'success': True,
+            'product_type': chosen_response['product_type'],
+            'material_details': chosen_response['material_details'],
+            'raw_labels': chosen_response['raw_labels']
+        })
+        # --- END DEMO MODE MODIFICATION ---
+
+    return JsonResponse({'success': False, 'error': 'Invalid request method for demo scan.'}, status=405)
